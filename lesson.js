@@ -1,6 +1,82 @@
 // Lesson data structure
 const lessonData = {
-	greetings: [
+	// Unit 1 Main Module: Greetings Overview
+	'greetings-overview': [
+		{
+			type: 'multiple-choice',
+			question: 'What does "Per favore" mean?',
+			options: ['Thank you', 'Please', 'Excuse me', 'Sorry'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: '<blank>, come stai?',
+			translation: 'Hello, how are you?',
+			options: ['Ciao', 'Grazie', 'Scusa', 'Prego'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'Grazie', back: 'Thank you', pronunciation: '/ˈɡrattsje/' },
+				{ front: 'Prego', back: 'You\'re welcome', pronunciation: '/ˈprɛɡo/' },
+				{ front: 'Scusa', back: 'Excuse me/Sorry', pronunciation: '/ˈskuza/' },
+				{ front: 'Per favore', back: 'Please', pronunciation: '/per faˈvore/' },
+				{ front: 'Salve', back: 'Hello (formal)', pronunciation: '/ˈsalve/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'Grazie', english: 'Thank you' },
+				{ italian: 'Prego', english: 'You\'re welcome' },
+				{ italian: 'Scusa', english: 'Excuse me' },
+				{ italian: 'Per favore', english: 'Please' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "You\'re welcome" in Italian?',
+			options: ['Grazie', 'Prego', 'Scusa', 'Ciao'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: '<blank> mille!',
+			translation: 'Thank you very much!',
+			options: ['Grazie', 'Prego', 'Scusa', 'Ciao'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "Scusa" mean?',
+			options: ['Hello', 'Goodbye', 'Excuse me', 'Thank you'],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Un caffè, <blank>.',
+			translation: 'A coffee, please.',
+			options: ['per favore', 'grazie', 'prego', 'scusa'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'Which is more formal?',
+			options: ['Ciao', 'Salve', 'Ehilà', 'Bella'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: '<blank>, non parlo italiano.',
+			translation: 'Sorry, I don\'t speak Italian.',
+			options: ['Scusa', 'Grazie', 'Prego', 'Ciao'],
+			correct: 0
+		}
+	],
+	
+	// Unit 1 Lesson 1: Basic Greetings (Hello & Goodbye)
+	'greetings-basic': [
 		{
 			type: 'multiple-choice',
 			question: 'What does "Ciao" mean?',
@@ -9,71 +85,298 @@ const lessonData = {
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Ciao! Come <blank> chiami?',
-			translation: 'Hello! What is your name?',
-			options: ['ti', 'mi', 'si', 'vi'],
+			sentence: '<blank>! Come stai?',
+			translation: 'Hello! How are you?',
+			options: ['Ciao', 'Grazie', 'Scusa', 'Prego'],
 			correct: 0
 		},
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Ciao', back: 'Hello', pronunciation: '/ˈtʃaʊ/' },
-				{ front: 'Grazie', back: 'Thank you', pronunciation: '/ˈɡrɑːtsie/' },
-				{ front: 'Per favore', back: 'Please', pronunciation: '/per faˈvore/' },
+				{ front: 'Ciao', back: 'Hello/Bye', pronunciation: '/ˈtʃaʊ/' },
 				{ front: 'Arrivederci', back: 'Goodbye', pronunciation: '/arːiveˈdertʃi/' },
-				{ front: 'Buongiorno', back: 'Good morning', pronunciation: '/bwonˈdʒorno/' }
+				{ front: 'Buongiorno', back: 'Good morning', pronunciation: '/bwonˈdʒorno/' },
+				{ front: 'Buonasera', back: 'Good evening', pronunciation: '/bwonaˈsera/' },
+				{ front: 'Buonanotte', back: 'Good night', pronunciation: '/bwonaˈnotte/' }
 			]
 		},
 		{
 			type: 'matching',
 			pairs: [
 				{ italian: 'Ciao', english: 'Hello' },
-				{ italian: 'Grazie', english: 'Thank you' },
 				{ italian: 'Arrivederci', english: 'Goodbye' },
-				{ italian: 'Per favore', english: 'Please' }
+				{ italian: 'Buongiorno', english: 'Good morning' },
+				{ italian: 'Buonanotte', english: 'Good night' }
 			]
 		},
 		{
 			type: 'multiple-choice',
-			question: 'How do you say "Thank you" in Italian?',
-			options: ['Ciao', 'Grazie', 'Prego', 'Scusa'],
+			question: 'How do you say "Goodbye" in Italian?',
+			options: ['Ciao', 'Arrivederci', 'Grazie', 'Prego'],
 			correct: 1
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Buongiorno! <blank> stai?',
-			translation: 'Good morning! How are you?',
-			options: ['Come', 'Quando', 'Dove', 'Perché'],
+			sentence: '<blank>, signora!',
+			translation: 'Good morning, madam!',
+			options: ['Buongiorno', 'Buonanotte', 'Ciao', 'Arrivederci'],
 			correct: 0
 		},
 		{
 			type: 'multiple-choice',
-			question: 'What does "Arrivederci" mean?',
-			options: ['Hello', 'Please', 'Goodbye', 'Thank you'],
+			question: 'What time of day is "Buonasera" used?',
+			options: ['Morning', 'Afternoon', 'Evening', 'Night'],
 			correct: 2
 		},
 		{
 			type: 'fill-blank',
-			sentence: '<blank> mille!',
-			translation: 'Thanks a lot!',
-			options: ['Grazie', 'Ciao', 'Prego', 'Scusa'],
+			sentence: '<blank> e buonanotte!',
+			translation: 'Goodbye and good night!',
+			options: ['Ciao', 'Grazie', 'Scusa', 'Prego'],
 			correct: 0
 		},
 		{
 			type: 'multiple-choice',
-			question: 'How do you say "Good morning" in Italian?',
-			options: ['Buonasera', 'Buonanotte', 'Buongiorno', 'Ciao'],
+			question: 'Which greeting is most formal?',
+			options: ['Ciao', 'Salve', 'Buongiorno', 'Ehilà'],
 			correct: 2
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Mi <blank> Marco.',
-			translation: 'My name is Marco.',
-			options: ['chiamo', 'sono', 'stai', 'vai'],
+			sentence: '<blank>, amico!',
+			translation: 'Goodbye, friend!',
+			options: ['Arrivederci', 'Buonasera', 'Grazie', 'Scusa'],
 			correct: 0
 		}
 	],
-	numbers: [
+	
+	// Unit 1 Lesson 2: Introductions (Nice to Meet You)
+	'greetings-intro': [
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "My name is..." in Italian?',
+			options: ['Io sono...', 'Mi chiamo...', 'Tu sei...', 'Lei è...'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Mi chiamo Marco. <blank> di conoscerla!',
+			translation: 'My name is Marco. Nice to meet you!',
+			options: ['Piacere', 'Grazie', 'Ciao', 'Scusa'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'Mi chiamo...', back: 'My name is...', pronunciation: '/mi ˈkjamo/' },
+				{ front: 'Piacere', back: 'Nice to meet you', pronunciation: '/pjaˈtʃere/' },
+				{ front: 'Come ti chiami?', back: 'What is your name?', pronunciation: '/ˈkome ti ˈkjami/' },
+				{ front: 'Sono di...', back: 'I am from...', pronunciation: '/ˈsono di/' },
+				{ front: 'E tu?', back: 'And you?', pronunciation: '/e tu/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'Come ti chiami?', english: 'What is your name?' },
+				{ italian: 'Piacere', english: 'Nice to meet you' },
+				{ italian: 'Di dove sei?', english: 'Where are you from?' },
+				{ italian: 'Sono americano', english: 'I am American' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "Piacere" mean?',
+			options: ['Thank you', 'Please', 'Nice to meet you', 'Excuse me'],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Come <blank> chiami?',
+			translation: 'What is your name?',
+			options: ['ti', 'mi', 'si', 'vi'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you ask "Where are you from?" in Italian?',
+			options: ['Come stai?', 'Di dove sei?', 'Che ore sono?', 'Quanto costa?'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Sono <blank> Milano.',
+			translation: 'I am from Milan.',
+			options: ['di', 'a', 'in', 'da'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'Which means "And you?" (informal)?',
+			options: ['E Lei?', 'E tu?', 'E voi?', 'E loro?'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Molto <blank> di conoscerti!',
+			translation: 'Very nice to meet you!',
+			options: ['piacere', 'bene', 'grazie', 'male'],
+			correct: 0
+		}
+	],
+	
+	// Unit 1 Lesson 3: How Are You?
+	'greetings-wellbeing': [
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "How are you?" in Italian?',
+			options: ['Come stai?', 'Dove vai?', 'Che fai?', 'Chi sei?'],
+			correct: 0
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Sto <blank>, grazie!',
+			translation: 'I am well, thank you!',
+			options: ['bene', 'male', 'così', 'molto'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'Come stai?', back: 'How are you?', pronunciation: '/ˈkome ˈstai/' },
+				{ front: 'Bene', back: 'Well/Good', pronunciation: '/ˈbɛne/' },
+				{ front: 'Male', back: 'Bad', pronunciation: '/ˈmale/' },
+				{ front: 'Così così', back: 'So-so', pronunciation: '/koˈsi koˈsi/' },
+				{ front: 'Molto bene', back: 'Very well', pronunciation: '/ˈmolto ˈbɛne/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'Come stai?', english: 'How are you?' },
+				{ italian: 'Bene', english: 'Well' },
+				{ italian: 'Male', english: 'Bad' },
+				{ italian: 'E tu?', english: 'And you?' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "Sto bene" mean?',
+			options: ['I am bad', 'I am well', 'I am tired', 'I am hungry'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Non sto <blank>.',
+			translation: 'I am not well.',
+			options: ['bene', 'male', 'qui', 'molto'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "Very well" in Italian?',
+			options: ['Così così', 'Molto male', 'Molto bene', 'Un po\''],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Sto <blank> stanco.',
+			translation: 'I am a bit tired.',
+			options: ['un po\'', 'molto', 'non', 'sempre'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "Così così" mean?',
+			options: ['Very good', 'Very bad', 'So-so', 'Thank you'],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Come stai oggi? - <blank> bene!',
+			translation: 'How are you today? - Very well!',
+			options: ['Molto', 'Poco', 'Non', 'Sempre'],
+			correct: 0
+		}
+	],
+	
+	// Unit 2 Main Module: Numbers Overview
+	'numbers-overview': [
+		{
+			type: 'multiple-choice',
+			question: 'What is "zero" in Italian?',
+			options: ['Nulla', 'Zero', 'Niente', 'Vuoto'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Il numero è <blank>.',
+			translation: 'The number is zero.',
+			options: ['zero', 'uno', 'dieci', 'cento'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'zero', back: 'zero', pronunciation: '/ˈdzɛro/' },
+				{ front: 'primo', back: 'first', pronunciation: '/ˈprimo/' },
+				{ front: 'secondo', back: 'second', pronunciation: '/seˈkondo/' },
+				{ front: 'terzo', back: 'third', pronunciation: '/ˈtɛrtso/' },
+				{ front: 'ultimo', back: 'last', pronunciation: '/ˈultimo/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'primo', english: 'first' },
+				{ italian: 'secondo', english: 'second' },
+				{ italian: 'terzo', english: 'third' },
+				{ italian: 'quarto', english: 'fourth' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "first" in Italian?',
+			options: ['Uno', 'Primo', 'Una', 'Prima'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'È il <blank> giorno.',
+			translation: 'It is the third day.',
+			options: ['terzo', 'tre', 'terza', 'trenta'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "ultimo" mean?',
+			options: ['First', 'Second', 'Last', 'Next'],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Sono il <blank> studente.',
+			translation: 'I am the second student.',
+			options: ['secondo', 'due', 'prima', 'terzo'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "fourth" in Italian?',
+			options: ['Quattro', 'Quarto', 'Quarta', 'Quaranta'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'È l\'<blank> volta.',
+			translation: 'It is the last time.',
+			options: ['ultimo', 'ultima', 'uno', 'una'],
+			correct: 1
+		}
+	],
+	
+	// Unit 2 Lesson 1: Numbers 1-10
+	'numbers-basic': [
 		{
 			type: 'multiple-choice',
 			question: 'What is "uno" in English?',
@@ -82,9 +385,9 @@ const lessonData = {
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Ho <blank> anni.',
-			translation: 'I am twenty years old.',
-			options: ['venti', 'dieci', 'trenta', 'cinque'],
+			sentence: 'Ho <blank> gatti.',
+			translation: 'I have three cats.',
+			options: ['tre', 'due', 'quattro', 'cinque'],
 			correct: 0
 		},
 		{
@@ -94,347 +397,512 @@ const lessonData = {
 				{ front: 'due', back: 'two', pronunciation: '/ˈdue/' },
 				{ front: 'tre', back: 'three', pronunciation: '/tre/' },
 				{ front: 'quattro', back: 'four', pronunciation: '/ˈkwattro/' },
-				{ front: 'cinque', back: 'five', pronunciation: '/ˈtʃinkwe/' }
+				{ front: 'cinque', back: 'five', pronunciation: '/ˈtʃinkwe/' },
+				{ front: 'sei', back: 'six', pronunciation: '/sɛi/' },
+				{ front: 'sette', back: 'seven', pronunciation: '/ˈsette/' },
+				{ front: 'otto', back: 'eight', pronunciation: '/ˈɔtto/' },
+				{ front: 'nove', back: 'nine', pronunciation: '/ˈnɔve/' },
+				{ front: 'dieci', back: 'ten', pronunciation: '/ˈdjɛtʃi/' }
 			]
 		},
 		{
 			type: 'matching',
 			pairs: [
-				{ italian: 'sei', english: 'six' },
+				{ italian: 'uno', english: 'one' },
+				{ italian: 'cinque', english: 'five' },
 				{ italian: 'sette', english: 'seven' },
-				{ italian: 'otto', english: 'eight' },
-				{ italian: 'nove', english: 'nine' }
+				{ italian: 'dieci', english: 'ten' }
 			]
 		},
 		{
 			type: 'multiple-choice',
-			question: 'What is "dieci" in English?',
-			options: ['Eight', 'Nine', 'Ten', 'Eleven'],
-			correct: 2
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Costa <blank> euro.',
-			translation: 'It costs ten euros.',
-			options: ['dieci', 'cento', 'mille', 'zero'],
-			correct: 0
-		},
-		{
-			type: 'multiple-choice',
-			question: 'How do you say "100" in Italian?',
-			options: ['Mille', 'Cento', 'Cinquanta', 'Venti'],
+			question: 'What number is "sette"?',
+			options: ['6', '7', '8', '9'],
 			correct: 1
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Sono le <blank>.',
-			translation: 'It is three o\'clock.',
-			options: ['tre', 'sei', 'nove', 'dodici'],
+			sentence: 'Ci sono <blank> mele.',
+			translation: 'There are five apples.',
+			options: ['cinque', 'sei', 'sette', 'otto'],
 			correct: 0
 		},
 		{
 			type: 'multiple-choice',
-			question: 'What is "cinquanta" in English?',
-			options: ['Five', 'Fifteen', 'Fifty', 'Five hundred'],
+			question: 'How do you say "eight" in Italian?',
+			options: ['sette', 'otto', 'nove', 'sei'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Ho <blank> anni.',
+			translation: 'I am ten years old.',
+			options: ['dieci', 'nove', 'undici', 'dodici'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What is "quattro" in English?',
+			options: ['Three', 'Four', 'Five', 'Six'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Vorrei <blank> biglietti.',
+			translation: 'I would like two tickets.',
+			options: ['due', 'tre', 'uno', 'quattro'],
+			correct: 0
+		}
+	],
+	
+	// Unit 2 Lesson 2: Counting Higher
+	'numbers-advanced': [
+		{
+			type: 'multiple-choice',
+			question: 'What is "venti" in English?',
+			options: ['Ten', 'Twenty', 'Thirty', 'Fifty'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Ho <blank> anni.',
+			translation: 'I am twenty-five years old.',
+			options: ['venticinque', 'ventuno', 'trenta', 'quindici'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'undici', back: 'eleven', pronunciation: '/ˈunditʃi/' },
+				{ front: 'quindici', back: 'fifteen', pronunciation: '/ˈkwinditʃi/' },
+				{ front: 'venti', back: 'twenty', pronunciation: '/ˈventi/' },
+				{ front: 'trenta', back: 'thirty', pronunciation: '/ˈtrenta/' },
+				{ front: 'cinquanta', back: 'fifty', pronunciation: '/tʃinkˈkwanta/' },
+				{ front: 'cento', back: 'one hundred', pronunciation: '/ˈtʃɛnto/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'venti', english: 'twenty' },
+				{ italian: 'trenta', english: 'thirty' },
+				{ italian: 'cinquanta', english: 'fifty' },
+				{ italian: 'cento', english: 'one hundred' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "fifty" in Italian?',
+			options: ['quaranta', 'cinquanta', 'sessanta', 'settanta'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Costa <blank> euro.',
+			translation: 'It costs thirty euros.',
+			options: ['trenta', 'venti', 'quaranta', 'cinquanta'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What is "cento" in English?',
+			options: ['Ten', 'Fifty', 'One hundred', 'One thousand'],
 			correct: 2
 		},
 		{
 			type: 'fill-blank',
 			sentence: 'Ci sono <blank> studenti.',
-			translation: 'There are twenty students.',
-			options: ['venti', 'trenta', 'quaranta', 'cinquanta'],
+			translation: 'There are fifteen students.',
+			options: ['quindici', 'quattordici', 'sedici', 'diciassette'],
 			correct: 0
-		}
-	],
-	food: [
+		},
 		{
 			type: 'multiple-choice',
-			question: 'What does "pizza" mean?',
-			options: ['Pasta', 'Pizza', 'Bread', 'Cheese'],
+			question: 'What number is "quaranta"?',
+			options: ['30', '40', '50', '60'],
 			correct: 1
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Vorrei una <blank>, per favore.',
-			translation: 'I would like a pizza, please.',
-			options: ['pizza', 'pasta', 'acqua', 'caffè'],
+			sentence: 'Il libro costa <blank> euro.',
+			translation: 'The book costs twelve euros.',
+			options: ['dodici', 'undici', 'tredici', 'quattordici'],
+			correct: 0
+		}
+	],
+	
+	// Unit 2 Lesson 3: Time & Dates
+	'numbers-time': [
+		{
+			type: 'multiple-choice',
+			question: 'How do you ask "What time is it?" in Italian?',
+			options: ['Che ore sono?', 'Che giorno è?', 'Quanto costa?', 'Dove vai?'],
+			correct: 0
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Sono le <blank>.',
+			translation: 'It is three o\'clock.',
+			options: ['tre', 'due', 'quattro', 'cinque'],
 			correct: 0
 		},
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'pasta', back: 'pasta', pronunciation: '/ˈpasta/' },
-				{ front: 'pane', back: 'bread', pronunciation: '/ˈpane/' },
-				{ front: 'vino', back: 'wine', pronunciation: '/ˈvino/' },
-				{ front: 'acqua', back: 'water', pronunciation: '/ˈakkwa/' },
-				{ front: 'caffè', back: 'coffee', pronunciation: '/kafˈfɛ/' }
+				{ front: 'Che ore sono?', back: 'What time is it?', pronunciation: '/ke ˈɔre ˈsono/' },
+				{ front: 'È l\'una', back: 'It is one o\'clock', pronunciation: '/ɛ ˈluna/' },
+				{ front: 'Sono le due', back: 'It is two o\'clock', pronunciation: '/ˈsono le ˈdue/' },
+				{ front: 'Mezzogiorno', back: 'Noon', pronunciation: '/mɛddzoˈdʒorno/' },
+				{ front: 'Mezzanotte', back: 'Midnight', pronunciation: '/mɛdddzaˈnɔtte/' }
 			]
 		},
 		{
 			type: 'matching',
 			pairs: [
-				{ italian: 'formaggio', english: 'cheese' },
-				{ italian: 'pomodoro', english: 'tomato' },
-				{ italian: 'gelato', english: 'ice cream' },
-				{ italian: 'dolce', english: 'dessert' }
+				{ italian: 'Che ore sono?', english: 'What time is it?' },
+				{ italian: 'Mezzogiorno', english: 'Noon' },
+				{ italian: 'Mezzanotte', english: 'Midnight' },
+				{ italian: 'Un quarto', english: 'Quarter' }
 			]
 		},
 		{
 			type: 'multiple-choice',
-			question: 'How do you say "water" in Italian?',
-			options: ['Vino', 'Latte', 'Acqua', 'Succo'],
+			question: 'What is "mezzogiorno" in English?',
+			options: ['Midnight', 'Noon', 'Morning', 'Evening'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'È <blank>.',
+			translation: 'It is midnight.',
+			options: ['mezzanotte', 'mezzogiorno', 'sera', 'mattina'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "quarter past" in Italian?',
+			options: ['E mezzo', 'E un quarto', 'Meno un quarto', 'In punto'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Sono le cinque e <blank>.',
+			translation: 'It is half past five.',
+			options: ['mezzo', 'quarto', 'dieci', 'venti'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "in punto" mean?',
+			options: ['Half past', 'Quarter to', 'O\'clock (sharp)', 'About'],
 			correct: 2
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Prendo un <blank>.',
-			translation: 'I\'ll have a coffee.',
-			options: ['caffè', 'tè', 'latte', 'succo'],
+			sentence: 'Sono le otto <blank> un quarto.',
+			translation: 'It is quarter to eight.',
+			options: ['meno', 'e', 'più', 'con'],
 			correct: 0
+		}
+	],
+	
+	// Unit 3 Main Module: Food Overview
+	'food-overview': [
+		{
+			type: 'multiple-choice',
+			question: 'What does "Buon appetito" mean?',
+			options: ['Good night', 'Enjoy your meal', 'Good morning', 'Thank you'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: '<blank> appetito!',
+			translation: 'Enjoy your meal!',
+			options: ['Buon', 'Buona', 'Bene', 'Brava'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'Fame', back: 'Hunger', pronunciation: '/ˈfame/' },
+				{ front: 'Sete', back: 'Thirst', pronunciation: '/ˈsete/' },
+				{ front: 'Delizioso', back: 'Delicious', pronunciation: '/deliˈtsjoso/' },
+				{ front: 'Piccante', back: 'Spicy', pronunciation: '/pikˈkante/' },
+				{ front: 'Dolce', back: 'Sweet', pronunciation: '/ˈdoltʃe/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'Fame', english: 'Hunger' },
+				{ italian: 'Sete', english: 'Thirst' },
+				{ italian: 'Delizioso', english: 'Delicious' },
+				{ italian: 'Piccante', english: 'Spicy' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "I am hungry" in Italian?',
+			options: ['Ho sete', 'Ho fame', 'Sono stanco', 'Sono felice'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Ho <blank>!',
+			translation: 'I am thirsty!',
+			options: ['sete', 'fame', 'sonno', 'freddo'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "piccante" mean?',
+			options: ['Sweet', 'Sour', 'Spicy', 'Salty'],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Questo cibo è <blank>!',
+			translation: 'This food is delicious!',
+			options: ['delizioso', 'piccante', 'salato', 'amaro'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "sweet" in Italian?',
+			options: ['Salato', 'Amaro', 'Dolce', 'Acido'],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Mi piace il cibo <blank>.',
+			translation: 'I like spicy food.',
+			options: ['piccante', 'dolce', 'salato', 'freddo'],
+			correct: 0
+		}
+	],
+	
+	// Unit 3 Lesson 1: Fruits & Vegetables
+	'food-produce': [
+		{
+			type: 'multiple-choice',
+			question: 'What is "mela" in English?',
+			options: ['Orange', 'Apple', 'Banana', 'Pear'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Mi piace la <blank> rossa.',
+			translation: 'I like the red apple.',
+			options: ['mela', 'banana', 'arancia', 'pera'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'mela', back: 'apple', pronunciation: '/ˈmɛla/' },
+				{ front: 'banana', back: 'banana', pronunciation: '/baˈnana/' },
+				{ front: 'arancia', back: 'orange', pronunciation: '/aˈrantʃa/' },
+				{ front: 'pomodoro', back: 'tomato', pronunciation: '/pomoˈdɔro/' },
+				{ front: 'insalata', back: 'lettuce/salad', pronunciation: '/insaˈlata/' },
+				{ front: 'carota', back: 'carrot', pronunciation: '/kaˈrɔta/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'mela', english: 'apple' },
+				{ italian: 'pomodoro', english: 'tomato' },
+				{ italian: 'carota', english: 'carrot' },
+				{ italian: 'banana', english: 'banana' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "tomato" in Italian?',
+			options: ['patata', 'pomodoro', 'cipolla', 'aglio'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Vorrei una <blank> verde.',
+			translation: 'I would like a green salad.',
+			options: ['insalata', 'mela', 'pera', 'banana'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What is "fragola" in English?',
+			options: ['Strawberry', 'Blueberry', 'Raspberry', 'Cherry'],
+			correct: 0
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Le <blank> sono arancioni.',
+			translation: 'The carrots are orange.',
+			options: ['carote', 'mele', 'banane', 'arance'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'Which is a vegetable?',
+			options: ['mela', 'pera', 'carota', 'uva'],
+			correct: 2
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Compro delle <blank> fresche.',
+			translation: 'I buy some fresh strawberries.',
+			options: ['fragole', 'mele', 'pere', 'banane'],
+			correct: 0
+		}
+	],
+	
+	// Unit 3 Lesson 2: Ordering Food
+	'food-restaurant': [
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "I would like..." in Italian?',
+			options: ['Voglio...', 'Vorrei...', 'Devo...', 'Posso...'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: '<blank> una pizza margherita, per favore.',
+			translation: 'I would like a margherita pizza, please.',
+			options: ['Vorrei', 'Voglio', 'Sono', 'Ho'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'Vorrei...', back: 'I would like...', pronunciation: '/vorˈrɛi/' },
+				{ front: 'Il conto', back: 'The bill/check', pronunciation: '/il ˈkonto/' },
+				{ front: 'Il menu', back: 'The menu', pronunciation: '/il meˈnu/' },
+				{ front: 'Acqua', back: 'Water', pronunciation: '/ˈakkwa/' },
+				{ front: 'Vino', back: 'Wine', pronunciation: '/ˈvino/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'Il conto', english: 'The bill' },
+				{ italian: 'Vorrei', english: 'I would like' },
+				{ italian: 'Acqua', english: 'Water' },
+				{ italian: 'Il menu', english: 'The menu' }
+			]
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What does "Il conto, per favore" mean?',
+			options: ['The menu, please', 'The bill, please', 'Water, please', 'More bread, please'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Posso avere il <blank>, per favore?',
+			translation: 'Can I have the menu, please?',
+			options: ['menu', 'conto', 'pane', 'vino'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'How do you order water in Italian?',
+			options: ['Vorrei vino', 'Vorrei acqua', 'Vorrei caffè', 'Vorrei birra'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Un bicchiere di <blank>, per favore.',
+			translation: 'A glass of wine, please.',
+			options: ['vino', 'acqua', 'latte', 'succo'],
+			correct: 0
+		},
+		{
+			type: 'multiple-choice',
+			question: 'What is "pane" in English?',
+			options: ['Water', 'Bread', 'Wine', 'Cheese'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Il ristorante è <blank>!',
+			translation: 'The restaurant is delicious!',
+			options: ['buono', 'grande', 'piccolo', 'veloce'],
+			correct: 0
+		}
+	],
+	
+	// Unit 3 Lesson 3: Drinks & Desserts
+	'food-drinks': [
+		{
+			type: 'multiple-choice',
+			question: 'How do you say "coffee" in Italian?',
+			options: ['Tè', 'Caffè', 'Latte', 'Succo'],
+			correct: 1
+		},
+		{
+			type: 'fill-blank',
+			sentence: 'Vorrei un <blank>, per favore.',
+			translation: 'I would like a coffee, please.',
+			options: ['caffè', 'tè', 'acqua', 'vino'],
+			correct: 0
+		},
+		{
+			type: 'flashcard',
+			cards: [
+				{ front: 'Caffè', back: 'Coffee', pronunciation: '/kafˈfɛ/' },
+				{ front: 'Tè', back: 'Tea', pronunciation: '/tɛ/' },
+				{ front: 'Latte', back: 'Milk', pronunciation: '/ˈlatte/' },
+				{ front: 'Gelato', back: 'Ice cream', pronunciation: '/dʒeˈlato/' },
+				{ front: 'Tiramisù', back: 'Tiramisu', pronunciation: '/tiramiˈsu/' }
+			]
+		},
+		{
+			type: 'matching',
+			pairs: [
+				{ italian: 'Caffè', english: 'Coffee' },
+				{ italian: 'Gelato', english: 'Ice cream' },
+				{ italian: 'Succo', english: 'Juice' },
+				{ italian: 'Birra', english: 'Beer' }
+			]
 		},
 		{
 			type: 'multiple-choice',
 			question: 'What does "gelato" mean?',
-			options: ['Cake', 'Ice cream', 'Cookie', 'Chocolate'],
+			options: ['Cake', 'Ice cream', 'Cookie', 'Pie'],
 			correct: 1
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Mi piace la <blank> italiana.',
-			translation: 'I like Italian pasta.',
-			options: ['pasta', 'pizza', 'carne', 'pesce'],
+			sentence: 'Un <blank> di arancia, per favore.',
+			translation: 'An orange juice, please.',
+			options: ['succo', 'vino', 'caffè', 'latte'],
 			correct: 0
 		},
 		{
 			type: 'multiple-choice',
-			question: 'How do you say "bread" in Italian?',
-			options: ['Pane', 'Pasta', 'Riso', 'Carne'],
-			correct: 0
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Buon <blank>!',
-			translation: 'Enjoy your meal!',
-			options: ['appetito', 'giorno', 'compleanno', 'viaggio'],
-			correct: 0
-		}
-	],
-	travel: [
-		{
-			type: 'multiple-choice',
-			question: 'What does "aeroporto" mean?',
-			options: ['Train station', 'Airport', 'Bus stop', 'Taxi'],
+			question: 'How do you say "tea" in Italian?',
+			options: ['Caffè', 'Tè', 'Latte', 'Cioccolata'],
 			correct: 1
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Dov\'è la <blank>?',
-			translation: 'Where is the station?',
-			options: ['stazione', 'piazza', 'strada', 'casa'],
-			correct: 0
-		},
-		{
-			type: 'flashcard',
-			cards: [
-				{ front: 'treno', back: 'train', pronunciation: '/ˈtreno/' },
-				{ front: 'autobus', back: 'bus', pronunciation: '/ˈautobus/' },
-				{ front: 'taxi', back: 'taxi', pronunciation: '/ˈtaksi/' },
-				{ front: 'biglietto', back: 'ticket', pronunciation: '/biʎˈʎetto/' },
-				{ front: 'stazione', back: 'station', pronunciation: '/statˈtsjone/' }
-			]
-		},
-		{
-			type: 'matching',
-			pairs: [
-				{ italian: 'hotel', english: 'hotel' },
-				{ italian: 'museo', english: 'museum' },
-				{ italian: 'spiaggia', english: 'beach' },
-				{ italian: 'centro', english: 'center' }
-			]
-		},
-		{
-			type: 'multiple-choice',
-			question: 'How do you say "train" in Italian?',
-			options: ['Autobus', 'Treno', 'Metro', 'Taxi'],
-			correct: 1
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Un <blank> per Roma, per favore.',
-			translation: 'One ticket to Rome, please.',
-			options: ['biglietto', 'treno', 'passaporto', 'hotel'],
+			sentence: 'Mi piace il <blank> al cioccolato.',
+			translation: 'I like chocolate ice cream.',
+			options: ['gelato', 'caffè', 'pane', 'formaggio'],
 			correct: 0
 		},
 		{
 			type: 'multiple-choice',
-			question: 'What does "spiaggia" mean?',
-			options: ['Mountain', 'Beach', 'River', 'Lake'],
-			correct: 1
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Vado in <blank>.',
-			translation: 'I\'m going to the hotel.',
-			options: ['hotel', 'museo', 'chiesa', 'ristorante'],
-			correct: 0
-		},
-		{
-			type: 'multiple-choice',
-			question: 'How do you say "ticket" in Italian?',
-			options: ['Passaporto', 'Valigia', 'Biglietto', 'Mappa'],
+			question: 'What is "birra" in English?',
+			options: ['Wine', 'Water', 'Beer', 'Juice'],
 			correct: 2
 		},
 		{
 			type: 'fill-blank',
-			sentence: 'Il <blank> parte alle dieci.',
-			translation: 'The train leaves at ten.',
-			options: ['treno', 'autobus', 'aereo', 'taxi'],
-			correct: 0
-		}
-	],
-	family: [
-		{
-			type: 'multiple-choice',
-			question: 'What does "famiglia" mean?',
-			options: ['Friend', 'Family', 'Father', 'Mother'],
-			correct: 1
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Mia <blank> si chiama Maria.',
-			translation: 'My mother is called Maria.',
-			options: ['madre', 'sorella', 'nonna', 'zia'],
-			correct: 0
-		},
-		{
-			type: 'flashcard',
-			cards: [
-				{ front: 'padre', back: 'father', pronunciation: '/ˈpadre/' },
-				{ front: 'madre', back: 'mother', pronunciation: '/ˈmadre/' },
-				{ front: 'fratello', back: 'brother', pronunciation: '/fraˈtɛllo/' },
-				{ front: 'sorella', back: 'sister', pronunciation: '/soˈrɛlla/' },
-				{ front: 'figlio', back: 'son', pronunciation: '/ˈfiʎʎo/' }
-			]
-		},
-		{
-			type: 'matching',
-			pairs: [
-				{ italian: 'nonno', english: 'grandfather' },
-				{ italian: 'nonna', english: 'grandmother' },
-				{ italian: 'zio', english: 'uncle' },
-				{ italian: 'zia', english: 'aunt' }
-			]
-		},
-		{
-			type: 'multiple-choice',
-			question: 'How do you say "brother" in Italian?',
-			options: ['Padre', 'Fratello', 'Figlio', 'Cugino'],
-			correct: 1
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Ho una <blank>.',
-			translation: 'I have a sister.',
-			options: ['sorella', 'madre', 'figlia', 'zia'],
-			correct: 0
-		},
-		{
-			type: 'multiple-choice',
-			question: 'What does "nonno" mean?',
-			options: ['Uncle', 'Father', 'Grandfather', 'Son'],
-			correct: 2
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Mio <blank> ha dieci anni.',
-			translation: 'My son is ten years old.',
-			options: ['figlio', 'fratello', 'padre', 'nipote'],
-			correct: 0
-		},
-		{
-			type: 'multiple-choice',
-			question: 'How do you say "daughter" in Italian?',
-			options: ['Sorella', 'Madre', 'Figlia', 'Nipote'],
-			correct: 2
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'La mia <blank> è grande.',
-			translation: 'My family is big.',
-			options: ['famiglia', 'casa', 'città', 'scuola'],
-			correct: 0
-		}
-	],
-	shopping: [
-		{
-			type: 'multiple-choice',
-			question: 'What does "negozio" mean?',
-			options: ['Market', 'Shop', 'Mall', 'Street'],
-			correct: 1
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Quanto <blank>?',
-			translation: 'How much does it cost?',
-			options: ['costa', 'compro', 'vendo', 'pago'],
-			correct: 0
-		},
-		{
-			type: 'flashcard',
-			cards: [
-				{ front: 'soldi', back: 'money', pronunciation: '/ˈsoldi/' },
-				{ front: 'prezzo', back: 'price', pronunciation: '/ˈprɛttso/' },
-				{ front: 'comprare', back: 'to buy', pronunciation: '/komˈprare/' },
-				{ front: 'vendere', back: 'to sell', pronunciation: '/ˈvɛndere/' },
-				{ front: 'sconto', back: 'discount', pronunciation: '/ˈskonto/' }
-			]
-		},
-		{
-			type: 'matching',
-			pairs: [
-				{ italian: 'mercato', english: 'market' },
-				{ italian: 'carta', english: 'card' },
-				{ italian: 'contanti', english: 'cash' },
-				{ italian: 'borsa', english: 'bag' }
-			]
-		},
-		{
-			type: 'multiple-choice',
-			question: 'How do you say "price" in Italian?',
-			options: ['Soldi', 'Prezzo', 'Costo', 'Pagamento'],
-			correct: 1
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Posso pagare con la <blank>?',
-			translation: 'Can I pay with card?',
-			options: ['carta', 'borsa', 'tasca', 'mano'],
-			correct: 0
-		},
-		{
-			type: 'multiple-choice',
-			question: 'What does "sconto" mean?',
-			options: ['Receipt', 'Discount', 'Tax', 'Change'],
-			correct: 1
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Vado al <blank>.',
-			translation: 'I\'m going to the market.',
-			options: ['mercato', 'negozio', 'centro', 'museo'],
-			correct: 0
-		},
-		{
-			type: 'multiple-choice',
-			question: 'How do you say "to buy" in Italian?',
-			options: ['Vendere', 'Pagare', 'Comprare', 'Costare'],
-			correct: 2
-		},
-		{
-			type: 'fill-blank',
-			sentence: 'Ho bisogno di <blank>.',
-			translation: 'I need money.',
-			options: ['soldi', 'tempo', 'aiuto', 'acqua'],
+			sentence: 'Vorrei un <blank> con latte.',
+			translation: 'I would like a coffee with milk.',
+			options: ['caffè', 'tè', 'succo', 'vino'],
 			correct: 0
 		}
 	]
@@ -459,20 +927,61 @@ let isFlipped = false;
 // Initialize lesson
 function initLesson() {
 	const urlParams = new URLSearchParams(window.location.search);
-	const moduleNumber = urlParams.get('module') || '1';
+	const lessonParam = urlParams.get('lesson') || '1-1'; // Get lesson parameter like "1-1", "2-1", etc.
+	const unitParam = urlParams.get('unit') || null;
 	
-	// Map module numbers to lesson data keys
-	const moduleMap = {
-		'1': 'greetings',
-		'2': 'numbers',
-		'3': 'food',
-		'4': 'travel',
-		'5': 'family',
-		'6': 'shopping'
+	console.log('URL Params - lesson:', lessonParam, 'unit:', unitParam);
+	
+	// Map lesson IDs to lesson data keys
+	const lessonMap = {
+		// Unit 1 - Greetings
+		'1-1': 'greetings-basic',      // Hello & Goodbye
+		'1-2': 'greetings-intro',      // Nice to Meet You
+		'1-3': 'greetings-wellbeing',  // How Are You?
+		// Unit 2 - Numbers
+		'2-1': 'numbers-basic',        // Numbers 1-10
+		'2-2': 'numbers-advanced',     // Counting Higher
+		'2-3': 'numbers-time',         // Time & Dates
+		// Unit 3 - Food
+		'3-1': 'food-produce',         // Fruits & Vegetables
+		'3-2': 'food-restaurant',      // Ordering Food
+		'3-3': 'food-drinks',          // Drinks & Desserts
+		// Unit 4 - Travel
+		'4-1': 'travel-directions',
+		'4-2': 'travel-transport',
+		'4-3': 'travel-accommodation',
+		// Unit 5 - Family
+		'5-1': 'family-members',
+		'5-2': 'family-relationships',
+		'5-3': 'family-activities',
+		// Unit 6 - Verbs
+		'6-1': 'verbs-common',
+		'6-2': 'verbs-daily',
+		'6-3': 'verbs-past'
 	};
 	
-	currentModuleId = moduleMap[moduleNumber] || 'greetings';
-	currentLessonData = lessonData[currentModuleId] || lessonData.greetings;
+	// If unit parameter is provided, use general unit content
+	if (unitParam) {
+		const unitMap = {
+			'1': 'greetings-overview',
+			'2': 'numbers-overview',
+			'3': 'food-overview',
+			'4': 'travel-directions',
+			'5': 'family-members',
+			'6': 'verbs-common'
+		};
+		currentModuleId = unitMap[unitParam] || 'greetings-overview';
+	} else {
+		currentModuleId = lessonMap[lessonParam] || 'greetings-overview';
+	}
+	
+	console.log('Loading lesson type:', currentModuleId);
+	console.log('Available lessons in lessonData:', Object.keys(lessonData));
+	
+	currentLessonData = lessonData[currentModuleId] || lessonData['greetings-overview'];
+	
+	console.log('Lesson data loaded:', currentLessonData);
+	console.log('First question:', currentLessonData[0]);
 	
 	renderQuestion(currentQuestionIndex);
 	updateProgressBar();
@@ -513,6 +1022,9 @@ function renderQuestion(index) {
 			renderMultipleChoice(question);
 			break;
 	}
+	
+	// Add TTS button after instruction
+	addTTSButton(question);
 }
 
 // Render fill in the blank
@@ -845,6 +1357,79 @@ function showCompletion() {
 		`${accuracy}%`;
 	
 	modal.style.display = 'flex';
+}
+
+// Add TTS button dynamically below instruction
+function addTTSButton(question) {
+	// Remove any existing TTS button
+	const existingBtn = document.getElementById('tts-btn');
+	if (existingBtn) {
+		existingBtn.remove();
+	}
+	
+	// Find the visible game mode and its instruction
+	const visibleMode = document.querySelector('.game-mode[style*="display: block"], .game-mode[style*="display: flex"]');
+	if (!visibleMode) return;
+	
+	const instruction = visibleMode.querySelector('.instruction');
+	if (!instruction) return;
+	
+	// Create TTS button
+	const ttsBtn = document.createElement('button');
+	ttsBtn.className = 'tts-btn';
+	ttsBtn.id = 'tts-btn';
+	ttsBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i> Listen';
+	ttsBtn.onclick = speakItalian;
+	
+	// Insert after instruction
+	instruction.insertAdjacentElement('afterend', ttsBtn);
+}
+
+// Text-to-Speech function
+function speakItalian() {
+	const question = currentLessonData[currentQuestionIndex];
+	let textToSpeak = '';
+	
+	// Extract Italian text based on question type (without revealing answers)
+	if (question.type === 'fill-blank') {
+		// Speak the sentence with the blank marker instead of the answer
+		textToSpeak = question.sentence.replace('<blank>', 'blank');
+	} else if (question.type === 'multiple-choice') {
+		// Extract Italian words from the question
+		const italianMatch = question.question.match(/"([^"]+)"/);
+		if (italianMatch) {
+			textToSpeak = italianMatch[1];
+		}
+	} else if (question.type === 'flashcard') {
+		// Speak the current flashcard front text
+		if (question.cards && question.cards[currentCardIndex]) {
+			textToSpeak = question.cards[currentCardIndex].front;
+		}
+	} else if (question.type === 'matching') {
+		// Speak all Italian words in the pairs
+		if (question.pairs && question.pairs.length > 0) {
+			textToSpeak = question.pairs.map(pair => pair.italian).join(', ');
+		}
+	}
+	
+	if (textToSpeak) {
+		const utterance = new SpeechSynthesisUtterance(textToSpeak);
+		utterance.lang = 'it-IT'; // Set language to Italian
+		utterance.rate = 0.8; // Slightly slower for learning
+		utterance.pitch = 1;
+		
+		const ttsBtn = document.getElementById('tts-btn');
+		if (ttsBtn) {
+			ttsBtn.classList.add('speaking');
+			
+			utterance.onend = () => {
+				ttsBtn.classList.remove('speaking');
+			};
+		}
+		
+		window.speechSynthesis.cancel(); // Cancel any ongoing speech
+		window.speechSynthesis.speak(utterance);
+	}
 }
 
 // Event listeners

@@ -16,27 +16,49 @@
 			});
 		}
 
-		// Main module click: first click expands to show lessons, collapse on click outside
+		// Main module click: single click expands, double click goes to overview
 		document.querySelectorAll('.main-module').forEach(function(m){
+			var clickTimer = null;
+			
 			m.addEventListener('click', function(e){
 				e.stopPropagation();
 				if(m.disabled) return;
+				
 				var pn = m.closest('.path-node');
 				if(!pn) return;
-
-				var isExpanded = pn.classList.contains('expanded');
-
-				// Collapse all others
-				document.querySelectorAll('.path-node.expanded').forEach(function(o){
-					if(o !== pn) o.classList.remove('expanded');
-				});
-
-				// Toggle current
-				if (isExpanded) {
-					pn.classList.remove('expanded');
-				} else {
-					pn.classList.add('expanded');
+				
+				// Clear any existing timer
+				if(clickTimer) {
+					clearTimeout(clickTimer);
+					clickTimer = null;
+					
+					// This is a double click - navigate to unit overview
+					var unitId = m.dataset.unit;
+					if(unitId) {
+						window.location.href = 'lesson.html?unit=' + encodeURIComponent(unitId);
+					}
+					return;
 				}
+				
+				// Set timer for single click
+				clickTimer = setTimeout(function() {
+					clickTimer = null;
+					
+					// Single click - toggle expansion
+					var isExpanded = pn.classList.contains('expanded');
+
+					// Collapse all others
+					document.querySelectorAll('.path-node.expanded').forEach(function(o){
+						if(o !== pn) o.classList.remove('expanded');
+					});
+
+					// Toggle current
+					if (isExpanded) {
+						pn.classList.remove('expanded');
+					} else {
+						pn.classList.add('expanded');
+					}
+				}, 250); // 250ms delay to detect double click
 			});
 		});
 
@@ -44,7 +66,8 @@
 		document.querySelectorAll('.sub-lesson').forEach(function(sl){
 			sl.addEventListener('click', function(e){
 				e.stopPropagation();
-				var lessonId = sl.dataset.lesson;
+				var lessonId = sl.getAttribute('data-lesson');
+				console.log('Clicked lesson ID:', lessonId); // Debug
 				if(lessonId) {
 					window.location.href = 'lesson.html?lesson=' + encodeURIComponent(lessonId);
 				}

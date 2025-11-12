@@ -116,6 +116,49 @@ body.lesson-page {
 	letter-spacing: -0.02em;
 }
 
+/* TTS Button */
+.tts-btn {
+	background: #000;
+	border: none;
+	color: #fff;
+	font-size: 1.2rem;
+	padding: 0.8rem 1.5rem;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	margin-bottom: 2rem;
+	font-family: 'Baloo 2', cursive;
+	font-weight: 600;
+}
+
+.tts-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+	background: #222;
+}
+
+.tts-btn:active {
+	transform: translateY(0);
+}
+
+.tts-btn.speaking {
+	animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
 /* Fill in the Blank */
 .question-text {
 	margin-bottom: 3rem;

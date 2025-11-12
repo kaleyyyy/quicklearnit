@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Your Progress - QuickLearn Italian</title>
+	<!-- Google Fonts for handwritten & bubbly look -->
+	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="progress.css" />
+</head>
+<body>
+	<div class="progress-page">
+		<!-- Header with back button -->
+		<header class="progress-header">
+			<a href="modules.html" class="back-btn" aria-label="Back to modules">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M19 12H5M12 19l-7-7 7-7"/>
+				</svg>
+			</a>
+			<h1>Your Progress</h1>
+			<div class="header-spacer"></div>
+		</header>
+
+		<!-- Main progress content -->
+		<main class="progress-content">
+			<!-- Overall progress card -->
+			<div class="progress-card overall-progress">
+				<div class="card-header">
+					<i class="fa-solid fa-chart-line"></i>
+					<h2>Overall Progress</h2>
+				</div>
+				<div class="progress-stats">
+					<div class="stat-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-bg" cx="60" cy="60" r="50" stroke="#e0e0e0" stroke-width="10" fill="none"/>
+							<circle class="progress-ring-fill" cx="60" cy="60" r="50" stroke="#06c258" stroke-width="10" fill="none" stroke-dasharray="314.16" stroke-dashoffset="314.16"/>
+						</svg>
+						<div class="stat-percentage">0%</div>
+					</div>
+					<div class="stat-details">
+						<div class="stat-item">
+							<span class="stat-label">Units Completed</span>
+							<span class="stat-value" id="units-completed">0 / 6</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-label">Lessons Completed</span>
+							<span class="stat-value" id="lessons-completed">0</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-label">Current Streak</span>
+							<span class="stat-value" id="current-streak">0 days 🔥</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Units breakdown -->
+			<div class="progress-card units-breakdown">
+				<div class="card-header">
+					<i class="fa-solid fa-list-check"></i>
+					<h2>Units Breakdown</h2>
+				</div>
+				<div class="units-list" id="units-list">
+					<!-- Will be populated by JavaScript -->
+				</div>
+			</div>
+
+			<!-- Recent activity -->
+			<div class="progress-card recent-activity">
+				<div class="card-header">
+					<i class="fa-solid fa-clock-rotate-left"></i>
+					<h2>Recent Activity</h2>
+				</div>
+				<div class="activity-list" id="activity-list">
+					<p class="empty-state">No activity yet. Start learning to see your progress!</p>
+				</div>
+			</div>
+
+			<!-- Reset button -->
+			<button class="reset-btn" id="reset-progress" type="button">
+				<i class="fa-solid fa-rotate-left"></i>
+				Reset All Progress
+			</button>
+		</main>
+
+		<!-- Decorative swooshes -->
+		<svg class="swoosh swoosh-red" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+			<path d="M10 120 Q60 60, 140 80 T200 40" stroke="#e63946" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+		</svg>
+		<svg class="swoosh swoosh-green" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+			<path d="M20 60 Q80 100, 150 70 T190 120" stroke="#06c258" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+		</svg>
+		<svg class="swoosh swoosh-blue" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+			<path d="M0 100 Q70 130, 120 90 T200 110" stroke="#457b9d" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+		</svg>
+	</div>
+
+	<script src="progress.js"></script>
+</body>
+</html>

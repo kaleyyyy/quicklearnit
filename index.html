@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>QuickLearn</title>
+	<!-- Google Fonts for handwritten & bubbly look -->
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<div class="homepage">
+		<header class="title-block">
+			<h1 class="app-title">QuickLearn</h1>
+			<h2 class="language">Italian</h2>
+		</header>
+		<!-- Italy icon placed above the START button -->
+		<figure class="italy-wrapper" aria-hidden="false" role="img" aria-label="Outline of Italy">
+		  <img src="italyicon1.png" alt="Outline of Italy" class="italy-img" />
+			<!-- Red glowing heart overlay (cleaner path) -->
+			<svg class="italy-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+				<!-- cleaner symmetric heart path from Material icons -->
+				<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6.01 4.01 4 6.5 4c1.74 0 3.41.81 4.5 2.09C12.09 4.81 13.76 4 15.5 4 17.99 4 20 6.01 20 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+			</svg>
+		</figure>
+		<a href="modules.html" class="start-btn" role="button">START</a>
+		<!-- Italian color swooshes (decorative animated curves) -->
+		<svg class="swoosh swoosh-red" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+		  <path d="M10 120 Q60 60, 140 80 T200 40" stroke="#e63946" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+		</svg>
+		<svg class="swoosh swoosh-green" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+		  <path d="M20 50 Q80 100, 160 70 T200 120" stroke="#06c258" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+		</svg>
+
+		<!-- Extra swooshes: varied sizes, positions, and delays -->
+		<svg class="swoosh swoosh-red swoosh--large swoosh-top-left strokethick" data-delay="0" viewBox="0 0 300 220" aria-hidden="true" focusable="false">
+		  <path d="M12 160 Q90 70, 220 100 T300 50" stroke="#e63946" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.9"/>
+		</svg>
+
+		<svg class="swoosh swoosh-green swoosh--small swoosh-center-right strokelight" data-delay="250" viewBox="0 0 180 180" aria-hidden="true" focusable="false">
+		  <path d="M20 30 Q70 120, 150 80 T180 140" stroke="#06c258" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+		</svg>
+
+		<svg class="swoosh swoosh-red swoosh--small swoosh-bottom-left" data-delay="520" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+		  <path d="M10 100 Q60 160, 140 130 T200 180" stroke="#e63946" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.85"/>
+		</svg>
+
+		<svg class="swoosh swoosh-green swoosh--large swoosh-top-right strokethick" data-delay="900" viewBox="0 0 300 220" aria-hidden="true" focusable="false">
+		  <path d="M20 160 Q120 40, 260 90 T300 40" stroke="#06c258" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.9"/>
+		</svg>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

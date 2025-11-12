@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>QuickLearn - Lesson</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="lesson.css">
+</head>
+<body class="lesson-page">
+	<!-- Header with progress -->
+	<header class="lesson-header">
+		<button class="exit-btn" onclick="window.location.href='modules.html'">✕</button>
+		<div class="progress-bar">
+			<div class="progress-fill"></div>
+		</div>
+		<div class="hearts">
+			<span class="heart">❤️</span>
+			<span class="heart">❤️</span>
+			<span class="heart">❤️</span>
+		</div>
+	</header>
+
+	<!-- Main lesson content -->
+	<main class="lesson-container">
+		<!-- Question counter -->
+		<div class="question-counter">
+			<span class="current-question">1</span> / <span class="total-questions">10</span>
+		</div>
+
+		<!-- Game mode container (will be dynamically populated) -->
+		<div class="game-mode-container">
+			<!-- Fill in the Blank -->
+			<div class="game-mode fill-blank" data-mode="fill-blank" style="display: none;">
+				<h2 class="instruction">Fill in the blank</h2>
+				<div class="question-text">
+					<p>Ciao! Come <span class="blank">_____</span> chiami?</p>
+					<p class="translation">Hello! What is your name?</p>
+				</div>
+				<div class="word-options">
+					<button class="word-btn">ti</button>
+					<button class="word-btn">mi</button>
+					<button class="word-btn">si</button>
+					<button class="word-btn">vi</button>
+				</div>
+			</div>
+
+			<!-- Matching Words -->
+			<div class="game-mode matching" data-mode="matching" style="display: none;">
+				<h2 class="instruction">Match the pairs</h2>
+				<div class="matching-grid">
+					<button class="match-card" data-pair="1" data-lang="italian">Ciao</button>
+					<button class="match-card" data-pair="2" data-lang="italian">Grazie</button>
+					<button class="match-card" data-pair="3" data-lang="italian">Arrivederci</button>
+					<button class="match-card" data-pair="4" data-lang="italian">Per favore</button>
+					
+					<button class="match-card" data-pair="1" data-lang="english">Hello</button>
+					<button class="match-card" data-pair="2" data-lang="english">Thank you</button>
+					<button class="match-card" data-pair="3" data-lang="english">Goodbye</button>
+					<button class="match-card" data-pair="4" data-lang="english">Please</button>
+				</div>
+			</div>
+
+			<!-- Flashcards -->
+			<div class="game-mode flashcard" data-mode="flashcard" style="display: none;">
+				<h2 class="instruction">Learn these words</h2>
+				<div class="flashcard-container">
+					<div class="flashcard">
+						<div class="flashcard-inner">
+							<div class="flashcard-front">
+								<p class="word">Ciao</p>
+								<p class="hint">Tap to reveal</p>
+							</div>
+							<div class="flashcard-back">
+								<p class="word">Hello</p>
+								<p class="pronunciation">/ˈtʃaʊ/</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flashcard-controls">
+					<button class="prev-card-btn">← Previous</button>
+					<span class="card-counter"><span class="current-card">1</span> / <span class="total-cards">5</span></span>
+					<button class="next-card-btn">Next →</button>
+				</div>
+			</div>
+
+			<!-- Multiple Choice -->
+			<div class="game-mode multiple-choice" data-mode="multiple-choice" style="display: none;">
+				<h2 class="instruction">Choose the correct answer</h2>
+				<div class="question-prompt">
+					<p class="prompt-text">What does "Grazie" mean?</p>
+				</div>
+				<div class="choice-options">
+					<button class="choice-btn">Hello</button>
+					<button class="choice-btn">Thank you</button>
+					<button class="choice-btn">Goodbye</button>
+					<button class="choice-btn">Please</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Feedback section -->
+		<div class="feedback" style="display: none;">
+			<div class="feedback-content correct">
+				<span class="feedback-icon">✓</span>
+				<p class="feedback-text">Correct!</p>
+			</div>
+			<div class="feedback-content incorrect" style="display: none;">
+				<span class="feedback-icon">✕</span>
+				<p class="feedback-text">Not quite. Try again!</p>
+				<p class="correct-answer">The answer is: <strong>ti</strong></p>
+			</div>
+		</div>
+
+		<!-- Action buttons -->
+		<div class="lesson-actions">
+			<button class="check-btn">Check</button>
+			<button class="continue-btn" style="display: none;">Continue</button>
+		</div>
+	</main>
+
+	<!-- Completion modal -->
+	<div class="completion-modal" style="display: none;">
+		<div class="modal-content">
+			<h2>Lesson Complete! 🎉</h2>
+			<div class="completion-stats">
+				<div class="stat">
+					<span class="stat-value">10/10</span>
+					<span class="stat-label">Correct</span>
+				</div>
+				<div class="stat">
+					<span class="stat-value">100%</span>
+					<span class="stat-label">Accuracy</span>
+				</div>
+			</div>
+			<button class="continue-learning-btn" onclick="window.location.href='modules.html'">Continue Learning</button>
+		</div>
+	</div>
+
+	<script src="lesson.js"></script>
+</body>
+</html>

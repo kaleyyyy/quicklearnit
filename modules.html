@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Modules - QuickLearn Italian</title>
+	<!-- Google Fonts for handwritten & bubbly look -->
+	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="modules.css" />
+</head>
+<body>
+	<div class="modules-page">
+		<!-- Header with back button and user stats -->
+		<header class="modules-header">
+			<a href="index.html" class="back-btn" aria-label="Back to home">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M19 12H5M12 19l-7-7 7-7"/>
+				</svg>
+			</a>
+			
+			<div class="header-stats">
+				<a href="progress.html" class="stat-item progress-stat" aria-label="View progress">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 3v18h18"/>
+						<path d="M18 17V9"/>
+						<path d="M13 17V5"/>
+						<path d="M8 17v-3"/>
+					</svg>
+					<span class="stat-value">45%</span>
+				</a>
+				
+				<a href="tips.html" class="stat-item tips-btn" aria-label="Tips and hints">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M9 18h6"/>
+						<path d="M10 22h4"/>
+						<path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8a6 6 0 0 0-12 0c0 1.33.47 2.48 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/>
+					</svg>
+				</a>
+			</div>
+		</header>
+
+		<!-- Learning path container -->
+		<main class="learning-path">
+			<!-- Unit 1: Greetings -->
+			<div class="path-node" data-module="1" data-status="unlocked">
+				<div class="node-connector"></div>
+				
+				<div class="module-container">
+					<div class="unit-label">Unit 1</div>
+					<!-- Main unit circle -->
+					<button class="module-node main-module" type="button" data-unit="1">
+						<i class="fa-solid fa-message"></i>
+					</button>
+				</div>
+				
+				<div class="node-label">
+					<h3>Greetings</h3>
+					<p>Common Phrases</p>
+				</div>
+			</div>
+
+			<!-- Unit 2: Numbers -->
+			<div class="path-node" data-module="2" data-status="unlocked">
+				<div class="node-connector"></div>
+				
+				<div class="module-container">
+					<div class="unit-label">Unit 2</div>
+					<!-- Main unit circle -->
+					<button class="module-node main-module" type="button" data-unit="2">
+						<i class="fa-solid fa-calculator"></i>
+					</button>
+				</div>
+				
+				<div class="node-label">
+					<h3>Numbers</h3>
+					<p>Count from uno to cento</p>
+				</div>
+			</div>
+
+			<!-- Unit 3: Food -->
+			<div class="path-node" data-module="3" data-status="unlocked">
+				<div class="node-connector"></div>
+				
+				<div class="module-container">
+					<div class="unit-label">Unit 3</div>
+					<!-- Main unit circle -->
+					<button class="module-node main-module" type="button" data-unit="3">
+						<i class="fa-solid fa-pizza-slice"></i>
+					</button>
+				</div>
+				
+				<div class="node-label">
+					<h3>Food</h3>
+					<p>Italian cuisine vocabulary</p>
+				</div>
+			</div>
+
+			<div class="path-node" data-module="4" data-status="locked">
+				<div class="node-connector"></div>
+				
+				<div class="module-container">
+					<div class="unit-label">Unit 4</div>
+					<button class="module-node" type="button" disabled>
+						<i class="fa-solid fa-plane"></i>
+						<div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+					</button>
+				</div>
+				
+				<div class="node-label">
+					<h3>Travel</h3>
+					<p>Ways to navigate</p>
+				</div>
+			</div>
+
+			<div class="path-node" data-module="5" data-status="locked">
+				<div class="node-connector"></div>
+				
+				<div class="module-container">
+					<div class="unit-label">Unit 5</div>
+					<button class="module-node" type="button" disabled>
+						<i class="fa-solid fa-people-group"></i>
+						<div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+					</button>
+				</div>
+				
+				<div class="node-label">
+					<h3>Family</h3>
+					<p>Talk about your loved ones</p>
+				</div>
+			</div>
+
+			<div class="path-node" data-module="6" data-status="locked">
+				<div class="node-connector"></div>
+				
+				<div class="module-container">
+					<div class="unit-label">Unit 6</div>
+					<button class="module-node" type="button" disabled>
+						<i class="fa-solid fa-cart-shopping"></i>
+						<div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+					</button>
+				</div>
+				
+				<div class="node-label">
+					<h3>Verbs</h3>
+					<p>Action words in Italian</p>
+				</div>
+			</div>
+		</main>
+
+		<!-- Decorative swooshes (same as homepage) -->
+		<svg class="swoosh swoosh-red" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+		  <path d="M10 120 Q60 60, 140 80 T200 40" stroke="#e63946" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+		</svg>
+		<svg class="swoosh swoosh-green" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+		  <path d="M20 50 Q80 100, 160 70 T200 120" stroke="#06c258" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+		</svg>
+		<svg class="swoosh swoosh-red swoosh--large swoosh-top-left strokethick" data-delay="0" viewBox="0 0 300 220" aria-hidden="true" focusable="false">
+		  <path d="M12 160 Q90 70, 220 100 T300 50" stroke="#e63946" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.9"/>
+		</svg>
+		<svg class="swoosh swoosh-green swoosh--small swoosh-center-right strokelight" data-delay="250" viewBox="0 0 180 180" aria-hidden="true" focusable="false">
+		  <path d="M20 30 Q70 120, 150 80 T180 140" stroke="#06c258" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+		</svg>
+	</div>
+	<script src="modules.js"></script>
+</body>
+</html>

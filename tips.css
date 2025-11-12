@@ -1,0 +1,341 @@
+/* Base layout - matching site style */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+	background: #fff;
+	font-family: 'Patrick Hand', cursive;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.tips-page {
+	position: relative;
+	min-height: 100vh;
+	padding: 2rem 5vw 4rem;
+	background: linear-gradient(135deg, #fefefe 0%, #f8f8f8 50%, #fefefe 100%);
+	background-attachment: fixed;
+}
+
+/* Header */
+.tips-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	opacity: 0;
+	animation: fadeIn 800ms cubic-bezier(.22,.98,.28,1) 100ms forwards;
+}
+
+.tips-header h1 {
+	font-family: 'Baloo 2', cursive;
+	font-size: 2rem;
+	font-weight: 600;
+	color: #000;
+	margin: 0;
+}
+
+.header-spacer {
+	width: 3rem;
+}
+
+.back-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	border: 3px solid rgba(0,0,0,0.85);
+	border-radius: 50%;
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+	box-shadow: 0 4px 0 rgba(0,0,0,0.8);
+}
+
+.back-btn:hover {
+	background: #f9f9f9;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.back-btn:active {
+	transform: translateY(2px);
+	box-shadow: 0 2px 0 rgba(0,0,0,0.6);
+}
+
+/* Main content */
+.tips-content {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Introduction card */
+.intro-card {
+	background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+	border: 3px solid rgba(0,0,0,0.85);
+	border-radius: 20px;
+	padding: 2rem;
+	text-align: center;
+	box-shadow: 0 6px 0 rgba(0,0,0,0.8);
+	margin-bottom: 2rem;
+	opacity: 0;
+	animation: fadeInUp 600ms cubic-bezier(.22,.98,.28,1) 200ms forwards;
+}
+
+.intro-card h2 {
+	font-family: 'Baloo 2', cursive;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #000;
+	margin: 0 0 0.5rem 0;
+}
+
+.intro-card p {
+	font-size: 1.2rem;
+	color: #333;
+	margin: 0;
+}
+
+/* Tips list */
+.tips-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+/* Individual tip item */
+.tip-item {
+	background: #fff;
+	border: 3px solid rgba(0,0,0,0.85);
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 6px 0 rgba(0,0,0,0.8);
+	opacity: 0;
+	animation: fadeInUp 600ms cubic-bezier(.22,.98,.28,1) forwards;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tip-item:nth-child(1) { animation-delay: 300ms; }
+.tip-item:nth-child(2) { animation-delay: 360ms; }
+.tip-item:nth-child(3) { animation-delay: 420ms; }
+.tip-item:nth-child(4) { animation-delay: 480ms; }
+.tip-item:nth-child(5) { animation-delay: 540ms; }
+.tip-item:nth-child(6) { animation-delay: 600ms; }
+.tip-item:nth-child(7) { animation-delay: 660ms; }
+.tip-item:nth-child(8) { animation-delay: 720ms; }
+
+.tip-item:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+/* Tip header */
+.tip-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.5rem;
+	cursor: pointer;
+	user-select: none;
+}
+
+.tip-icon {
+	width: 50px;
+	height: 50px;
+	border: 3px solid rgba(0,0,0,0.85);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	color: #fff;
+	flex-shrink: 0;
+}
+
+.tip-header h3 {
+	font-family: 'Baloo 2', cursive;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: #000;
+	margin: 0;
+	flex: 1;
+}
+
+.expand-btn {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 2px solid rgba(0,0,0,0.2);
+	border-radius: 50%;
+	background: #f9f9f9;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	flex-shrink: 0;
+}
+
+.expand-btn i {
+	transition: transform 0.3s ease;
+}
+
+.tip-item.expanded .expand-btn i {
+	transform: rotate(180deg);
+}
+
+/* Tip content */
+.tip-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
+	padding: 0 1.5rem;
+	background: #f9f9f9;
+	border-top: 2px solid rgba(0,0,0,0.1);
+}
+
+.tip-item.expanded .tip-content {
+	max-height: 1000px;
+	padding: 1.5rem;
+}
+
+.tip-content p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #333;
+	margin: 0 0 1rem 0;
+}
+
+.tip-content ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1rem 0;
+}
+
+.tip-content li {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: #333;
+	padding-left: 1.5rem;
+	position: relative;
+}
+
+.tip-content li::before {
+	content: '→';
+	position: absolute;
+	left: 0;
+	color: #06c258;
+	font-weight: bold;
+}
+
+.tip-example {
+	background: #fff;
+	border: 2px solid rgba(0,0,0,0.1);
+	border-radius: 10px;
+	padding: 1rem;
+	margin-top: 1rem;
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: #333;
+}
+
+.tip-example strong {
+	color: #000;
+	font-family: 'Baloo 2', cursive;
+}
+
+/* Decorative swooshes */
+.swoosh {
+	position: fixed;
+	pointer-events: none;
+	z-index: 0;
+	opacity: 0;
+	animation: swooshDraw 1.2s cubic-bezier(.22,.98,.28,1) forwards;
+}
+
+.swoosh path {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: drawPath 1.8s cubic-bezier(.22,.98,.28,1) forwards;
+}
+
+.swoosh-red {
+	width: 280px;
+	top: 15%;
+	right: -3%;
+	animation-delay: 500ms;
+}
+
+.swoosh-red path { animation-delay: 500ms; }
+
+.swoosh-green {
+	width: 260px;
+	bottom: 10%;
+	left: -5%;
+	animation-delay: 800ms;
+}
+
+.swoosh-green path { animation-delay: 800ms; }
+
+/* Animations */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes swooshDraw {
+	to { opacity: 1; }
+}
+
+@keyframes drawPath {
+	to { stroke-dashoffset: 0; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.tips-header h1 {
+		font-size: 1.5rem;
+	}
+
+	.intro-card h2 {
+		font-size: 1.5rem;
+	}
+
+	.intro-card p {
+		font-size: 1rem;
+	}
+
+	.tip-header h3 {
+		font-size: 1.2rem;
+	}
+
+	.tip-icon {
+		width: 40px;
+		height: 40px;
+		font-size: 1.2rem;
+	}
+
+	.tip-content {
+		font-size: 1rem;
+	}
+
+	.swoosh {
+		display: none;
+	}
+}

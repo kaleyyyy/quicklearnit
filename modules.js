@@ -16,7 +16,7 @@
 			});
 		}
 
-		// Main module click: first click expands, second click navigates
+		// Main module click: first click expands to show lessons, collapse on click outside
 		document.querySelectorAll('.main-module').forEach(function(m){
 			m.addEventListener('click', function(e){
 				e.stopPropagation();
@@ -24,20 +24,40 @@
 				var pn = m.closest('.path-node');
 				if(!pn) return;
 
-				if(pn.classList.contains('expanded')){
-					// Second click navigates
-					window.location.href = 'lesson.html?module=' + encodeURIComponent(m.dataset.unit || '1');
-					return;
-				}
+				var isExpanded = pn.classList.contains('expanded');
 
-				// Collapse others
+				// Collapse all others
 				document.querySelectorAll('.path-node.expanded').forEach(function(o){
 					if(o !== pn) o.classList.remove('expanded');
 				});
 
-				// Expand this one
-				pn.classList.add('expanded');
+				// Toggle current
+				if (isExpanded) {
+					pn.classList.remove('expanded');
+				} else {
+					pn.classList.add('expanded');
+				}
 			});
+		});
+
+		// Sub lesson click: navigate to lesson
+		document.querySelectorAll('.sub-lesson').forEach(function(sl){
+			sl.addEventListener('click', function(e){
+				e.stopPropagation();
+				var lessonId = sl.dataset.lesson;
+				if(lessonId) {
+					window.location.href = 'lesson.html?lesson=' + encodeURIComponent(lessonId);
+				}
+			});
+		});
+
+		// Click outside to collapse
+		document.addEventListener('click', function(e) {
+			if (!e.target.closest('.path-node')) {
+				document.querySelectorAll('.path-node.expanded').forEach(function(pn){
+					pn.classList.remove('expanded');
+				});
+			}
 		});
 
 		// Tips modal functionality

@@ -22,6 +22,7 @@ const units = [
 function getProgressData() {
 	const defaultData = {
 		completedUnits: [],
+		completedLessons: [],
 		lessonsCompleted: 0,
 		streak: 0,
 		lastVisit: null,
@@ -29,7 +30,10 @@ function getProgressData() {
 	};
 	
 	const stored = localStorage.getItem('quicklearnit-progress');
-	return stored ? JSON.parse(stored) : defaultData;
+	const parsed = stored ? JSON.parse(stored) : defaultData;
+	if (!Array.isArray(parsed.completedLessons)) parsed.completedLessons = [];
+	parsed.lessonsCompleted = parsed.completedLessons.length; // derive
+	return parsed;
 }
 
 // Save progress data to localStorage
@@ -53,21 +57,27 @@ function loadProgress() {
 
 // Update overall progress circle and stats
 function updateOverallProgress(data) {
-	const totalUnits = 6;
-	const completedCount = data.completedUnits.length;
-	const percentage = Math.round((completedCount / totalUnits) * 100);
-	
+	// Prefer showing progress by lessons completed (more granular).
+	// Each unit contains an overview + 3 sub-lessons = 4 lessons per unit.
+	const lessonsPerUnit = 4;
+	const totalUnits = units.length || 6;
+	const totalLessons = totalUnits * lessonsPerUnit;
+	const completedLessonsCount = Array.isArray(data.completedLessons) ? data.completedLessons.length : 0;
+	const percentage = Math.round((completedLessonsCount / totalLessons) * 100);
+
 	// Update percentage text
 	document.querySelector('.stat-percentage').textContent = `${percentage}%`;
 	
 	// Update progress ring
 	const circumference = 2 * Math.PI * 50; // radius = 50
 	const offset = circumference - (percentage / 100) * circumference;
-	document.querySelector('.progress-ring-fill').style.strokeDashoffset = offset;
-	
-	// Update stats
-	document.getElementById('units-completed').textContent = `${completedCount} / ${totalUnits}`;
-	document.getElementById('lessons-completed').textContent = data.lessonsCompleted;
+	const ringFill = document.querySelector('.progress-ring-fill');
+	if (ringFill) ringFill.style.strokeDashoffset = offset;
+
+	// Update stats — keep units completed as a unit-level count, and lessons completed separately
+	const completedUnitsCount = Array.isArray(data.completedUnits) ? data.completedUnits.length : 0;
+	document.getElementById('units-completed').textContent = `${completedUnitsCount} / ${totalUnits}`;
+	document.getElementById('lessons-completed').textContent = completedLessonsCount;
 	
 	// Update streak
 	const streakText = data.streak > 0 ? `${data.streak} days 🔥` : '0 days';

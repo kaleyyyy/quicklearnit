@@ -906,6 +906,357 @@ const lessonData = {
 			correct: 0
 		}
 	]
+	,
+
+	// Unit 4 Main Module: Travel Overview
+	'travel-overview': [
+		{ // general situational phrase
+			type: 'multiple-choice',
+			question: 'What does "Dove si trova...?" mean?',
+			options: ['How much is it?', 'Where is ... located?', 'Who is there?', 'When does it open?'],
+			correct: 1
+		},
+		{ // polite navigation help
+			type: 'fill-blank',
+			sentence: '<blank> mi aiuti con la mappa?',
+			translation: 'Can you help me with the map?',
+			options: ['Puoi', 'Hai', 'Sei', 'Vai'],
+			correct: 0
+		},
+		{ // key travel vocab
+			type: 'flashcard',
+			cards: [
+				{ front: 'mappa', back: 'map', pronunciation: '/ˈmapːa/' },
+				{ front: 'biglietto', back: 'ticket', pronunciation: '/biʎˈʎetto/' },
+				{ front: 'fermata', back: 'stop (bus/tram)', pronunciation: '/ferˈmata/' },
+				{ front: 'viaggio', back: 'trip/journey', pronunciation: '/viˈadʒːo/' },
+				{ front: 'aeroporto', back: 'airport', pronunciation: '/aeroˈpɔrto/' }
+			]
+		},
+		{ // matching travel basics
+			type: 'matching',
+			pairs: [
+				{ italian: 'mappa', english: 'map' },
+				{ italian: 'biglietto', english: 'ticket' },
+				{ italian: 'fermata', english: 'stop' },
+				{ italian: 'viaggio', english: 'journey' }
+			]
+		},
+		{ // direction phrase
+			type: 'multiple-choice',
+			question: 'How do you ask for help finding the station?',
+			options: ['Dove è la stazione?', 'Quanto costa la stazione?', 'Chi è la stazione?', 'Quando sei la stazione?'],
+			correct: 0
+		},
+		{ // fill ticket purchase
+			type: 'fill-blank',
+			sentence: 'Vorrei un <blank> per Roma.',
+			translation: 'I would like a ticket to Rome.',
+			options: ['biglietto', 'viaggio', 'mappa', 'fermata'],
+			correct: 0
+		},
+		{ // understanding airport
+			type: 'multiple-choice',
+			question: 'What does "aeroporto" mean?',
+			options: ['Harbor', 'Airport', 'Highway', 'Bridge'],
+			correct: 1
+		},
+		{ // fill arriving
+			type: 'fill-blank',
+			sentence: 'Il <blank> parte alle nove.',
+			translation: 'The trip leaves at nine.',
+			options: ['viaggio', 'biglietto', 'mappa', 'fermata'],
+			correct: 0
+		},
+		{ // location clarity
+			type: 'multiple-choice',
+			question: 'Which word means a scheduled stop for public transport?',
+			options: ['fermata', 'chiave', 'camera', 'strada'],
+			correct: 0
+		},
+		{ // final reinforcement
+			type: 'fill-blank',
+			sentence: 'Ho bisogno della <blank> per orientarmi.',
+			translation: 'I need the map to orient myself.',
+			options: ['mappa', 'chiave', 'camera', 'valigia'],
+			correct: 0
+		}
+	],
+
+	// Unit 4 
+	'travel-directions': [
+		{ type: 'multiple-choice', question: 'What does "sinistra" mean?', options: ['Right', 'Left', 'Straight', 'Behind'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Gira a <blank> al semaforo.', translation: 'Turn left at the traffic light.', options: ['sinistra','destra','avanti','vicino'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'sinistra', back: 'left', pronunciation: '/siˈnistrɐ/' },
+			{ front: 'destra', back: 'right', pronunciation: '/ˈdɛstra/' },
+			{ front: 'dritto', back: 'straight', pronunciation: '/ˈdritto/' },
+			{ front: 'avanti', back: 'forward', pronunciation: '/aˈvanti/' },
+			{ front: 'vicino', back: 'near', pronunciation: '/viˈtʃino/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'destra', english: 'right' },
+			{ italian: 'sinistra', english: 'left' },
+			{ italian: 'avanti', english: 'forward' },
+			{ italian: 'vicino', english: 'near' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "straight ahead"?', options: ['Vai destra','Sempre dritto','Avanti vicino','Fermata dritto'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'La stazione è <blank> all’hotel.', translation: 'The station is near the hotel.', options: ['vicino','lontano','avanti','destra'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "lontano" mean?', options: ['Far','Slow','Near','Down'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Vai <blank> poi gira a destra.', translation: 'Go straight then turn right.', options: ['dritto','sinistra','vicino','lontano'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which word refers to a crossway where roads meet?', options: ['incrocio','fermata','stazione','valigia'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'L’<blank> è dopo il ponte.', translation: 'The intersection is after the bridge.', options: ['incrocio','avanti','biglietto','bagno'], correct: 0 }
+	],
+
+	// Unit 4 
+	'travel-transport': [
+		{ type: 'multiple-choice', question: 'What is "treno" in English?', options: ['Train','Tram','Track','Trip'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'La degli autobus è lì.', translation: 'The bus stop is there.', options: ['fermata','camera','chiave','strada'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'treno', back: 'train', pronunciation: '/ˈtrɛno/' },
+			{ front: 'autobus', back: 'bus', pronunciation: '/ˈautobus/' },
+			{ front: 'aereo', back: 'airplane', pronunciation: '/aˈɛreo/' },
+			{ front: 'taxi', back: 'taxi', pronunciation: '/ˈtaksi/' },
+			{ front: 'stazione', back: 'station', pronunciation: '/staˈtsjone/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'treno', english: 'train' },
+			{ italian: 'autobus', english: 'bus' },
+			{ italian: 'aereo', english: 'airplane' },
+			{ italian: 'taxi', english: 'taxi' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "station" in Italian?', options: ['fermata','stazione','strada','viaggio'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Prendo l’<blank> per Milano.', translation: 'I take the train to Milan.', options: ['treno','autobus','taxi','aereo'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which word means airplane?', options: ['aereo','aria','aeroporto','viaggio'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Cerco un <blank> libero.', translation: 'I look for a free taxi.', options: ['taxi','autobus','viaggio','biglietto'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "biglietteria" refer to?', options: ['Ticket office','Luggage','Runway','Parking'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'La <blank> è vicino alla stazione.', translation: 'The ticket office is near the station.', options: ['biglietteria','valigia','camera','prenotazione'], correct: 0 }
+	],
+
+	// Unit 4 Lesson 3: Accommodation
+	'travel-accommodation': [
+		{ type: 'multiple-choice', question: 'What is "hotel" in Italian?', options: ['ostello','albergo','fermata','viaggio'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Ho una <blank> per due notti.', translation: 'I have a reservation for two nights.', options: ['prenotazione','camera','chiave','valigia'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'albergo', back: 'hotel', pronunciation: '/alˈbɛrɡo/' },
+			{ front: 'ostello', back: 'hostel', pronunciation: '/osˈtɛllo/' },
+			{ front: 'prenotazione', back: 'reservation', pronunciation: '/prenoˈtsjone/' },
+			{ front: 'camera', back: 'room', pronunciation: '/ˈkamera/' },
+			{ front: 'chiave', back: 'key', pronunciation: '/ˈkjave/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'prenotazione', english: 'reservation' },
+			{ italian: 'camera', english: 'room' },
+			{ italian: 'chiave', english: 'key' },
+			{ italian: 'bagno', english: 'bathroom' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "room" in Italian?', options: ['camera','stanza','bagno','salotto'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Dov’è il <blank>?', translation: 'Where is the bathroom?', options: ['bagno','camera','chiave','ostello'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which word means key?', options: ['chiave','valigia','prenotazione','fermata'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'La <blank> è al terzo piano.', translation: 'The room is on the third floor.', options: ['camera','chiave','valigia','prenotazione'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "colazione" mean?', options: ['Breakfast','Dinner','Lunch','Snack'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'La <blank> è inclusa.', translation: 'Breakfast is included.', options: ['colazione','prenotazione','camera','chiave'], correct: 0 }
+	],
+
+	// Unit 5 
+	'family-overview': [
+		{ type: 'multiple-choice', question: 'What does "famiglia" mean?', options: ['Family','Famous','Farm','Female'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mia <blank> è grande.', translation: 'My family is big.', options: ['famiglia','sorella','zia','nonna'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'madre', back: 'mother', pronunciation: '/ˈmadre/' },
+			{ front: 'padre', back: 'father', pronunciation: '/ˈpadre/' },
+			{ front: 'fratello', back: 'brother', pronunciation: '/fraˈtɛllo/' },
+			{ front: 'sorella', back: 'sister', pronunciation: '/soˈrɛlla/' },
+			{ front: 'genitori', back: 'parents', pronunciation: '/dʒeniˈtori/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'madre', english: 'mother' },
+			{ italian: 'padre', english: 'father' },
+			{ italian: 'fratello', english: 'brother' },
+			{ italian: 'sorella', english: 'sister' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "parents" in Italian?', options: ['parenti','genitori','famiglia','nipoti'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Ho un <blank> maggiore.', translation: 'I have an older brother.', options: ['fratello','padre','cugino','zio'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "nonna" mean?', options: ['Aunt','Grandmother','Niece','Cousin'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'La <blank> cucina bene.', translation: 'Grandmother cooks well.', options: ['nonna','madre','zia','famiglia'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which word means uncle?', options: ['zio','cugino','nipote','marito'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mio <blank> lavora molto.', translation: 'My father works a lot.', options: ['padre','fratello','zio','cugino'], correct: 0 }
+	],
+
+	// Unit 5 
+	'family-members': [
+		{ type: 'multiple-choice', question: 'What is "cugino" in English?', options: ['Uncle','Cousin','Nephew','Brother'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Lei è mia <blank>.', translation: 'She is my sister.', options: ['sorella','madre','zia','nonna'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'zio', back: 'uncle', pronunciation: '/ˈdzio/' },
+			{ front: 'zia', back: 'aunt', pronunciation: '/ˈdzia/' },
+			{ front: 'cugino', back: 'cousin (m)', pronunciation: '/kuˈdʒino/' },
+			{ front: 'cugina', back: 'cousin (f)', pronunciation: '/kuˈdʒina/' },
+			{ front: 'nipote', back: 'grandchild / nephew / niece', pronunciation: '/niˈpote/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'zia', english: 'aunt' },
+			{ italian: 'zio', english: 'uncle' },
+			{ italian: 'cugino', english: 'cousin (m)' },
+			{ italian: 'cugina', english: 'cousin (f)' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "aunt" in Italian?', options: ['zia','cugina','nonna','madre'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mia <blank> è giovane.', translation: 'My aunt is young.', options: ['zia','cugina','nonna','madre'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "nipote" NOT mean?', options: ['Niece','Nephew','Grandmother','Grandchild'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'Il <blank> di mio zio è mio cugino.', translation: 'My uncle’s son is my cousin.', options: ['figlio','nipote','marito','padre'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which word means daughter?', options: ['figlia','figlio','famiglia','madre'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'La <blank> di mia zia è mia cugina.', translation: 'My aunt’s daughter is my female cousin.', options: ['figlia','nipote','madre','nonna'], correct: 0 }
+	],
+
+	// Unit 5 Lesson 2: Relationships
+	'family-relationships': [
+		{ type: 'multiple-choice', question: 'What does "marito" mean?', options: ['Husband','Fiancé','Brother','Parent'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Lei è mia <blank>.', translation: 'She is my wife.', options: ['moglie','sorella','zia','madre'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'marito', back: 'husband', pronunciation: '/maˈrito/' },
+			{ front: 'moglie', back: 'wife', pronunciation: '/ˈmoʎʎe/' },
+			{ front: 'fidanzato', back: 'boyfriend/fiancé', pronunciation: '/fidanˈtsato/' },
+			{ front: 'fidanzata', back: 'girlfriend/fiancée', pronunciation: '/fidanˈtsata/' },
+			{ front: 'matrimonio', back: 'marriage/wedding', pronunciation: '/matriˈmoɲɲo/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'marito', english: 'husband' },
+			{ italian: 'moglie', english: 'wife' },
+			{ italian: 'fidanzato', english: 'boyfriend' },
+			{ italian: 'fidanzata', english: 'girlfriend' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "girlfriend"?', options: ['fidanzata','moglie','nipote','cugina'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Il loro <blank> è in giugno.', translation: 'Their wedding is in June.', options: ['matrimonio','famiglia','marito','parenti'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "parenti" mean?', options: ['Relatives','Parents','Children','Cousins'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'I miei <blank> vivono lontano.', translation: 'My relatives live far away.', options: ['parenti','genitori','figli','nipoti'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which word means grandson or nephew?', options: ['nipote','marito','cugino','fratello'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mia <blank> è molto felice.', translation: 'My fiancée is very happy.', options: ['fidanzata','moglie','cugina','sorella'], correct: 0 }
+	],
+
+	// Unit 5 Lesson 3: Family Activities
+	'family-activities': [
+		{ type: 'multiple-choice', question: 'What does "festeggiare" mean?', options: ['To celebrate','To study','To sleep','To wash'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Domani <blank> il compleanno di nonno.', translation: 'Tomorrow we celebrate grandpa’s birthday.', options: ['festeggiamo','dormiamo','leggiamo','cuciniamo'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'festeggiare', back: 'to celebrate', pronunciation: '/festeˈdʒare/' },
+			{ front: 'visitare', back: 'to visit', pronunciation: '/viziˈtare/' },
+			{ front: 'raccontare', back: 'to tell (stories)', pronunciation: '/rakkonˈtare/' },
+			{ front: 'aiutare', back: 'to help', pronunciation: '/ajuˈtare/' },
+			{ front: 'passeggiare', back: 'to stroll', pronunciation: '/passeˈdʒare/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'visitare', english: 'to visit' },
+			{ italian: 'aiutare', english: 'to help' },
+			{ italian: 'passeggiare', english: 'to stroll' },
+			{ italian: 'festeggiare', english: 'to celebrate' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "to help" in Italian?', options: ['aiutare','avere','stare','parlare'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ci piace <blank> storie.', translation: 'We like to tell stories.', options: ['raccontare','leggere','scrivere','dormire'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which verb means to stroll?', options: ['passeggiare','riposare','correre','volare'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ogni sera <blank> un film.', translation: 'Every evening we watch a film.', options: ['guardiamo','festeggiamo','camminiamo','studiamo'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "raccontare" mean?', options: ['To tell','To cook','To arrive','To draw'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mi piace <blank> con la famiglia.', translation: 'I like to walk with the family.', options: ['passeggiare','dormire','scrivere','mangiare'], correct: 0 }
+	],
+
+	// Unit 6 Main Module: Verbs Overview
+	'verbs-overview': [
+		{ type: 'multiple-choice', question: 'What does "parlare" mean?', options: ['To speak','To sleep','To write','To arrive'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Io <blank> italiano.', translation: 'I speak Italian.', options: ['parlo','parla','parli','parlano'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'parlare', back: 'to speak', pronunciation: '/parˈlare/' },
+			{ front: 'mangiare', back: 'to eat', pronunciation: '/manˈdʒare/' },
+			{ front: 'andare', back: 'to go', pronunciation: '/anˈdare/' },
+			{ front: 'fare', back: 'to do/make', pronunciation: '/ˈfare/' },
+			{ front: 'essere', back: 'to be', pronunciation: '/ˈɛssere/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'parlare', english: 'to speak' },
+			{ italian: 'mangiare', english: 'to eat' },
+			{ italian: 'fare', english: 'to do' },
+			{ italian: 'andare', english: 'to go' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "I go" in Italian?', options: ['Io vado','Io vai','Io va','Io andiamo'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Noi <blank> pizza.', translation: 'We eat pizza.', options: ['mangiamo','mangia','mangio','mangiate'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which verb means "to be"?', options: ['essere','avere','venire','vedere'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Lui <blank> molto.', translation: 'He does a lot.', options: ['fa','fai','fanno','fare'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "avere" mean?', options: ['To have','To be','To come','To sleep'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Io <blank> fame.', translation: 'I am hungry (I have hunger).', options: ['ho','hai','ha','hanno'], correct: 0 }
+	],
+
+	// Unit 6 Lesson 1: Common Verbs
+	'verbs-common': [
+		{ type: 'multiple-choice', question: 'What is "vedere" in English?', options: ['To see','To say','To sit','To send'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Noi <blank> un film.', translation: 'We watch (see) a film.', options: ['vediamo','vedo','vede','vedete'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'vedere', back: 'to see', pronunciation: '/veˈdere/' },
+			{ front: 'prendere', back: 'to take', pronunciation: '/ˈprendere/' },
+			{ front: 'venire', back: 'to come', pronunciation: '/veˈnire/' },
+			{ front: 'dormire', back: 'to sleep', pronunciation: '/dorˈmire/' },
+			{ front: 'avere', back: 'to have', pronunciation: '/aˈvere/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'dormire', english: 'to sleep' },
+			{ italian: 'prendere', english: 'to take' },
+			{ italian: 'venire', english: 'to come' },
+			{ italian: 'vedere', english: 'to see' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "we sleep"?', options: ['dormiamo','dormite','dormi','dormono'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Loro <blank> tardi.', translation: 'They come late.', options: ['vengono','venite','viene','veniamo'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which verb means to take?', options: ['prendere','venire','vedere','dormire'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Io <blank> il treno.', translation: 'I take the train.', options: ['prendo','prendi','prende','prendiamo'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is the meaning of "vengo"?', options: ['I come','I see','I sleep','I take'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Tu <blank> fame?', translation: 'Are you hungry?', options: ['hai','ho','ha','hanno'], correct: 0 }
+	],
+
+	// Unit 6 Lesson 2: Daily Routine Verbs
+	'verbs-daily': [
+		{ type: 'multiple-choice', question: 'What does "svegliarsi" mean?', options: ['To wake up','To wash','To write','To go out'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Io mi <blank> alle sette.', translation: 'I wake up at seven.', options: ['sveglio','svegli','svegliamo','svegliate'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'svegliarsi', back: 'to wake up', pronunciation: '/zveʎˈʎarsi/' },
+			{ front: 'lavarsi', back: 'to wash oneself', pronunciation: '/laˈvarsi/' },
+			{ front: 'vestirsi', back: 'to get dressed', pronunciation: '/veˈstirsi/' },
+			{ front: 'studiare', back: 'to study', pronunciation: '/stuˈdjare/' },
+			{ front: 'lavorare', back: 'to work', pronunciation: '/lavoˈrare/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'studiare', english: 'to study' },
+			{ italian: 'lavorare', english: 'to work' },
+			{ italian: 'svegliarsi', english: 'to wake up' },
+			{ italian: 'vestirsi', english: 'to get dressed' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "we work"?', options: ['lavoriamo','lavorate','lavori','lavora'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ti <blank> alle otto?', translation: 'Do you wash (yourself) at eight?', options: ['lavi','lava','laviamo','lavate'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which verb means to study?', options: ['studiare','lavarsi','vestirsi','uscire'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Noi ci <blank> velocemente.', translation: 'We get dressed quickly.', options: ['vestiamo','vestite','vesti','vestono'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "uscire" mean?', options: ['To go out','To eat','To sleep','To read'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Esco e poi <blank> al lavoro.', translation: 'I go out and then go to work.', options: ['vado','vai','andiamo','va'], correct: 0 }
+	],
+
+	// Unit 6 Lesson 3: Past Tense Forms
+	'verbs-past': [
+		{ type: 'multiple-choice', question: 'What does "ho mangiato" mean?', options: ['I ate','I eat','I will eat','I am eating'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Sono <blank> al mercato.', translation: 'I went to the market.', options: ['andato','fatto','venuto','mangiato'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'ho parlato', back: 'I spoke', pronunciation: '/o parˈlato/' },
+			{ front: 'sono andato/a', back: 'I went', pronunciation: '/ˈsono anˈdato/' },
+			{ front: 'ho visto', back: 'I saw', pronunciation: '/o ˈvisto/' },
+			{ front: 'ho fatto', back: 'I did/made', pronunciation: '/o ˈfatto/' },
+			{ front: 'sono venuto/a', back: 'I came', pronunciation: '/ˈsono veˈnuto/' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'ho fatto', english: 'I did' },
+			{ italian: 'ho parlato', english: 'I spoke' },
+			{ italian: 'sono andato', english: 'I went' },
+			{ italian: 'ho visto', english: 'I saw' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "I slept"?', options: ['ho dormito','dormo','sono dormito','dormivo'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ho <blank> un libro.', translation: 'I read a book.', options: ['letto','scritto','visto','parlato'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which form means "I wrote"?', options: ['ho scritto','ho letto','ho preso','ho dormito'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ho <blank> il treno.', translation: 'I took the train.', options: ['preso','venuto','andato','fatto'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "sono venuto" mean?', options: ['I came','I saw','I went','I arrived later'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ho <blank> la città ieri.', translation: 'I saw the city yesterday.', options: ['visto','letto','parlato','fatto'], correct: 0 }
+	]
 };
 
 // State management
@@ -966,9 +1317,9 @@ function initLesson() {
 			'1': 'greetings-overview',
 			'2': 'numbers-overview',
 			'3': 'food-overview',
-			'4': 'travel-directions',
-			'5': 'family-members',
-			'6': 'verbs-common'
+			'4': 'travel-overview',
+			'5': 'family-overview',
+			'6': 'verbs-overview'
 		};
 		currentModuleId = unitMap[unitParam] || 'greetings-overview';
 	} else {
@@ -1004,7 +1355,8 @@ function renderQuestion(index) {
 	checkBtn.style.display = 'block';
 	checkBtn.textContent = 'Check';
 	checkBtn.disabled = true;
-	document.querySelector('.continue-btn').style.display = 'none';
+	// Hide all continue buttons (generic + flashcard variant)
+	document.querySelectorAll('.continue-btn').forEach(btn => btn.style.display = 'none');
 	selectedAnswer = null;
 	
 	// Render based on question type
@@ -1025,6 +1377,11 @@ function renderQuestion(index) {
 	
 	// Add TTS button after instruction
 	addTTSButton(question);
+
+	// Toggle a body-level class so CSS can adjust layout per mode (flashcard needs overlap)
+	if (document && document.body) {
+		document.body.classList.toggle('flashcard-mode', question.type === 'flashcard');
+	}
 }
 
 // Render fill in the blank
@@ -1152,9 +1509,8 @@ function renderFlashcard(question) {
 	// Setup card flip - click on the whole flashcard container
 	const flashcardContainer = mode.querySelector('.flashcard');
 	const flashcardClickHandler = (e) => {
-		// Don't flip if clicking on navigation buttons
-		if (e.target.closest('.flashcard-controls')) return;
-		
+		// Don't flip if clicking on navigation buttons or counter meta section
+		if (e.target.closest('.flashcard-controls') || e.target.closest('.flashcard-meta')) return;
 		flashcardContainer.classList.toggle('flipped');
 		isFlipped = !isFlipped;
 	};
@@ -1180,11 +1536,14 @@ function renderFlashcard(question) {
 	
 	mode.style.display = 'block';
 	
-	// For flashcards, change check button to "Continue" since no checking needed
+	// Flashcard mode: hide check button, show dedicated continue button in controls row
 	const checkBtn = document.querySelector('.check-btn');
-	checkBtn.textContent = 'Continue';
-	checkBtn.disabled = false;
-	checkBtn.style.display = 'block';
+	checkBtn.style.display = 'none';
+	const flashcardContinue = document.querySelector('.flashcard-continue-btn');
+	if (flashcardContinue) {
+		flashcardContinue.style.display = 'block';
+		flashcardContinue.disabled = false;
+	}
 }
 
 // Update flashcard content
@@ -1312,7 +1671,9 @@ function showFeedback(isCorrect) {
 	
 	// Switch buttons
 	document.querySelector('.check-btn').style.display = 'none';
-	document.querySelector('.continue-btn').style.display = 'block';
+	// Show generic continue (non-flashcard). Ensure we don't accidentally show flashcard version.
+	const genericContinue = document.querySelector('.lesson-actions .continue-btn');
+	if (genericContinue) genericContinue.style.display = 'block';
 }
 
 // Lose a heart (disabled - no hearts system)
@@ -1356,7 +1717,119 @@ function showCompletion() {
 	modal.querySelector('.completion-stats .stat:last-child .stat-value').textContent = 
 		`${accuracy}%`;
 	
+	// Persist progress to localStorage
+	saveLessonProgress(currentModuleId, accuracy);
+	
 	modal.style.display = 'flex';
+}
+
+// Save lesson completion to localStorage
+function saveLessonProgress(lessonKey, accuracy) {
+	try {
+		const storageKey = 'quicklearnit-progress';
+		const raw = localStorage.getItem(storageKey);
+		const data = raw ? JSON.parse(raw) : {
+			completedUnits: [],
+			completedLessons: [],
+			lessonsCompleted: 0,
+			streak: 0,
+			lastVisit: null,
+			activities: []
+		};
+
+		// ensure new field exists for legacy data
+		if (!Array.isArray(data.completedLessons)) data.completedLessons = [];
+
+		// Add lesson if new
+		if (!data.completedLessons.includes(lessonKey)) {
+			data.completedLessons.push(lessonKey);
+			data.lessonsCompleted = data.completedLessons.length;
+
+			// Activity log entry
+			data.activities = data.activities || [];
+			data.activities.push({
+				title: 'Completed lesson: ' + formatLessonTitle(lessonKey),
+				icon: pickLessonIcon(lessonKey),
+				accuracy: accuracy,
+				timestamp: Date.now()
+			});
+		}
+
+		// Update streak
+		updateProgressStreak(data);
+
+		// Unit auto-complete: if all lessons for a unit done, mark unit
+		const unitId = detectUnitFromLesson(lessonKey);
+		if (unitId) {
+			const unitLessons = getUnitLessonKeys(unitId);
+			const allDone = unitLessons.every(k => data.completedLessons.includes(k));
+			if (allDone && !data.completedUnits.includes(unitId)) {
+				data.completedUnits.push(unitId);
+				data.activities.push({
+					title: 'Completed unit ' + unitId,
+					icon: pickUnitIcon(unitId),
+					timestamp: Date.now()
+				});
+			}
+		}
+
+		localStorage.setItem(storageKey, JSON.stringify(data));
+	} catch (e) {
+		console.warn('Failed to save lesson progress', e);
+	}
+}
+
+function formatLessonTitle(key) {
+	// Convert key like 'greetings-basic' to 'Greetings Basic'
+	return key.split('-').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+}
+
+function pickLessonIcon(key) {
+	const mapping = {
+		greetings: 'fa-message',
+		numbers: 'fa-calculator',
+		food: 'fa-pizza-slice',
+		travel: 'fa-plane',
+		family: 'fa-people-group',
+		verbs: 'fa-cart-shopping'
+	};
+	const prefix = key.split('-')[0];
+	return mapping[prefix] || 'fa-circle-check';
+}
+
+function detectUnitFromLesson(key) {
+	const prefix = key.split('-')[0];
+	const map = { greetings: 1, numbers: 2, food: 3, travel: 4, family: 5, verbs: 6 };
+	return map[prefix] || null;
+}
+
+function getUnitLessonKeys(unitId) {
+	switch(String(unitId)) {
+		case '1': return ['greetings-overview','greetings-basic','greetings-intro','greetings-wellbeing'];
+		case '2': return ['numbers-overview','numbers-basic','numbers-advanced','numbers-time'];
+		case '3': return ['food-overview','food-produce','food-restaurant','food-drinks'];
+		case '4': return ['travel-directions','travel-transport','travel-accommodation'];
+		case '5': return ['family-members','family-relationships','family-activities'];
+		case '6': return ['verbs-common','verbs-daily','verbs-past'];
+		default: return [];
+	}
+}
+
+function pickUnitIcon(unitId) {
+	const map = { 1:'fa-message',2:'fa-calculator',3:'fa-pizza-slice',4:'fa-plane',5:'fa-people-group',6:'fa-cart-shopping'};
+	return map[unitId] || 'fa-flag-checkered';
+}
+
+function updateProgressStreak(data) {
+	const today = new Date().setHours(0,0,0,0);
+	const lastVisit = data.lastVisit ? new Date(data.lastVisit).setHours(0,0,0,0) : null;
+	if (!lastVisit) {
+		data.streak = 1;
+	} else {
+		const diffDays = Math.floor((today - lastVisit)/86400000);
+		if (diffDays === 1) data.streak += 1; else if (diffDays > 1) data.streak = 1; // same day -> unchanged
+	}
+	data.lastVisit = Date.now();
 }
 
 // Add TTS button dynamically below instruction
@@ -1381,7 +1854,7 @@ function addTTSButton(question) {
 	ttsBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i> Listen';
 	ttsBtn.onclick = speakItalian;
 	
-	// Insert after instruction
+	// Insert only the TTS button (handwriting feature removed per request)
 	instruction.insertAdjacentElement('afterend', ttsBtn);
 }
 
@@ -1417,16 +1890,20 @@ function speakItalian() {
 		utterance.lang = 'it-IT'; // Set language to Italian
 		utterance.rate = 0.8; // Slightly slower for learning
 		utterance.pitch = 1;
-		
+
+		// Handwriting visual was removed; no synced text reveal
+
 		const ttsBtn = document.getElementById('tts-btn');
 		if (ttsBtn) {
 			ttsBtn.classList.add('speaking');
 			
 			utterance.onend = () => {
 				ttsBtn.classList.remove('speaking');
+				// stop handwriting animation when speech ends
+				if (handwritingEl) handwritingEl.classList.remove('playing');
 			};
 		}
-		
+
 		window.speechSynthesis.cancel(); // Cancel any ongoing speech
 		window.speechSynthesis.speak(utterance);
 	}
@@ -1437,5 +1914,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initLesson();
 	
 	document.querySelector('.check-btn').addEventListener('click', checkAnswer);
-	document.querySelector('.continue-btn').addEventListener('click', continueLesson);
+	// Attach listener to all continue buttons (generic + flashcard)
+	document.querySelectorAll('.continue-btn').forEach(btn => btn.addEventListener('click', continueLesson));
 });

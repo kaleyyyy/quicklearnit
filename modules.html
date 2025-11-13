@@ -4,22 +4,24 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Modules - QuickLearn Italian</title>
-	<!-- Google Fonts for handwritten & bubbly look -->
+	
 	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
-	<!-- Font Awesome -->
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<link rel="stylesheet" href="modules.css" />
 </head>
 <body>
 	<div class="modules-page">
-		<!-- Header with back button and user stats -->
+		
 		<header class="modules-header">
-			<a href="index.html" class="back-btn" aria-label="Back to home">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M19 12H5M12 19l-7-7 7-7"/>
-				</svg>
-			</a>
-			
+			<div class="header-left">
+				<a href="index.html" class="back-btn" aria-label="Back to home">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M19 12H5M12 19l-7-7 7-7"/>
+					</svg>
+				</a>
+				<div class="app-title">QuickLearn</div>
+			</div>
 			<div class="header-stats">
 				<a href="progress.html" class="stat-item progress-stat" aria-label="View progress">
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -41,7 +43,7 @@
 			</div>
 		</header>
 
-		<!-- Learning path container -->
+		
 		<main class="learning-path">
 			<!-- Unit 1: Greetings -->
 			<div class="path-node" data-module="1" data-status="unlocked">
@@ -49,12 +51,12 @@
 				
 				<div class="module-container">
 					<div class="unit-label">Unit 1</div>
-					<!-- Main unit circle -->
+					
 					<button class="module-node main-module" type="button" data-unit="1">
 						<i class="fa-solid fa-message"></i>
 					</button>
 					
-					<!-- Sub lessons (hidden by default) -->
+					
 					<div class="sub-lessons">
 						<button class="sub-lesson" data-lesson="1-1" title="Hello & Goodbye">
 							<i class="fa-solid fa-hand-wave"></i>
@@ -69,6 +71,7 @@
 				</div>
 				
 				<div class="node-label">
+					<div class="course-title">Learn Italian</div>
 					<h3>Greetings</h3>
 					<p>Common Phrases</p>
 				</div>
@@ -80,12 +83,12 @@
 				
 				<div class="module-container">
 					<div class="unit-label">Unit 2</div>
-					<!-- Main unit circle -->
+					
 					<button class="module-node main-module" type="button" data-unit="2">
 						<i class="fa-solid fa-calculator"></i>
 					</button>
 					
-					<!-- Sub lessons (hidden by default) -->
+					
 					<div class="sub-lessons">
 						<button class="sub-lesson" data-lesson="2-1" title="Numbers 1-10">
 							<i class="fa-solid fa-dice"></i>
@@ -111,12 +114,12 @@
 				
 				<div class="module-container">
 					<div class="unit-label">Unit 3</div>
-					<!-- Main unit circle -->
+					
 					<button class="module-node main-module" type="button" data-unit="3">
 						<i class="fa-solid fa-pizza-slice"></i>
 					</button>
 					
-					<!-- Sub lessons (hidden by default) -->
+					
 					<div class="sub-lessons">
 						<button class="sub-lesson" data-lesson="3-1" title="Fruits & Vegetables">
 							<i class="fa-solid fa-apple-whole"></i>
@@ -132,19 +135,29 @@
 				
 				<div class="node-label">
 					<h3>Food</h3>
-					<p>Italian cuisine vocabulary</p>
+					<p>Italian cuisine</p>
 				</div>
 			</div>
 
-			<div class="path-node" data-module="4" data-status="locked">
+			<div class="path-node" data-module="4" data-status="unlocked">
 				<div class="node-connector"></div>
 				
 				<div class="module-container">
 					<div class="unit-label">Unit 4</div>
-					<button class="module-node" type="button" disabled>
+					<button class="module-node main-module" type="button" data-unit="4">
 						<i class="fa-solid fa-plane"></i>
-						<div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
 					</button>
+					<div class="sub-lessons">
+						<button class="sub-lesson" data-lesson="4-1" title="Directions">
+							<i class="fa-solid fa-location-arrow"></i>
+						</button>
+						<button class="sub-lesson" data-lesson="4-2" title="Transport">
+							<i class="fa-solid fa-bus"></i>
+						</button>
+						<button class="sub-lesson" data-lesson="4-3" title="Accommodation">
+							<i class="fa-solid fa-bed"></i>
+						</button>
+					</div>
 				</div>
 				
 				<div class="node-label">
@@ -153,32 +166,52 @@
 				</div>
 			</div>
 
-			<div class="path-node" data-module="5" data-status="locked">
+			<div class="path-node" data-module="5" data-status="unlocked">
 				<div class="node-connector"></div>
 				
 				<div class="module-container">
 					<div class="unit-label">Unit 5</div>
-					<button class="module-node" type="button" disabled>
+					<button class="module-node main-module" type="button" data-unit="5">
 						<i class="fa-solid fa-people-group"></i>
-						<div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
 					</button>
+					<div class="sub-lessons">
+						<button class="sub-lesson" data-lesson="5-1" title="Members">
+							<i class="fa-solid fa-user-group"></i>
+						</button>
+						<button class="sub-lesson" data-lesson="5-2" title="Relationships">
+							<i class="fa-solid fa-heart"></i>
+						</button>
+						<button class="sub-lesson" data-lesson="5-3" title="Activities">
+							<i class="fa-solid fa-children"></i>
+						</button>
+					</div>
 				</div>
 				
 				<div class="node-label">
-					<h3>Family</h3>
-					<p>Talk about your loved ones</p>
+					<h3>People</h3>
+					<p>Describe people </p>
 				</div>
 			</div>
 
-			<div class="path-node" data-module="6" data-status="locked">
+			<div class="path-node" data-module="6" data-status="unlocked">
 				<div class="node-connector"></div>
 				
 				<div class="module-container">
 					<div class="unit-label">Unit 6</div>
-					<button class="module-node" type="button" disabled>
+					<button class="module-node main-module" type="button" data-unit="6">
 						<i class="fa-solid fa-cart-shopping"></i>
-						<div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
 					</button>
+					<div class="sub-lessons">
+						<button class="sub-lesson" data-lesson="6-1" title="Common Verbs">
+							<i class="fa-solid fa-comment-dots"></i>
+						</button>
+						<button class="sub-lesson" data-lesson="6-2" title="Daily Routine">
+							<i class="fa-solid fa-sun"></i>
+						</button>
+						<button class="sub-lesson" data-lesson="6-3" title="Past Tense">
+							<i class="fa-solid fa-clock-rotate-left"></i>
+						</button>
+					</div>
 				</div>
 				
 				<div class="node-label">
@@ -202,6 +235,7 @@
 		  <path d="M20 30 Q70 120, 150 80 T180 140" stroke="#06c258" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
 		</svg>
 	</div>
+
 	<script src="modules.js"></script>
 </body>
 </html>

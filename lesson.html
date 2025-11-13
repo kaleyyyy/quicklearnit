@@ -82,9 +82,14 @@
 					</div>
 				</div>
 				<div class="flashcard-controls">
-					<button class="prev-card-btn">← Previous</button>
-					<span class="card-counter"><span class="current-card">1</span> / <span class="total-cards">5</span></span>
-					<button class="next-card-btn">Next →</button>
+					<div class="flashcard-meta">
+						<span class="card-counter"><span class="current-card">1</span> / <span class="total-cards">5</span></span>
+					</div>
+					<div class="flashcard-buttons">
+						<button class="prev-card-btn">← Previous</button>
+						<button class="flashcard-continue-btn continue-btn" style="display: none;">Continue</button>
+						<button class="next-card-btn">Next →</button>
+					</div>
 				</div>
 			</div>
 
@@ -119,7 +124,7 @@
 		<!-- Action buttons -->
 		<div class="lesson-actions">
 			<button class="check-btn">Check</button>
-			<button class="continue-btn" style="display: none;">Continue</button>
+			<button class="continue-btn" style="display:none;">Continue</button>
 		</div>
 	</main>
 

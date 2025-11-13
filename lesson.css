@@ -159,6 +159,8 @@ body.lesson-page {
 	}
 }
 
+/* (Removed handwriting reveal feature per user request) */
+
 /* Fill in the Blank */
 .question-text {
 	margin-bottom: 3rem;
@@ -193,6 +195,8 @@ body.lesson-page {
 	justify-content: center;
 	max-width: 600px;
 	margin: 0 auto;
+	/* ensure action buttons below don't overlap these options */
+	padding-bottom: 6rem;
 }
 
 .word-btn {
@@ -247,6 +251,7 @@ body.lesson-page {
 	gap: 1rem;
 	max-width: 600px;
 	margin: 0 auto;
+	padding-bottom: 6rem;
 }
 
 .match-card {
@@ -293,7 +298,8 @@ body.lesson-page {
 /* Flashcard */
 .flashcard-container {
 	perspective: 1000px;
-	margin-bottom: 3rem;
+	/* reduce bottom spacing so action buttons can overlap the card */
+	margin-bottom: 0.5rem;
 }
 
 .flashcard {
@@ -361,11 +367,12 @@ body.lesson-page {
 
 .flashcard-controls {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	gap: 2rem;
-	max-width: 500px;
-	margin: 0 auto 2rem auto;
+	justify-content: flex-start;
+	gap: 1.1rem;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .prev-card-btn,
@@ -380,6 +387,8 @@ body.lesson-page {
 	transition: all 0.2s ease;
 	box-shadow: 0 4px 0 #000;
 	font-weight: 600;
+	/* larger min-width gives Prev/Next more visual weight and space from center */
+	min-width: 160px;
 }
 
 .prev-card-btn:hover,
@@ -389,9 +398,14 @@ body.lesson-page {
 }
 
 .card-counter {
-	font-size: 1.2rem;
-	color: #666;
+	font-size: 1.05rem;
+	color: #000;
 	font-weight: 600;
+	background:#fff;
+	padding:0.45rem 1rem;
+	border:3px solid #000;
+	border-radius:1rem;
+	box-shadow:0 4px 0 #000;
 }
 
 .current-card {
@@ -416,6 +430,8 @@ body.lesson-page {
 	gap: 1rem;
 	max-width: 600px;
 	margin: 0 auto;
+	/* reserve space for action buttons so they don't cover options */
+	padding-bottom: 6rem;
 }
 
 .choice-btn {
@@ -517,7 +533,87 @@ body.lesson-page {
 .lesson-actions {
 	display: flex;
 	justify-content: center;
+	/* default spacing for non-flashcard modes */
 	margin-top: 2rem;
+	position: relative;
+	z-index: 20; /* ensure buttons sit above 3D flashcard stacking context */
+}
+
+/* When flashcard mode is active, pull the actions up to overlap the card */
+body.flashcard-mode .lesson-actions {
+	/* place actions below the card with breathing room */
+	/* increase spacing so buttons never overlap the flashcard */
+	margin-top: 3.6rem;
+	gap: 1.6rem;
+}
+
+/* Slightly raise the flashcard and shrink the instruction spacing so the card sits higher on the page */
+body.flashcard-mode .instruction {
+	/* reduce the space under the heading */
+	margin-bottom: 0.6rem;
+}
+
+body.flashcard-mode .flashcard-container {
+	margin-top: -2.2rem;
+	margin-bottom: 2.2rem;
+}
+
+/* Move the whole flashcard area up (instruction, TTS, card) so the visual grouping sits higher.
+   Keeps other modes unaffected. */
+body.flashcard-mode .game-mode-container {
+	justify-content: flex-start; /* align items toward top */
+	/* reduce top padding so the whole flashcard grouping sits higher on the page */
+	padding-top: 1rem;
+}
+
+/* Nudge the Listen button up a little in flashcard mode so it sits closer to the heading */
+body.flashcard-mode .tts-btn {
+	margin-bottom: 0.6rem;
+	transform: translateY(-6px);
+}
+
+/* Ensure Listen button and heading are on top of the flashcard (avoid being obscured) */
+body.flashcard-mode .game-mode-container,
+body.flashcard-mode .instruction,
+body.flashcard-mode .tts-btn {
+	position: relative;
+	z-index: 40;
+}
+
+/* Keep the flashcard itself below the heading/listen button in stacking order */
+body.flashcard-mode .flashcard {
+	position: relative;
+	z-index: 30;
+}
+
+/* Slightly tighten spacing for the flashcard controls (prev/next and counter)
+   so the counter (eg. 1/5) sits closer to the card in flashcard mode */
+.flashcard-buttons { display:flex; align-items:center; justify-content:center; gap:2.6rem; }
+.flashcard-buttons .prev-card-btn,
+.flashcard-buttons .flashcard-continue-btn,
+.flashcard-buttons .next-card-btn { min-width:160px; }
+
+/* Make sure the action buttons (Continue / Check) have a bit more visual separation
+   but remain close enough to the flashcard for comfortable interaction */
+body.flashcard-mode .lesson-actions {
+	display: none; /* hidden in flashcard mode; use integrated controls row */
+}
+
+/* Slightly reduce the flashcard height on small viewports so layout doesn't collide */
+@media (max-width: 600px) {
+	body.flashcard-mode .flashcard {
+		height: 260px;
+	}
+	body.flashcard-mode .flashcard-container {
+		margin-top: -3.6rem;
+		/* maintain extra bottom spacing on small screens */
+		margin-bottom: 4rem;
+	}
+
+	/* ensure action buttons are pushed further down on small screens too */
+	body.flashcard-mode .lesson-actions {
+		margin-top: 5rem;
+	}
 }
 
 .check-btn,

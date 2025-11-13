@@ -16,6 +16,8 @@ body {
 	background-attachment: fixed;
 }
 
+/* Frame removed for Modules page (previous decorative frame deleted) */
+
 /* Header */
 .modules-header {
 	display: flex;
@@ -610,6 +612,7 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+	/* No modules-page frame on small screens (frame removed) */
 	.path-node {
 		padding: 0 1rem;
 	}

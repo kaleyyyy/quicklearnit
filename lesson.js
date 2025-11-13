@@ -1807,9 +1807,9 @@ function getUnitLessonKeys(unitId) {
 		case '1': return ['greetings-overview','greetings-basic','greetings-intro','greetings-wellbeing'];
 		case '2': return ['numbers-overview','numbers-basic','numbers-advanced','numbers-time'];
 		case '3': return ['food-overview','food-produce','food-restaurant','food-drinks'];
-		case '4': return ['travel-directions','travel-transport','travel-accommodation'];
-		case '5': return ['family-members','family-relationships','family-activities'];
-		case '6': return ['verbs-common','verbs-daily','verbs-past'];
+		case '4': return ['travel-overview','travel-directions','travel-transport','travel-accommodation'];
+		case '5': return ['family-overview','family-members','family-relationships','family-activities'];
+		case '6': return ['verbs-overview','verbs-common','verbs-daily','verbs-past'];
 		default: return [];
 	}
 }

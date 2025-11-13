@@ -88,8 +88,36 @@ function displayUnitsBreakdown(data) {
 	const unitsList = document.getElementById('units-list');
 	unitsList.innerHTML = '';
 	
+	// Helper function to get lesson keys for each unit
+	function getUnitLessonKeys(unitId) {
+		switch(unitId) {
+			case 1: return ['greetings-overview','greetings-basic','greetings-intro','greetings-wellbeing'];
+			case 2: return ['numbers-overview','numbers-basic','numbers-advanced','numbers-time'];
+			case 3: return ['food-overview','food-produce','food-restaurant','food-drinks'];
+			case 4: return ['travel-overview','travel-directions','travel-transport','travel-accommodation'];
+			case 5: return ['family-overview','family-members','family-relationships','family-activities'];
+			case 6: return ['verbs-overview','verbs-common','verbs-daily','verbs-past'];
+			default: return [];
+		}
+	}
+	
 	units.forEach(unit => {
 		const isCompleted = data.completedUnits.includes(unit.id);
+		
+		// Calculate lesson progress for this unit
+		const unitLessons = getUnitLessonKeys(unit.id);
+		const completedCount = unitLessons.filter(lesson => data.completedLessons.includes(lesson)).length;
+		const totalCount = unitLessons.length;
+		const progressText = `${completedCount} / ${totalCount} lessons`;
+		
+		let statusText;
+		if (isCompleted) {
+			statusText = 'Completed ✓';
+		} else if (completedCount > 0) {
+			statusText = `In Progress (${progressText})`;
+		} else {
+			statusText = 'Not started';
+		}
 		
 		const unitItem = document.createElement('div');
 		unitItem.className = `unit-item ${isCompleted ? 'completed' : ''}`;
@@ -100,7 +128,7 @@ function displayUnitsBreakdown(data) {
 			</div>
 			<div class="unit-info">
 				<div class="unit-name">${unit.name}</div>
-				<div class="unit-status">${isCompleted ? 'Completed' : 'Not started'}</div>
+				<div class="unit-status">${statusText}</div>
 			</div>
 			${isCompleted ? '<i class="fa-solid fa-circle-check unit-check"></i>' : ''}
 		`;

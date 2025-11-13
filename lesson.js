@@ -18,11 +18,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Grazie', back: 'Thank you', pronunciation: '/ˈɡrattsje/' },
-				{ front: 'Prego', back: 'You\'re welcome', pronunciation: '/ˈprɛɡo/' },
-				{ front: 'Scusa', back: 'Excuse me/Sorry', pronunciation: '/ˈskuza/' },
-				{ front: 'Per favore', back: 'Please', pronunciation: '/per faˈvore/' },
-				{ front: 'Salve', back: 'Hello (formal)', pronunciation: '/ˈsalve/' }
+				{ front: 'Grazie', back: 'Thank you' },
+				{ front: 'Prego', back: 'You\'re welcome' },
+				{ front: 'Scusa', back: 'Excuse me/Sorry' },
+				{ front: 'Per favore', back: 'Please' },
+				{ front: 'Salve', back: 'Hello (formal)' }
 			]
 		},
 		{
@@ -93,11 +93,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Ciao', back: 'Hello/Bye', pronunciation: '/ˈtʃaʊ/' },
-				{ front: 'Arrivederci', back: 'Goodbye', pronunciation: '/arːiveˈdertʃi/' },
-				{ front: 'Buongiorno', back: 'Good morning', pronunciation: '/bwonˈdʒorno/' },
-				{ front: 'Buonasera', back: 'Good evening', pronunciation: '/bwonaˈsera/' },
-				{ front: 'Buonanotte', back: 'Good night', pronunciation: '/bwonaˈnotte/' }
+				{ front: 'Ciao', back: 'Hello/Bye' },
+				{ front: 'Arrivederci', back: 'Goodbye' },
+				{ front: 'Buongiorno', back: 'Good morning' },
+				{ front: 'Buonasera', back: 'Good evening' },
+				{ front: 'Buonanotte', back: 'Good night' }
 			]
 		},
 		{
@@ -168,11 +168,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Mi chiamo...', back: 'My name is...', pronunciation: '/mi ˈkjamo/' },
-				{ front: 'Piacere', back: 'Nice to meet you', pronunciation: '/pjaˈtʃere/' },
-				{ front: 'Come ti chiami?', back: 'What is your name?', pronunciation: '/ˈkome ti ˈkjami/' },
-				{ front: 'Sono di...', back: 'I am from...', pronunciation: '/ˈsono di/' },
-				{ front: 'E tu?', back: 'And you?', pronunciation: '/e tu/' }
+				{ front: 'Mi chiamo...', back: 'My name is...' },
+				{ front: 'Piacere', back: 'Nice to meet you' },
+				{ front: 'Come ti chiami?', back: 'What is your name?' },
+				{ front: 'Sono di...', back: 'I am from...' },
+				{ front: 'E tu?', back: 'And you?' }
 			]
 		},
 		{
@@ -243,11 +243,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Come stai?', back: 'How are you?', pronunciation: '/ˈkome ˈstai/' },
-				{ front: 'Bene', back: 'Well/Good', pronunciation: '/ˈbɛne/' },
-				{ front: 'Male', back: 'Bad', pronunciation: '/ˈmale/' },
-				{ front: 'Così così', back: 'So-so', pronunciation: '/koˈsi koˈsi/' },
-				{ front: 'Molto bene', back: 'Very well', pronunciation: '/ˈmolto ˈbɛne/' }
+				{ front: 'Come stai?', back: 'How are you?' },
+				{ front: 'Bene', back: 'Well/Good' },
+				{ front: 'Male', back: 'Bad' },
+				{ front: 'Così così', back: 'So-so' },
+				{ front: 'Molto bene', back: 'Very well' }
 			]
 		},
 		{
@@ -318,11 +318,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'zero', back: 'zero', pronunciation: '/ˈdzɛro/' },
-				{ front: 'primo', back: 'first', pronunciation: '/ˈprimo/' },
-				{ front: 'secondo', back: 'second', pronunciation: '/seˈkondo/' },
-				{ front: 'terzo', back: 'third', pronunciation: '/ˈtɛrtso/' },
-				{ front: 'ultimo', back: 'last', pronunciation: '/ˈultimo/' }
+				{ front: 'zero', back: 'zero' },
+				{ front: 'primo', back: 'first' },
+				{ front: 'secondo', back: 'second' },
+				{ front: 'terzo', back: 'third' },
+				{ front: 'ultimo', back: 'last' }
 			]
 		},
 		{
@@ -393,16 +393,16 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'uno', back: 'one', pronunciation: '/ˈuno/' },
-				{ front: 'due', back: 'two', pronunciation: '/ˈdue/' },
-				{ front: 'tre', back: 'three', pronunciation: '/tre/' },
-				{ front: 'quattro', back: 'four', pronunciation: '/ˈkwattro/' },
-				{ front: 'cinque', back: 'five', pronunciation: '/ˈtʃinkwe/' },
-				{ front: 'sei', back: 'six', pronunciation: '/sɛi/' },
-				{ front: 'sette', back: 'seven', pronunciation: '/ˈsette/' },
-				{ front: 'otto', back: 'eight', pronunciation: '/ˈɔtto/' },
-				{ front: 'nove', back: 'nine', pronunciation: '/ˈnɔve/' },
-				{ front: 'dieci', back: 'ten', pronunciation: '/ˈdjɛtʃi/' }
+				{ front: 'uno', back: 'one' },
+				{ front: 'due', back: 'two' },
+				{ front: 'tre', back: 'three' },
+				{ front: 'quattro', back: 'four' },
+				{ front: 'cinque', back: 'five' },
+				{ front: 'sei', back: 'six' },
+				{ front: 'sette', back: 'seven' },
+				{ front: 'otto', back: 'eight' },
+				{ front: 'nove', back: 'nine' },
+				{ front: 'dieci', back: 'ten' }
 			]
 		},
 		{
@@ -473,12 +473,12 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'undici', back: 'eleven', pronunciation: '/ˈunditʃi/' },
-				{ front: 'quindici', back: 'fifteen', pronunciation: '/ˈkwinditʃi/' },
-				{ front: 'venti', back: 'twenty', pronunciation: '/ˈventi/' },
-				{ front: 'trenta', back: 'thirty', pronunciation: '/ˈtrenta/' },
-				{ front: 'cinquanta', back: 'fifty', pronunciation: '/tʃinkˈkwanta/' },
-				{ front: 'cento', back: 'one hundred', pronunciation: '/ˈtʃɛnto/' }
+				{ front: 'undici', back: 'eleven' },
+				{ front: 'quindici', back: 'fifteen' },
+				{ front: 'venti', back: 'twenty' },
+				{ front: 'trenta', back: 'thirty' },
+				{ front: 'cinquanta', back: 'fifty' },
+				{ front: 'cento', back: 'one hundred' }
 			]
 		},
 		{
@@ -549,11 +549,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Che ore sono?', back: 'What time is it?', pronunciation: '/ke ˈɔre ˈsono/' },
-				{ front: 'È l\'una', back: 'It is one o\'clock', pronunciation: '/ɛ ˈluna/' },
-				{ front: 'Sono le due', back: 'It is two o\'clock', pronunciation: '/ˈsono le ˈdue/' },
-				{ front: 'Mezzogiorno', back: 'Noon', pronunciation: '/mɛddzoˈdʒorno/' },
-				{ front: 'Mezzanotte', back: 'Midnight', pronunciation: '/mɛdddzaˈnɔtte/' }
+				{ front: 'Che ore sono?', back: 'What time is it?' },
+				{ front: 'È l\'una', back: 'It is one o\'clock' },
+				{ front: 'Sono le due', back: 'It is two o\'clock' },
+				{ front: 'Mezzogiorno', back: 'Noon' },
+				{ front: 'Mezzanotte', back: 'Midnight' }
 			]
 		},
 		{
@@ -624,11 +624,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Fame', back: 'Hunger', pronunciation: '/ˈfame/' },
-				{ front: 'Sete', back: 'Thirst', pronunciation: '/ˈsete/' },
-				{ front: 'Delizioso', back: 'Delicious', pronunciation: '/deliˈtsjoso/' },
-				{ front: 'Piccante', back: 'Spicy', pronunciation: '/pikˈkante/' },
-				{ front: 'Dolce', back: 'Sweet', pronunciation: '/ˈdoltʃe/' }
+				{ front: 'Fame', back: 'Hunger' },
+				{ front: 'Sete', back: 'Thirst' },
+				{ front: 'Delizioso', back: 'Delicious' },
+				{ front: 'Piccante', back: 'Spicy' },
+				{ front: 'Dolce', back: 'Sweet' }
 			]
 		},
 		{
@@ -699,12 +699,12 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'mela', back: 'apple', pronunciation: '/ˈmɛla/' },
-				{ front: 'banana', back: 'banana', pronunciation: '/baˈnana/' },
-				{ front: 'arancia', back: 'orange', pronunciation: '/aˈrantʃa/' },
-				{ front: 'pomodoro', back: 'tomato', pronunciation: '/pomoˈdɔro/' },
-				{ front: 'insalata', back: 'lettuce/salad', pronunciation: '/insaˈlata/' },
-				{ front: 'carota', back: 'carrot', pronunciation: '/kaˈrɔta/' }
+				{ front: 'mela', back: 'apple' },
+				{ front: 'banana', back: 'banana' },
+				{ front: 'arancia', back: 'orange' },
+				{ front: 'pomodoro', back: 'tomato' },
+				{ front: 'insalata', back: 'lettuce/salad' },
+				{ front: 'carota', back: 'carrot' }
 			]
 		},
 		{
@@ -775,11 +775,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Vorrei...', back: 'I would like...', pronunciation: '/vorˈrɛi/' },
-				{ front: 'Il conto', back: 'The bill/check', pronunciation: '/il ˈkonto/' },
-				{ front: 'Il menu', back: 'The menu', pronunciation: '/il meˈnu/' },
-				{ front: 'Acqua', back: 'Water', pronunciation: '/ˈakkwa/' },
-				{ front: 'Vino', back: 'Wine', pronunciation: '/ˈvino/' }
+				{ front: 'Vorrei...', back: 'I would like...' },
+				{ front: 'Il conto', back: 'The bill/check' },
+				{ front: 'Il menu', back: 'The menu' },
+				{ front: 'Acqua', back: 'Water' },
+				{ front: 'Vino', back: 'Wine' }
 			]
 		},
 		{
@@ -850,11 +850,11 @@ const lessonData = {
 		{
 			type: 'flashcard',
 			cards: [
-				{ front: 'Caffè', back: 'Coffee', pronunciation: '/kafˈfɛ/' },
-				{ front: 'Tè', back: 'Tea', pronunciation: '/tɛ/' },
-				{ front: 'Latte', back: 'Milk', pronunciation: '/ˈlatte/' },
-				{ front: 'Gelato', back: 'Ice cream', pronunciation: '/dʒeˈlato/' },
-				{ front: 'Tiramisù', back: 'Tiramisu', pronunciation: '/tiramiˈsu/' }
+				{ front: 'Caffè', back: 'Coffee' },
+				{ front: 'Tè', back: 'Tea' },
+				{ front: 'Latte', back: 'Milk' },
+				{ front: 'Gelato', back: 'Ice cream' },
+				{ front: 'Tiramisù', back: 'Tiramisu' }
 			]
 		},
 		{
@@ -926,11 +926,11 @@ const lessonData = {
 		{ // key travel vocab
 			type: 'flashcard',
 			cards: [
-				{ front: 'mappa', back: 'map', pronunciation: '/ˈmapːa/' },
-				{ front: 'biglietto', back: 'ticket', pronunciation: '/biʎˈʎetto/' },
-				{ front: 'fermata', back: 'stop (bus/tram)', pronunciation: '/ferˈmata/' },
-				{ front: 'viaggio', back: 'trip/journey', pronunciation: '/viˈadʒːo/' },
-				{ front: 'aeroporto', back: 'airport', pronunciation: '/aeroˈpɔrto/' }
+				{ front: 'mappa', back: 'map' },
+				{ front: 'biglietto', back: 'ticket' },
+				{ front: 'fermata', back: 'stop (bus/tram)' },
+				{ front: 'viaggio', back: 'trip/journey' },
+				{ front: 'aeroporto', back: 'airport' }
 			]
 		},
 		{ // matching travel basics
@@ -988,11 +988,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What does "sinistra" mean?', options: ['Right', 'Left', 'Straight', 'Behind'], correct: 1 },
 		{ type: 'fill-blank', sentence: 'Gira a <blank> al semaforo.', translation: 'Turn left at the traffic light.', options: ['sinistra','destra','avanti','vicino'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'sinistra', back: 'left', pronunciation: '/siˈnistrɐ/' },
-			{ front: 'destra', back: 'right', pronunciation: '/ˈdɛstra/' },
-			{ front: 'dritto', back: 'straight', pronunciation: '/ˈdritto/' },
-			{ front: 'avanti', back: 'forward', pronunciation: '/aˈvanti/' },
-			{ front: 'vicino', back: 'near', pronunciation: '/viˈtʃino/' }
+			{ front: 'sinistra', back: 'left' },
+			{ front: 'destra', back: 'right' },
+			{ front: 'dritto', back: 'straight' },
+			{ front: 'avanti', back: 'forward' },
+			{ front: 'vicino', back: 'near' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'destra', english: 'right' },
@@ -1013,11 +1013,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What is "treno" in English?', options: ['Train','Tram','Track','Trip'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'La degli autobus è lì.', translation: 'The bus stop is there.', options: ['fermata','camera','chiave','strada'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'treno', back: 'train', pronunciation: '/ˈtrɛno/' },
-			{ front: 'autobus', back: 'bus', pronunciation: '/ˈautobus/' },
-			{ front: 'aereo', back: 'airplane', pronunciation: '/aˈɛreo/' },
-			{ front: 'taxi', back: 'taxi', pronunciation: '/ˈtaksi/' },
-			{ front: 'stazione', back: 'station', pronunciation: '/staˈtsjone/' }
+			{ front: 'treno', back: 'train' },
+			{ front: 'autobus', back: 'bus' },
+			{ front: 'aereo', back: 'airplane' },
+			{ front: 'taxi', back: 'taxi' },
+			{ front: 'stazione', back: 'station' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'treno', english: 'train' },
@@ -1038,11 +1038,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What is "hotel" in Italian?', options: ['ostello','albergo','fermata','viaggio'], correct: 1 },
 		{ type: 'fill-blank', sentence: 'Ho una <blank> per due notti.', translation: 'I have a reservation for two nights.', options: ['prenotazione','camera','chiave','valigia'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'albergo', back: 'hotel', pronunciation: '/alˈbɛrɡo/' },
-			{ front: 'ostello', back: 'hostel', pronunciation: '/osˈtɛllo/' },
-			{ front: 'prenotazione', back: 'reservation', pronunciation: '/prenoˈtsjone/' },
-			{ front: 'camera', back: 'room', pronunciation: '/ˈkamera/' },
-			{ front: 'chiave', back: 'key', pronunciation: '/ˈkjave/' }
+			{ front: 'albergo', back: 'hotel' },
+			{ front: 'ostello', back: 'hostel' },
+			{ front: 'prenotazione', back: 'reservation' },
+			{ front: 'camera', back: 'room' },
+			{ front: 'chiave', back: 'key' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'prenotazione', english: 'reservation' },
@@ -1063,11 +1063,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What does "famiglia" mean?', options: ['Family','Famous','Farm','Female'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Mia <blank> è grande.', translation: 'My family is big.', options: ['famiglia','sorella','zia','nonna'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'madre', back: 'mother', pronunciation: '/ˈmadre/' },
-			{ front: 'padre', back: 'father', pronunciation: '/ˈpadre/' },
-			{ front: 'fratello', back: 'brother', pronunciation: '/fraˈtɛllo/' },
-			{ front: 'sorella', back: 'sister', pronunciation: '/soˈrɛlla/' },
-			{ front: 'genitori', back: 'parents', pronunciation: '/dʒeniˈtori/' }
+			{ front: 'madre', back: 'mother' },
+			{ front: 'padre', back: 'father' },
+			{ front: 'fratello', back: 'brother' },
+			{ front: 'sorella', back: 'sister' },
+			{ front: 'genitori', back: 'parents' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'madre', english: 'mother' },
@@ -1088,11 +1088,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What is "cugino" in English?', options: ['Uncle','Cousin','Nephew','Brother'], correct: 1 },
 		{ type: 'fill-blank', sentence: 'Lei è mia <blank>.', translation: 'She is my sister.', options: ['sorella','madre','zia','nonna'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'zio', back: 'uncle', pronunciation: '/ˈdzio/' },
-			{ front: 'zia', back: 'aunt', pronunciation: '/ˈdzia/' },
-			{ front: 'cugino', back: 'cousin (m)', pronunciation: '/kuˈdʒino/' },
-			{ front: 'cugina', back: 'cousin (f)', pronunciation: '/kuˈdʒina/' },
-			{ front: 'nipote', back: 'grandchild / nephew / niece', pronunciation: '/niˈpote/' }
+			{ front: 'zio', back: 'uncle' },
+			{ front: 'zia', back: 'aunt' },
+			{ front: 'cugino', back: 'cousin (m)' },
+			{ front: 'cugina', back: 'cousin (f)' },
+			{ front: 'nipote', back: 'grandchild / nephew / niece' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'zia', english: 'aunt' },
@@ -1113,11 +1113,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What does "marito" mean?', options: ['Husband','Fiancé','Brother','Parent'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Lei è mia <blank>.', translation: 'She is my wife.', options: ['moglie','sorella','zia','madre'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'marito', back: 'husband', pronunciation: '/maˈrito/' },
-			{ front: 'moglie', back: 'wife', pronunciation: '/ˈmoʎʎe/' },
-			{ front: 'fidanzato', back: 'boyfriend/fiancé', pronunciation: '/fidanˈtsato/' },
-			{ front: 'fidanzata', back: 'girlfriend/fiancée', pronunciation: '/fidanˈtsata/' },
-			{ front: 'matrimonio', back: 'marriage/wedding', pronunciation: '/matriˈmoɲɲo/' }
+			{ front: 'marito', back: 'husband' },
+			{ front: 'moglie', back: 'wife' },
+			{ front: 'fidanzato', back: 'boyfriend/fiancé' },
+			{ front: 'fidanzata', back: 'girlfriend/fiancée' },
+			{ front: 'matrimonio', back: 'marriage/wedding' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'marito', english: 'husband' },
@@ -1138,11 +1138,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What does "festeggiare" mean?', options: ['To celebrate','To study','To sleep','To wash'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Domani <blank> il compleanno di nonno.', translation: 'Tomorrow we celebrate grandpa’s birthday.', options: ['festeggiamo','dormiamo','leggiamo','cuciniamo'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'festeggiare', back: 'to celebrate', pronunciation: '/festeˈdʒare/' },
-			{ front: 'visitare', back: 'to visit', pronunciation: '/viziˈtare/' },
-			{ front: 'raccontare', back: 'to tell (stories)', pronunciation: '/rakkonˈtare/' },
-			{ front: 'aiutare', back: 'to help', pronunciation: '/ajuˈtare/' },
-			{ front: 'passeggiare', back: 'to stroll', pronunciation: '/passeˈdʒare/' }
+			{ front: 'festeggiare', back: 'to celebrate' },
+			{ front: 'visitare', back: 'to visit' },
+			{ front: 'raccontare', back: 'to tell (stories)' },
+			{ front: 'aiutare', back: 'to help' },
+			{ front: 'passeggiare', back: 'to stroll' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'visitare', english: 'to visit' },
@@ -1163,11 +1163,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What does "parlare" mean?', options: ['To speak','To sleep','To write','To arrive'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Io <blank> italiano.', translation: 'I speak Italian.', options: ['parlo','parla','parli','parlano'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'parlare', back: 'to speak', pronunciation: '/parˈlare/' },
-			{ front: 'mangiare', back: 'to eat', pronunciation: '/manˈdʒare/' },
-			{ front: 'andare', back: 'to go', pronunciation: '/anˈdare/' },
-			{ front: 'fare', back: 'to do/make', pronunciation: '/ˈfare/' },
-			{ front: 'essere', back: 'to be', pronunciation: '/ˈɛssere/' }
+			{ front: 'parlare', back: 'to speak' },
+			{ front: 'mangiare', back: 'to eat' },
+			{ front: 'andare', back: 'to go' },
+			{ front: 'fare', back: 'to do/make' },
+			{ front: 'essere', back: 'to be' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'parlare', english: 'to speak' },
@@ -1188,11 +1188,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What is "vedere" in English?', options: ['To see','To say','To sit','To send'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Noi <blank> un film.', translation: 'We watch (see) a film.', options: ['vediamo','vedo','vede','vedete'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'vedere', back: 'to see', pronunciation: '/veˈdere/' },
-			{ front: 'prendere', back: 'to take', pronunciation: '/ˈprendere/' },
-			{ front: 'venire', back: 'to come', pronunciation: '/veˈnire/' },
-			{ front: 'dormire', back: 'to sleep', pronunciation: '/dorˈmire/' },
-			{ front: 'avere', back: 'to have', pronunciation: '/aˈvere/' }
+			{ front: 'vedere', back: 'to see' },
+			{ front: 'prendere', back: 'to take' },
+			{ front: 'venire', back: 'to come' },
+			{ front: 'dormire', back: 'to sleep' },
+			{ front: 'avere', back: 'to have' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'dormire', english: 'to sleep' },
@@ -1213,11 +1213,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What does "svegliarsi" mean?', options: ['To wake up','To wash','To write','To go out'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Io mi <blank> alle sette.', translation: 'I wake up at seven.', options: ['sveglio','svegli','svegliamo','svegliate'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'svegliarsi', back: 'to wake up', pronunciation: '/zveʎˈʎarsi/' },
-			{ front: 'lavarsi', back: 'to wash oneself', pronunciation: '/laˈvarsi/' },
-			{ front: 'vestirsi', back: 'to get dressed', pronunciation: '/veˈstirsi/' },
-			{ front: 'studiare', back: 'to study', pronunciation: '/stuˈdjare/' },
-			{ front: 'lavorare', back: 'to work', pronunciation: '/lavoˈrare/' }
+			{ front: 'svegliarsi', back: 'to wake up' },
+			{ front: 'lavarsi', back: 'to wash oneself' },
+			{ front: 'vestirsi', back: 'to get dressed' },
+			{ front: 'studiare', back: 'to study' },
+			{ front: 'lavorare', back: 'to work' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'studiare', english: 'to study' },
@@ -1238,11 +1238,11 @@ const lessonData = {
 		{ type: 'multiple-choice', question: 'What does "ho mangiato" mean?', options: ['I ate','I eat','I will eat','I am eating'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Sono <blank> al mercato.', translation: 'I went to the market.', options: ['andato','fatto','venuto','mangiato'], correct: 0 },
 		{ type: 'flashcard', cards: [
-			{ front: 'ho parlato', back: 'I spoke', pronunciation: '/o parˈlato/' },
-			{ front: 'sono andato/a', back: 'I went', pronunciation: '/ˈsono anˈdato/' },
-			{ front: 'ho visto', back: 'I saw', pronunciation: '/o ˈvisto/' },
-			{ front: 'ho fatto', back: 'I did/made', pronunciation: '/o ˈfatto/' },
-			{ front: 'sono venuto/a', back: 'I came', pronunciation: '/ˈsono veˈnuto/' }
+			{ front: 'ho parlato', back: 'I spoke' },
+			{ front: 'sono andato/a', back: 'I went' },
+			{ front: 'ho visto', back: 'I saw' },
+			{ front: 'ho fatto', back: 'I did/made' },
+			{ front: 'sono venuto/a', back: 'I came' }
 		]},
 		{ type: 'matching', pairs: [
 			{ italian: 'ho fatto', english: 'I did' },
@@ -1558,7 +1558,6 @@ function updateFlashcard(card) {
 	// Update content
 	mode.querySelector('.flashcard-front .word').textContent = card.front;
 	mode.querySelector('.flashcard-back .word').textContent = card.back;
-	mode.querySelector('.flashcard-back .pronunciation').textContent = card.pronunciation;
 }
 
 // Navigate flashcards
@@ -1917,3 +1916,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Attach listener to all continue buttons (generic + flashcard)
 	document.querySelectorAll('.continue-btn').forEach(btn => btn.addEventListener('click', continueLesson));
 });
+

@@ -16,8 +16,6 @@ body {
 	background-attachment: fixed;
 }
 
-/* Frame removed for Modules page (previous decorative frame deleted) */
-
 /* Header */
 .modules-header {
 	display: flex;
@@ -344,21 +342,6 @@ body {
 	opacity: 0.6;
 }
 
-.lock-icon {
-	position: absolute;
-	bottom: -5px;
-	right: -5px;
-	width: 30px;
-	height: 30px;
-	background: #fff;
-	border: 3px solid rgba(0,0,0,0.85);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 0.8rem;
-}
-
 /* Node label */
 .node-label {
 	text-align: center;
@@ -471,58 +454,6 @@ body {
 	box-shadow: 0 3px 0 rgba(0,0,0,0.6);
 }
 
-/* Sub-modules container */
-.sub-modules {
-	display: flex;
-	gap: 1.5rem;
-	margin-top: 1rem;
-	opacity: 0;
-	transform: scale(0.8);
-	pointer-events: none;
-	transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.path-node.expanded .sub-modules {
-	opacity: 1;
-	transform: scale(1);
-	pointer-events: auto;
-}
-
-/* Sub-module buttons */
-.sub-module {
-	width: 50px;
-	height: 50px;
-	border: 3px solid rgba(0,0,0,0.85);
-	border-radius: 50%;
-	background: #fff;
-	color: #000;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-	box-shadow: 0 4px 0 rgba(0,0,0,0.8);
-	position: relative;
-}
-
-.sub-module:hover {
-	background: #06c258;
-	color: #fff;
-	transform: translateY(-2px);
-	box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-}
-
-.sub-module:active {
-	transform: translateY(1px);
-	box-shadow: 0 2px 0 rgba(0,0,0,0.6);
-}
-
-.sub-number {
-	font-family: 'Baloo 2', cursive;
-	font-size: 1.3rem;
-	font-weight: 600;
-}
-
 /* Decorative swooshes */
 .swoosh {
 	position: fixed;
@@ -566,12 +497,6 @@ body {
 	right: 3%;
 }
 
-.swoosh path {
-	stroke-linecap: round;
-	stroke-linejoin: round;
-	vector-effect: non-scaling-stroke;
-}
-
 @keyframes swooshFade {
 	0% { opacity: 0; transform: scale(0.92); }
 	15% { opacity: 0.8; transform: scale(1); }
@@ -612,7 +537,6 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
-	/* No modules-page frame on small screens (frame removed) */
 	.path-node {
 		padding: 0 1rem;
 	}

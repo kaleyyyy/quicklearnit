@@ -1,14 +1,14 @@
-// Progress page - displays user's learning progress using localStorage
+// displays user's learning progress using localStorage
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Initialize progress data
+	
 	loadProgress();
 	
-	// Reset button handler
+	
 	document.getElementById('reset-progress').addEventListener('click', resetProgress);
 });
 
-// Units data
+
 const units = [
 	{ id: 1, name: 'Unit 1: Greetings', icon: 'fa-message' },
 	{ id: 2, name: 'Unit 2: Numbers', icon: 'fa-calculator' },
@@ -41,40 +41,39 @@ function saveProgressData(data) {
 	localStorage.setItem('quicklearnit-progress', JSON.stringify(data));
 }
 
-// Load and display progress
+
 function loadProgress() {
 	const data = getProgressData();
 	
-	// Update overall stats
+	
 	updateOverallProgress(data);
 	
-	// Display units breakdown
+	
 	displayUnitsBreakdown(data);
 	
-	// Display recent activity
+	
 	displayRecentActivity(data);
 }
 
-// Update overall progress circle and stats
+
 function updateOverallProgress(data) {
-	// Prefer showing progress by lessons completed (more granular).
-	// Each unit contains an overview + 3 sub-lessons = 4 lessons per unit.
+	
 	const lessonsPerUnit = 4;
 	const totalUnits = units.length || 6;
 	const totalLessons = totalUnits * lessonsPerUnit;
 	const completedLessonsCount = Array.isArray(data.completedLessons) ? data.completedLessons.length : 0;
 	const percentage = Math.round((completedLessonsCount / totalLessons) * 100);
 
-	// Update percentage text
+	
 	document.querySelector('.stat-percentage').textContent = `${percentage}%`;
 	
-	// Update progress ring
-	const circumference = 2 * Math.PI * 50; // radius = 50
+	
+	const circumference = 2 * Math.PI * 50; 
 	const offset = circumference - (percentage / 100) * circumference;
 	const ringFill = document.querySelector('.progress-ring-fill');
 	if (ringFill) ringFill.style.strokeDashoffset = offset;
 
-	// Update stats — keep units completed as a unit-level count, and lessons completed separately
+	
 	const completedUnitsCount = Array.isArray(data.completedUnits) ? data.completedUnits.length : 0;
 	document.getElementById('units-completed').textContent = `${completedUnitsCount} / ${totalUnits}`;
 	document.getElementById('lessons-completed').textContent = completedLessonsCount;

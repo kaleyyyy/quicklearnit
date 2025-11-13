@@ -1233,7 +1233,7 @@ const lessonData = {
 		{ type: 'fill-blank', sentence: 'Esco e poi <blank> al lavoro.', translation: 'I go out and then go to work.', options: ['vado','vai','andiamo','va'], correct: 0 }
 	],
 
-	// Unit 6 Lesson 3: Past Tense Forms
+	// Unit 6 
 	'verbs-past': [
 		{ type: 'multiple-choice', question: 'What does "ho mangiato" mean?', options: ['I ate','I eat','I will eat','I am eating'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Sono <blank> al mercato.', translation: 'I went to the market.', options: ['andato','fatto','venuto','mangiato'], correct: 0 },
@@ -1722,7 +1722,7 @@ function showCompletion() {
 	modal.style.display = 'flex';
 }
 
-// Save lesson completion to localStorage
+
 function saveLessonProgress(lessonKey, accuracy) {
 	try {
 		const storageKey = 'quicklearnit-progress';
@@ -1736,15 +1736,15 @@ function saveLessonProgress(lessonKey, accuracy) {
 			activities: []
 		};
 
-		// ensure new field exists for legacy data
+
 		if (!Array.isArray(data.completedLessons)) data.completedLessons = [];
 
-		// Add lesson if new
+	
 		if (!data.completedLessons.includes(lessonKey)) {
 			data.completedLessons.push(lessonKey);
 			data.lessonsCompleted = data.completedLessons.length;
 
-			// Activity log entry
+			
 			data.activities = data.activities || [];
 			data.activities.push({
 				title: 'Completed lesson: ' + formatLessonTitle(lessonKey),
@@ -1754,7 +1754,7 @@ function saveLessonProgress(lessonKey, accuracy) {
 			});
 		}
 
-		// Update streak
+		
 		updateProgressStreak(data);
 
 		// Unit auto-complete: if all lessons for a unit done, mark unit

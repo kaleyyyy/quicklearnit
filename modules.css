@@ -137,25 +137,6 @@ body {
 	position: relative;
 }
 
-.learning-path::before {
-	content: '';
-	position: absolute;
-	top: -20px;
-    left: 50%;
-    width: 2px;
-    /* extend slightly so stroke caps at ends aren't clipped */
-    height: calc(100% + 40px);
-	background: repeating-linear-gradient(
-		to bottom,
-		transparent,
-		transparent 20px,
-		#e0e0e0 20px,
-		#e0e0e0 25px
-	);
-	transform: translateX(-50%);
-	z-index: 0;
-}
-
 /* Path node container */
 .path-node {
 	position: relative;
@@ -495,6 +476,24 @@ body {
 .swoosh-center-right {
 	top: 50%;
 	right: 3%;
+}
+
+.swoosh-bottom-left {
+	bottom: 8%;
+	left: 3%;
+	width: 240px;
+}
+
+.swoosh-mid-right {
+	top: 60%;
+	right: 2%;
+	width: 200px;
+}
+
+.swoosh-bottom-right {
+	bottom: 12%;
+	right: 4%;
+	width: 220px;
 }
 
 @keyframes swooshFade {

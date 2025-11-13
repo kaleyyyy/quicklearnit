@@ -580,23 +580,21 @@ body.flashcard-mode .tts-btn {
 	z-index: 40;
 }
 
-/* Keep the flashcard itself below the heading/listen button in stacking order */
+
 body.flashcard-mode .flashcard {
 	position: relative;
 	z-index: 30;
 }
 
-/* Slightly tighten spacing for the flashcard controls (prev/next and counter)
-   so the counter (eg. 1/5) sits closer to the card in flashcard mode */
+
 .flashcard-buttons { display:flex; align-items:center; justify-content:center; gap:2.6rem; }
 .flashcard-buttons .prev-card-btn,
 .flashcard-buttons .flashcard-continue-btn,
 .flashcard-buttons .next-card-btn { min-width:160px; }
 
-/* Make sure the action buttons (Continue / Check) have a bit more visual separation
-   but remain close enough to the flashcard for comfortable interaction */
+
 body.flashcard-mode .lesson-actions {
-	display: none; /* hidden in flashcard mode; use integrated controls row */
+	display: none; 
 }
 
 /* Slightly reduce the flashcard height on small viewports so layout doesn't collide */

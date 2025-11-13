@@ -197,7 +197,7 @@ function resetProgress() {
 	}
 }
 
-// Public function to mark unit as complete (called from lesson page)
+
 window.completeUnit = function(unitId) {
 	const data = getProgressData();
 	
@@ -215,14 +215,14 @@ window.completeUnit = function(unitId) {
 			});
 		}
 		
-		// Update streak
+		
 		updateStreak(data);
 		
 		saveProgressData(data);
 	}
 };
 
-// Update streak based on last visit
+
 function updateStreak(data) {
 	const today = new Date().setHours(0, 0, 0, 0);
 	const lastVisit = data.lastVisit ? new Date(data.lastVisit).setHours(0, 0, 0, 0) : null;
@@ -236,10 +236,10 @@ function updateStreak(data) {
 			// Consecutive day
 			data.streak += 1;
 		} else if (daysDiff > 1) {
-			// Streak broken
+			
 			data.streak = 1;
 		}
-		// If daysDiff === 0, same day, don't change streak
+		
 	}
 	
 	data.lastVisit = Date.now();

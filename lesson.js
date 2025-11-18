@@ -1678,10 +1678,8 @@ let isFlipped = false;
 // Initialize lesson
 function initLesson() {
 	const urlParams = new URLSearchParams(window.location.search);
-	const lessonParam = urlParams.get('lesson') || '1-1'; // Get lesson parameter like "1-1", "2-1", etc.
+	const lessonParam = urlParams.get('lesson') || '1-1';
 	const unitParam = urlParams.get('unit') || null;
-	
-	console.log('URL Params - lesson:', lessonParam, 'unit:', unitParam);
 	
 	// Map lesson IDs to lesson data keys
 	const lessonMap = {
@@ -1746,13 +1744,7 @@ function initLesson() {
 		currentModuleId = lessonMap[lessonParam] || 'greetings-overview';
 	}
 	
-	console.log('Loading lesson type:', currentModuleId);
-	console.log('Available lessons in lessonData:', Object.keys(lessonData));
-	
 	currentLessonData = lessonData[currentModuleId] || lessonData['greetings-overview'];
-	
-	console.log('Lesson data loaded:', currentLessonData);
-	console.log('First question:', currentLessonData[0]);
 	
 	renderQuestion(currentQuestionIndex);
 	updateProgressBar();

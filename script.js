@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-	// If reduced-motion is requested, reveal everything plainly and skip typing
 	if (prefersReduced) {
 		document.querySelector('.homepage')?.classList.add('animate');
 		var lang = document.querySelector('.language');
@@ -9,14 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		return;
 	}
 
-	
 	setTimeout(function () {
 		document.querySelector('.homepage')?.classList.add('animate');
 	}, 60);
 
-	
-	var titleFadeDuration = 800; 
-	var delayAfterFade = 140; 
+	var titleFadeDuration = 800;
+	var delayAfterFade = 140;
 	var languageEl = document.querySelector('.language');
 	if (languageEl) {
 		var full = languageEl.textContent.trim();
@@ -27,27 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		setTimeout(function () {
 			languageEl.classList.add('typing');
 			var i = 0;
-			var speed = 95; // ms per character
+			var speed = 95;
 			function typeChar() {
 				if (i <= full.length - 1) {
 					languageEl.textContent += full.charAt(i);
 					i++;
 					setTimeout(typeChar, speed);
 				} else {
-					// typing finished
 					languageEl.classList.remove('typing');
 				}
 			}
 			typeChar();
 		}, titleFadeDuration + delayAfterFade);
 	}
-});
 
-
-document.addEventListener('DOMContentLoaded', function () {
 	setTimeout(function () {
 		var heart = document.querySelector('.italy-heart');
-		if (heart && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+		if (heart && !prefersReduced) {
 			heart.classList.add('pulse');
 		}
 	}, 500);
@@ -139,32 +132,22 @@ document.addEventListener('DOMContentLoaded', function () {
 			}, delay);
 		}
 
-		/*
-		 Place each swoosh at a randomized candidate position while avoiding
-		 overlap with protected elements (title, start button, image). This runs
-		 once per trigger so positions change each cycle.
-		*/
 		function placeSwooshesNonOverlapping(swooshArray) {
 			var viewportW = window.innerWidth;
 			var viewportH = window.innerHeight;
 
-			// protected elements to avoid (include individual title elements for tighter coverage)
 			var protectedEls = Array.from(document.querySelectorAll('.title-block, .app-title, .language, .start-btn, .italy-wrapper'));
 			var protectedRects = protectedEls.map(function (el) {
 				var r = el.getBoundingClientRect();
-				// make padding larger so swooshes don't get too close to the title text
-				var pad = Math.max(80, Math.round(Math.min(viewportW, viewportH) * 0.12)); // larger adaptive padding
+				var pad = Math.max(80, Math.round(Math.min(viewportW, viewportH) * 0.12));
 				return { left: r.left - pad, top: r.top - pad, right: r.right + pad, bottom: r.bottom + pad };
 			});
 
-			// keep track of assigned rects so swooshes don't overlap each other
 			var assignedRects = [];
 
 			function rectsOverlap(a, b) { return !(a.right < b.left || a.left > b.right || a.bottom < b.top || a.top > b.bottom); }
 
-			// helper: try random positions across the viewport with collision checks
 			function tryPlaceRandom(swoosh, attempts) {
-				// increase attempts for better distribution on large screens
 				attempts = attempts || 120;
 				var b = swoosh.getBoundingClientRect();
 				
@@ -173,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				var effW = Math.round(w * 0.8);
 				var effH = Math.round(h * 0.8);
 
-				// allow positions that can be partially offscreen to spread swooshes across edges
 				var minLeft = Math.max(-Math.round(w * 0.5), -Math.round(viewportW * 0.15));
 				var maxLeft = Math.min(Math.round(viewportW - effW * 0.2), Math.round(viewportW + Math.round(w * 0.3)));
 				var minTop = Math.max(-Math.round(h * 0.5), -Math.round(viewportH * 0.15));
@@ -187,7 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
 					var top = Math.floor(minTop + Math.random() * (maxTop - minTop));
 					var rect = { left: left, top: top, right: left + w, bottom: top + h };
 					var bad = protectedRects.some(function (p) { return rectsOverlap(rect, p); }) || assignedRects.some(function (a) { return rectsOverlap(rect, a); });
-					// avoid putting the swoosh entirely outside the viewport
 					if ((rect.right < -0.25 * viewportW) || (rect.left > viewportW + 0.25 * viewportW) || (rect.bottom < -0.25 * viewportH) || (rect.top > viewportH + 0.25 * viewportH)) bad = true;
 					if (!bad) {
 						assignedRects.push(rect);
@@ -201,7 +182,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				return false;
 			}
 
-			// fallback grid of candidate positions for deterministic placement
 			var candidates = [
 				{ x: 0.04, y: 0.06 }, { x: 0.72, y: 0.06 }, { x: 0.04, y: 0.36 }, { x: 0.72, y: 0.36 },
 				{ x: 0.04, y: 0.66 }, { x: 0.72, y: 0.66 }, { x: 0.38, y: 0.22 }, { x: 0.38, y: 0.62 },
@@ -210,9 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			function shuffle(arr) { for (var i = arr.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = arr[i]; arr[i] = arr[j]; arr[j] = t; } return arr; }
 
-			// attempt to place each swoosh randomly; if impossible, try candidate slots
 			swooshArray.forEach(function (swoosh) {
-				// reset previous inline positioning so our calculations are accurate
 				swoosh.style.left = '';
 				swoosh.style.top = '';
 				swoosh.style.right = '';
@@ -220,7 +198,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				var placed = tryPlaceRandom(swoosh, 72);
 				if (!placed) {
-					// fallback to shuffled candidate grid
 					var shuffled = shuffle(candidates.slice());
 					for (var i = 0; i < shuffled.length && !placed; i++) {
 						var c = shuffled[i];
@@ -237,15 +214,12 @@ document.addEventListener('DOMContentLoaded', function () {
 						}
 					}
 				}
-				
 			});
 		}
 	}
 
-	
 	setTimeout(function () {
 		triggerSwooshes();
-		
 		setInterval(triggerSwooshes, 5000);
-	}, 2000); 
+	}, 2000);
 });

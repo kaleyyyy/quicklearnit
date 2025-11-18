@@ -1,4 +1,4 @@
-// Simplified modules.js — no branching
+// Simplified modules.js
 (function(){
 	document.addEventListener('DOMContentLoaded', function(){
 		var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -14,24 +14,10 @@
 					setTimeout(function () { p.style.transition = 'stroke-dashoffset 700ms ease'; p.style.strokeDashoffset = '0'; }, 40);
 				} catch (e) { }
 			});
-
-			// (Vine animation removed)
 		}
 
-		// Update progress stat from localStorage
 		updateProgressStat();
 		markCompletedModules();
-
-		// DEBUG: unlock all modules for testing (remove in production)
-		try {
-			document.querySelectorAll('.path-node[data-status="locked"]').forEach(function(pn){
-				pn.setAttribute('data-status','unlocked');
-				// enable any disabled module buttons inside
-				pn.querySelectorAll('button[disabled]').forEach(function(b){ b.removeAttribute('disabled'); });
-				// remove lock icons if present
-				pn.querySelectorAll('.lock-icon').forEach(function(li){ li.remove(); });
-			});
-		} catch(e) { /* ignore in non-DOM env */ }
 
 		// Main module click: single click expands, double click goes to overview
 		document.querySelectorAll('.main-module').forEach(function(m){
@@ -81,11 +67,10 @@
 
 		// Sub lesson click: navigate to lesson
 		document.querySelectorAll('.sub-lesson').forEach(function(sl){
-			sl.addEventListener('click', function(e){
-				e.stopPropagation();
-				var lessonId = sl.getAttribute('data-lesson');
-				console.log('Clicked lesson ID:', lessonId); // Debug
-				if(lessonId) {
+		sl.addEventListener('click', function(e){
+			e.stopPropagation();
+			var lessonId = sl.getAttribute('data-lesson');
+			if(lessonId) {
 					window.location.href = 'lesson.html?lesson=' + encodeURIComponent(lessonId);
 				}
 			});

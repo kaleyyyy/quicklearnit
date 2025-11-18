@@ -597,18 +597,18 @@ body.flashcard-mode .lesson-actions {
 	display: none; 
 }
 
-/* Slightly reduce the flashcard height on small viewports so layout doesn't collide */
+
 @media (max-width: 600px) {
 	body.flashcard-mode .flashcard {
 		height: 260px;
 	}
 	body.flashcard-mode .flashcard-container {
 		margin-top: -3.6rem;
-		/* maintain extra bottom spacing on small screens */
+		
 		margin-bottom: 4rem;
 	}
 
-	/* ensure action buttons are pushed further down on small screens too */
+	
 	body.flashcard-mode .lesson-actions {
 		margin-top: 5rem;
 	}

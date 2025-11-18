@@ -199,6 +199,20 @@ body {
 	animation-delay: 800ms;
 	flex-direction: row-reverse;
 }
+.path-node:nth-child(7) { 
+	animation-delay: 920ms;
+}
+.path-node:nth-child(8) { 
+	animation-delay: 1040ms;
+	flex-direction: row-reverse;
+}
+.path-node:nth-child(9) { 
+	animation-delay: 1160ms;
+}
+.path-node:nth-child(10) { 
+	animation-delay: 1280ms;
+	flex-direction: row-reverse;
+}
 
 /* Connector line between nodes */
 .node-connector {

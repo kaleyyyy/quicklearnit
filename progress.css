@@ -1,4 +1,4 @@
-/* Base layout - matching site style */
+
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; }
 body {
@@ -16,7 +16,7 @@ body {
 	background-attachment: fixed;
 }
 
-/* Header */
+
 .progress-header {
 	display: flex;
 	align-items: center;
@@ -64,7 +64,7 @@ body {
 	box-shadow: 0 2px 0 rgba(0,0,0,0.6);
 }
 
-/* Main content */
+
 .progress-content {
 	max-width: 900px;
 	margin: 0 auto;
@@ -73,7 +73,7 @@ body {
 	gap: 2rem;
 }
 
-/* Progress cards */
+
 .progress-card {
 	background: #fff;
 	border: 3px solid rgba(0,0,0,0.85);
@@ -108,7 +108,7 @@ body {
 	margin: 0;
 }
 
-/* Overall progress stats */
+
 .progress-stats {
 	display: flex;
 	align-items: center;
@@ -170,7 +170,6 @@ body {
 	color: #000;
 }
 
-/* Units breakdown */
 .units-list {
 	display: flex;
 	flex-direction: column;

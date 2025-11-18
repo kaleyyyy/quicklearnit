@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		return;
 	}
 
-	// Add animate class to trigger fade for title & button
+	
 	setTimeout(function () {
 		document.querySelector('.homepage')?.classList.add('animate');
 	}, 60);
 
-	// After fade finishes, start typing the language text
-	var titleFadeDuration = 800; // matches CSS fadeIn
-	var delayAfterFade = 140; // small gap before typing
+	
+	var titleFadeDuration = 800; 
+	var delayAfterFade = 140; 
 	var languageEl = document.querySelector('.language');
 	if (languageEl) {
 		var full = languageEl.textContent.trim();
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
-// Add pulse class to the heart once the page animates so it doesn't start before layout
+
 document.addEventListener('DOMContentLoaded', function () {
 	setTimeout(function () {
 		var heart = document.querySelector('.italy-heart');
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}, 500);
 });
 
-// Swoosh animation trigger: every 5 seconds, show the swooshes for 3 seconds
+
 document.addEventListener('DOMContentLoaded', function () {
 	var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	if (prefersReduced) return;
@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (!swooshes.length) return;
 
 	function triggerSwooshes() {
-		// place swooshes in randomized non-overlapping spots for this run
+		
 		placeSwooshesNonOverlapping(Array.from(swooshes));
 
-		// animate each swoosh, optionally staggered by data-delay or index
+		
 		swooshes.forEach(function (swoosh, i) {
 			var delay = Number(swoosh.dataset.delay || (i * 320));
 			animateSwoosh(swoosh, delay);
@@ -167,8 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				// increase attempts for better distribution on large screens
 				attempts = attempts || 120;
 				var b = swoosh.getBoundingClientRect();
-				// compute an effective footprint; allow slightly smaller effective w/h so
-				// placement can tuck a bit offscreen without colliding too easily
+				
 				var w = Math.max(48, Math.round(b.width) || Math.min(viewportW * 0.42, 380));
 				var h = Math.max(48, Math.round(b.height) || Math.min(viewportH * 0.42, 380));
 				var effW = Math.round(w * 0.8);
@@ -238,15 +237,15 @@ document.addEventListener('DOMContentLoaded', function () {
 						}
 					}
 				}
-				// if still not placed, leave original class-based CSS position
+				
 			});
 		}
 	}
 
-	// Initial delay before first swoosh
+	
 	setTimeout(function () {
 		triggerSwooshes();
-		// Then repeat every 5 seconds
+		
 		setInterval(triggerSwooshes, 5000);
-	}, 2000); // start after 2s
+	}, 2000); 
 });

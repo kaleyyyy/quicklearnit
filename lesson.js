@@ -1256,6 +1256,406 @@ const lessonData = {
 		{ type: 'fill-blank', sentence: 'Ho <blank> il treno.', translation: 'I took the train.', options: ['preso','venuto','andato','fatto'], correct: 0 },
 		{ type: 'multiple-choice', question: 'What does "sono venuto" mean?', options: ['I came','I saw','I went','I arrived later'], correct: 0 },
 		{ type: 'fill-blank', sentence: 'Ho <blank> la città ieri.', translation: 'I saw the city yesterday.', options: ['visto','letto','parlato','fatto'], correct: 0 }
+	],
+
+	// Unit 7 Main Module: Colors & Clothing Overview
+	'colors-overview': [
+		{ type: 'multiple-choice', question: 'What does "rosso" mean?', options: ['Blue', 'Red', 'Green', 'Yellow'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Il cielo è <blank>.', translation: 'The sky is blue.', options: ['blu','rosso','verde','giallo'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'rosso', back: 'red' },
+			{ front: 'blu', back: 'blue' },
+			{ front: 'verde', back: 'green' },
+			{ front: 'giallo', back: 'yellow' },
+			{ front: 'nero', back: 'black' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'rosso', english: 'red' },
+			{ italian: 'blu', english: 'blue' },
+			{ italian: 'verde', english: 'green' },
+			{ italian: 'bianco', english: 'white' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "clothing" in Italian?', options: ['vestiti','scarpe','colori','cappello'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Indosso una <blank> rossa.', translation: 'I wear a red shirt.', options: ['camicia','gonna','scarpa','cravatta'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "nero"?', options: ['White','Black','Gray','Brown'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'I miei <blank> sono neri.', translation: 'My pants are black.', options: ['pantaloni','scarpe','occhi','capelli'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "dress"?', options: ['vestito','camicia','gonna','cappotto'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Lei porta un <blank> elegante.', translation: 'She wears an elegant dress.', options: ['vestito','cappello','scarpe','guanti'], correct: 0 }
+	],
+
+	// Unit 7 Lesson 1: Colors
+	'colors-basic': [
+		{ type: 'multiple-choice', question: 'What is "verde" in English?', options: ['Red','Green','Yellow','Blue'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'L\'erba è <blank>.', translation: 'The grass is green.', options: ['verde','rosso','blu','giallo'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'arancione', back: 'orange' },
+			{ front: 'viola', back: 'purple' },
+			{ front: 'rosa', back: 'pink' },
+			{ front: 'marrone', back: 'brown' },
+			{ front: 'grigio', back: 'gray' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'giallo', english: 'yellow' },
+			{ italian: 'arancione', english: 'orange' },
+			{ italian: 'viola', english: 'purple' },
+			{ italian: 'rosa', english: 'pink' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "white"?', options: ['nero','bianco','grigio','marrone'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'La neve è <blank>.', translation: 'The snow is white.', options: ['bianca','nera','grigia','marrone'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What color is "arancione"?', options: ['Orange','Purple','Pink','Brown'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Il sole è <blank>.', translation: 'The sun is yellow.', options: ['giallo','rosso','arancione','bianco'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "gray"?', options: ['marrone','nero','grigio','bianco'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'Le nuvole sono <blank>.', translation: 'The clouds are gray.', options: ['grigie','rosse','verdi','blu'], correct: 0 }
+	],
+
+	// Unit 7 Lesson 2: Clothing Items
+	'clothing-items': [
+		{ type: 'multiple-choice', question: 'What is "camicia" in English?', options: ['Pants','Shirt','Shoes','Hat'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Indosso una <blank> blu.', translation: 'I wear a blue shirt.', options: ['camicia','gonna','scarpa','giacca'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'pantaloni', back: 'pants' },
+			{ front: 'gonna', back: 'skirt' },
+			{ front: 'scarpe', back: 'shoes' },
+			{ front: 'cappello', back: 'hat' },
+			{ front: 'giacca', back: 'jacket' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'scarpe', english: 'shoes' },
+			{ italian: 'pantaloni', english: 'pants' },
+			{ italian: 'gonna', english: 'skirt' },
+			{ italian: 'cappello', english: 'hat' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "jacket"?', options: ['cappotto','giacca','maglia','camicia'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Ho bisogno di una <blank> nuova.', translation: 'I need a new jacket.', options: ['giacca','gonna','scarpa','borsa'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What are "scarpe"?', options: ['Socks','Shoes','Pants','Gloves'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Le mie <blank> sono comode.', translation: 'My shoes are comfortable.', options: ['scarpe','calze','guanti','scarpe'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "coat"?', options: ['cappotto','giacca','maglia','camicia'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Fa freddo, metto il <blank>.', translation: 'It\'s cold, I put on my coat.', options: ['cappotto','cappello','guanti','sciarpa'], correct: 0 }
+	],
+
+	// Unit 7 Lesson 3: Descriptions
+	'clothing-descriptions': [
+		{ type: 'multiple-choice', question: 'What does "lungo" mean?', options: ['Short','Long','Wide','Tight'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Il vestito è molto <blank>.', translation: 'The dress is very long.', options: ['lungo','corto','stretto','largo'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'grande', back: 'big/large' },
+			{ front: 'piccolo', back: 'small' },
+			{ front: 'nuovo', back: 'new' },
+			{ front: 'vecchio', back: 'old' },
+			{ front: 'elegante', back: 'elegant' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'grande', english: 'large' },
+			{ italian: 'piccolo', english: 'small' },
+			{ italian: 'nuovo', english: 'new' },
+			{ italian: 'vecchio', english: 'old' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "expensive"?', options: ['caro','economico','bello','brutto'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Questa borsa è troppo <blank>.', translation: 'This bag is too expensive.', options: ['cara','economica','grande','piccola'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "comodo"?', options: ['Uncomfortable','Comfortable','Beautiful','Ugly'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Queste scarpe sono <blank>.', translation: 'These shoes are comfortable.', options: ['comode','scomode','belle','brutte'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "beautiful"?', options: ['brutto','bello','nuovo','vecchio'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Che <blank> vestito!', translation: 'What a beautiful dress!', options: ['bel','brutto','vecchio','nuovo'], correct: 0 }
+	],
+
+	// Unit 8 Main Module: Weather & Seasons Overview
+	'weather-overview': [
+		{ type: 'multiple-choice', question: 'What does "piove" mean?', options: ['It snows','It rains','It\'s sunny','It\'s windy'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Oggi <blank>.', translation: 'Today it rains.', options: ['piove','nevica','splende','tira vento'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'piove', back: 'it rains' },
+			{ front: 'nevica', back: 'it snows' },
+			{ front: 'sole', back: 'sun' },
+			{ front: 'vento', back: 'wind' },
+			{ front: 'nuvola', back: 'cloud' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'piove', english: 'it rains' },
+			{ italian: 'nevica', english: 'it snows' },
+			{ italian: 'sole', english: 'sun' },
+			{ italian: 'vento', english: 'wind' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "it\'s hot"?', options: ['fa freddo','fa caldo','piove','nevica'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'In estate <blank> caldo.', translation: 'In summer it\'s hot.', options: ['fa','piove','nevica','tira'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "primavera"?', options: ['Summer','Spring','Fall','Winter'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'La <blank> è bella.', translation: 'Spring is beautiful.', options: ['primavera','estate','autunno','inverno'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which season is "inverno"?', options: ['Spring','Summer','Fall','Winter'], correct: 3 },
+		{ type: 'fill-blank', sentence: 'In <blank> fa freddo.', translation: 'In winter it\'s cold.', options: ['inverno','estate','primavera','autunno'], correct: 0 }
+	],
+
+	// Unit 8 Lesson 1: Weather Conditions
+	'weather-conditions': [
+		{ type: 'multiple-choice', question: 'What is "nuvoloso" in English?', options: ['Sunny','Cloudy','Rainy','Windy'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Il cielo è <blank>.', translation: 'The sky is cloudy.', options: ['nuvoloso','sereno','piovoso','ventoso'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'sereno', back: 'clear/sunny' },
+			{ front: 'nuvoloso', back: 'cloudy' },
+			{ front: 'piovoso', back: 'rainy' },
+			{ front: 'ventoso', back: 'windy' },
+			{ front: 'temporale', back: 'storm' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'sereno', english: 'clear' },
+			{ italian: 'nuvoloso', english: 'cloudy' },
+			{ italian: 'piovoso', english: 'rainy' },
+			{ italian: 'ventoso', english: 'windy' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "it\'s sunny"?', options: ['c\'è sole','piove','nevica','tira vento'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Oggi <blank> sole.', translation: 'Today it\'s sunny.', options: ['c\'è','fa','piove','nevica'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "tira vento" mean?', options: ['It rains','It\'s windy','It snows','It\'s hot'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Oggi <blank> vento.', translation: 'Today it\'s windy.', options: ['tira','fa','c\'è','piove'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is a "temporale"?', options: ['Cloud','Rain','Storm','Wind'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'C\'è un <blank> stasera.', translation: 'There\'s a storm tonight.', options: ['temporale','sole','vento','nuvola'], correct: 0 }
+	],
+
+	// Unit 8 Lesson 2: Seasons
+	'seasons': [
+		{ type: 'multiple-choice', question: 'What is "estate" in English?', options: ['Spring','Summer','Fall','Winter'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'L\'<blank> è calda.', translation: 'Summer is hot.', options: ['estate','inverno','autunno','primavera'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'primavera', back: 'spring' },
+			{ front: 'estate', back: 'summer' },
+			{ front: 'autunno', back: 'fall/autumn' },
+			{ front: 'inverno', back: 'winter' },
+			{ front: 'stagione', back: 'season' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'primavera', english: 'spring' },
+			{ italian: 'estate', english: 'summer' },
+			{ italian: 'autunno', english: 'fall' },
+			{ italian: 'inverno', english: 'winter' }
+		]},
+		{ type: 'multiple-choice', question: 'Which season has falling leaves?', options: ['primavera','estate','autunno','inverno'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'In <blank> cadono le foglie.', translation: 'In fall the leaves fall.', options: ['autunno','primavera','estate','inverno'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What season comes after winter?', options: ['primavera','estate','autunno','inverno'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Dopo l\'inverno viene la <blank>.', translation: 'After winter comes spring.', options: ['primavera','estate','autunno','stagione'], correct: 0 },
+		{ type: 'multiple-choice', question: 'In which season does it snow most?', options: ['primavera','estate','autunno','inverno'], correct: 3 },
+		{ type: 'fill-blank', sentence: 'Nevica in <blank>.', translation: 'It snows in winter.', options: ['inverno','estate','primavera','autunno'], correct: 0 }
+	],
+
+	// Unit 8 Lesson 3: Temperature
+	'temperature': [
+		{ type: 'multiple-choice', question: 'What does "freddo" mean?', options: ['Hot','Cold','Warm','Cool'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Fa molto <blank> oggi.', translation: 'It\'s very cold today.', options: ['freddo','caldo','bello','brutto'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'caldo', back: 'hot' },
+			{ front: 'freddo', back: 'cold' },
+			{ front: 'fresco', back: 'cool' },
+			{ front: 'mite', back: 'mild' },
+			{ front: 'temperatura', back: 'temperature' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'caldo', english: 'hot' },
+			{ italian: 'freddo', english: 'cold' },
+			{ italian: 'fresco', english: 'cool' },
+			{ italian: 'mite', english: 'mild' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "it\'s warm"?', options: ['fa caldo','fa freddo','fa fresco','fa bel tempo'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'In primavera fa <blank>.', translation: 'In spring it\'s mild.', options: ['mite','caldo','freddo','fresco'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "temperatura"?', options: ['Weather','Season','Temperature','Climate'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'La <blank> è alta.', translation: 'The temperature is high.', options: ['temperatura','stagione','primavera','estate'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "pleasant weather"?', options: ['brutto tempo','bel tempo','cattivo tempo','mal tempo'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Oggi fa <blank> tempo.', translation: 'Today the weather is nice.', options: ['bel','brutto','cattivo','mal'], correct: 0 }
+	],
+
+	// Unit 9 Main Module: Shopping & Money Overview
+	'shopping-overview': [
+		{ type: 'multiple-choice', question: 'What does "Quanto costa?" mean?', options: ['How much?','Where is?','What time?','Who is?'], correct: 0 },
+		{ type: 'fill-blank', sentence: '<blank> costa questo?', translation: 'How much does this cost?', options: ['Quanto','Dove','Quando','Chi'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'costa', back: 'it costs' },
+			{ front: 'prezzo', back: 'price' },
+			{ front: 'euro', back: 'euro' },
+			{ front: 'comprare', back: 'to buy' },
+			{ front: 'vendere', back: 'to sell' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'comprare', english: 'to buy' },
+			{ italian: 'vendere', english: 'to sell' },
+			{ italian: 'prezzo', english: 'price' },
+			{ italian: 'soldi', english: 'money' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "I would like to buy"?', options: ['Vorrei comprare','Voglio vendere','Devo pagare','Posso vendere'], correct: 0 },
+		{ type: 'fill-blank', sentence: '<blank> comprare questo.', translation: 'I would like to buy this.', options: ['Vorrei','Voglio','Devo','Posso'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "negozio"?', options: ['Money','Price','Store','Market'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'Vado al <blank>.', translation: 'I go to the store.', options: ['negozio','mercato','centro','prezzo'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "expensive"?', options: ['caro','economico','gratis','scontato'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Questo è troppo <blank>.', translation: 'This is too expensive.', options: ['caro','economico','gratis','bello'], correct: 0 }
+	],
+
+	// Unit 9 Lesson 1: Shopping Phrases
+	'shopping-phrases': [
+		{ type: 'multiple-choice', question: 'What is "vendita" in English?', options: ['Purchase','Sale','Price','Store'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'C\'è una grande <blank>.', translation: 'There\'s a big sale.', options: ['vendita','negozio','prezzo','borsa'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'sconto', back: 'discount' },
+			{ front: 'offerta', back: 'offer' },
+			{ front: 'saldo', back: 'sale' },
+			{ front: 'cliente', back: 'customer' },
+			{ front: 'cassiere', back: 'cashier' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'sconto', english: 'discount' },
+			{ italian: 'offerta', english: 'offer' },
+			{ italian: 'cliente', english: 'customer' },
+			{ italian: 'cassiere', english: 'cashier' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "Can I try this?"', options: ['Posso provare questo?','Quanto costa?','Dov\'è il negozio?','Che taglia?'], correct: 0 },
+		{ type: 'fill-blank', sentence: '<blank> provare questo?', translation: 'Can I try this?', options: ['Posso','Voglio','Devo','Ho'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What does "taglia" mean?', options: ['Price','Size','Color','Store'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Che <blank> porta?', translation: 'What size do you wear?', options: ['taglia','prezzo','colore','sconto'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "receipt"?', options: ['scontrino','borsa','carta','soldi'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ecco lo <blank>.', translation: 'Here\'s the receipt.', options: ['scontrino','sconto','euro','negozio'], correct: 0 }
+	],
+
+	// Unit 9 Lesson 2: Money & Prices
+	'money-prices': [
+		{ type: 'multiple-choice', question: 'What is "moneta" in English?', options: ['Bill','Coin','Price','Money'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Ho molte <blank>.', translation: 'I have many coins.', options: ['monete','banconote','euro','soldi'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'euro', back: 'euro' },
+			{ front: 'centesimo', back: 'cent' },
+			{ front: 'banconota', back: 'bill/note' },
+			{ front: 'carta di credito', back: 'credit card' },
+			{ front: 'contanti', back: 'cash' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'euro', english: 'euro' },
+			{ italian: 'centesimo', english: 'cent' },
+			{ italian: 'banconota', english: 'bill' },
+			{ italian: 'contanti', english: 'cash' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "credit card"?', options: ['carta di credito','banconota','moneta','contanti'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Pago con la <blank> di credito.', translation: 'I pay with credit card.', options: ['carta','moneta','banconota','soldi'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What are "contanti"?', options: ['Card','Check','Cash','Coins'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'Pago in <blank>.', translation: 'I pay in cash.', options: ['contanti','carta','euro','monete'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "change" (money back)?', options: ['resto','sconto','prezzo','taglia'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ecco il <blank>.', translation: 'Here\'s your change.', options: ['resto','prezzo','sconto','euro'], correct: 0 }
+	],
+
+	// Unit 9 Lesson 3: At the Store
+	'at-store': [
+		{ type: 'multiple-choice', question: 'What does "aperto" mean?', options: ['Closed','Open','Expensive','Cheap'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Il negozio è <blank>.', translation: 'The store is open.', options: ['aperto','chiuso','caro','grande'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'aperto', back: 'open' },
+			{ front: 'chiuso', back: 'closed' },
+			{ front: 'entrata', back: 'entrance' },
+			{ front: 'uscita', back: 'exit' },
+			{ front: 'cassa', back: 'checkout/register' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'aperto', english: 'open' },
+			{ italian: 'chiuso', english: 'closed' },
+			{ italian: 'entrata', english: 'entrance' },
+			{ italian: 'uscita', english: 'exit' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you ask "Do you have...?"', options: ['Avete...?','Siete...?','Fate...?','Andate...?'], correct: 0 },
+		{ type: 'fill-blank', sentence: '<blank> questo in blu?', translation: 'Do you have this in blue?', options: ['Avete','Siete','Fate','Costa'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "cassa"?', options: ['Box','Checkout','Door','Window'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Pago alla <blank>.', translation: 'I pay at the checkout.', options: ['cassa','porta','finestra','entrata'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "to pay"?', options: ['pagare','comprare','vendere','costare'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Devo <blank> il conto.', translation: 'I have to pay the bill.', options: ['pagare','comprare','vendere','aprire'], correct: 0 }
+	],
+
+	// Unit 10 Main Module: Body & Health Overview
+	'health-overview': [
+		{ type: 'multiple-choice', question: 'What does "testa" mean?', options: ['Hand','Foot','Head','Arm'], correct: 2 },
+		{ type: 'fill-blank', sentence: 'Mi fa male la <blank>.', translation: 'My head hurts.', options: ['testa','mano','gamba','pancia'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'testa', back: 'head' },
+			{ front: 'braccio', back: 'arm' },
+			{ front: 'gamba', back: 'leg' },
+			{ front: 'mano', back: 'hand' },
+			{ front: 'piede', back: 'foot' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'testa', english: 'head' },
+			{ italian: 'braccio', english: 'arm' },
+			{ italian: 'gamba', english: 'leg' },
+			{ italian: 'mano', english: 'hand' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "I feel sick"?', options: ['Mi sento male','Sto bene','Ho fame','Ho sete'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mi <blank> male.', translation: 'I feel sick.', options: ['sento','sono','ho','sto'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "medico"?', options: ['Medicine','Doctor','Hospital','Patient'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Devo andare dal <blank>.', translation: 'I have to go to the doctor.', options: ['medico','ospedale','farmacia','dentista'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "pharmacy"?', options: ['ospedale','farmacia','medico','infermiere'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Vado in <blank>.', translation: 'I go to the pharmacy.', options: ['farmacia','ospedale','casa','scuola'], correct: 0 }
+	],
+
+	// Unit 10 Lesson 1: Body Parts
+	'body-parts': [
+		{ type: 'multiple-choice', question: 'What is "occhio" in English?', options: ['Ear','Eye','Nose','Mouth'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Ho due <blank>.', translation: 'I have two eyes.', options: ['occhi','orecchie','mani','piedi'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'occhio', back: 'eye' },
+			{ front: 'orecchio', back: 'ear' },
+			{ front: 'naso', back: 'nose' },
+			{ front: 'bocca', back: 'mouth' },
+			{ front: 'dente', back: 'tooth' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'occhio', english: 'eye' },
+			{ italian: 'orecchio', english: 'ear' },
+			{ italian: 'naso', english: 'nose' },
+			{ italian: 'bocca', english: 'mouth' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "finger"?', options: ['dito','mano','piede','braccio'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mi sono fatto male al <blank>.', translation: 'I hurt my finger.', options: ['dito','piede','naso','orecchio'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What are "denti"?', options: ['Fingers','Teeth','Toes','Eyes'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Mi fanno male i <blank>.', translation: 'My teeth hurt.', options: ['denti','piedi','occhi','orecchi'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "shoulder"?', options: ['spalla','gomito','ginocchio','polso'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Mi fa male la <blank>.', translation: 'My shoulder hurts.', options: ['spalla','testa','gamba','mano'], correct: 0 }
+	],
+
+	// Unit 10 Lesson 2: Feeling Sick
+	'feeling-sick': [
+		{ type: 'multiple-choice', question: 'What does "febbre" mean?', options: ['Cough','Fever','Cold','Pain'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Ho la <blank>.', translation: 'I have a fever.', options: ['febbre','tosse','raffreddore','influenza'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'febbre', back: 'fever' },
+			{ front: 'tosse', back: 'cough' },
+			{ front: 'raffreddore', back: 'cold' },
+			{ front: 'mal di testa', back: 'headache' },
+			{ front: 'mal di pancia', back: 'stomachache' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'febbre', english: 'fever' },
+			{ italian: 'tosse', english: 'cough' },
+			{ italian: 'raffreddore', english: 'cold' },
+			{ italian: 'mal di testa', english: 'headache' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "I have a cold"?', options: ['Ho il raffreddore','Ho la febbre','Ho la tosse','Ho l\'influenza'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ho il <blank>.', translation: 'I have a cold.', options: ['raffreddore','febbre','tosse','dolore'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "dolore"?', options: ['Medicine','Pain','Fever','Cough'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Ho un <blank> forte.', translation: 'I have a strong pain.', options: ['dolore','febbre','tosse','naso'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "nausea"?', options: ['nausea','febbre','tosse','raffreddore'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ho la <blank>.', translation: 'I have nausea.', options: ['nausea','febbre','tosse','fame'], correct: 0 }
+	],
+
+	// Unit 10 Lesson 3: At the Doctor
+	'at-doctor': [
+		{ type: 'multiple-choice', question: 'What is "medicina" in English?', options: ['Doctor','Medicine','Hospital','Patient'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Prendo la <blank>.', translation: 'I take medicine.', options: ['medicina','febbre','tosse','testa'], correct: 0 },
+		{ type: 'flashcard', cards: [
+			{ front: 'medicina', back: 'medicine' },
+			{ front: 'ricetta', back: 'prescription' },
+			{ front: 'appuntamento', back: 'appointment' },
+			{ front: 'ambulanza', back: 'ambulance' },
+			{ front: 'emergenza', back: 'emergency' }
+		]},
+		{ type: 'matching', pairs: [
+			{ italian: 'medicina', english: 'medicine' },
+			{ italian: 'ricetta', english: 'prescription' },
+			{ italian: 'appuntamento', english: 'appointment' },
+			{ italian: 'emergenza', english: 'emergency' }
+		]},
+		{ type: 'multiple-choice', question: 'How do you say "I need an appointment"?', options: ['Ho bisogno di un appuntamento','Ho la febbre','Prendo la medicina','Vado in ospedale'], correct: 0 },
+		{ type: 'fill-blank', sentence: 'Ho bisogno di un <blank>.', translation: 'I need an appointment.', options: ['appuntamento','medico','ospedale','farmacia'], correct: 0 },
+		{ type: 'multiple-choice', question: 'What is "ricetta"?', options: ['Recipe','Prescription','Medicine','Doctor'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'Il medico scrive una <blank>.', translation: 'The doctor writes a prescription.', options: ['ricetta','medicina','lettera','nota'], correct: 0 },
+		{ type: 'multiple-choice', question: 'Which means "emergency"?', options: ['urgenza','emergenza','ambulanza','ospedale'], correct: 1 },
+		{ type: 'fill-blank', sentence: 'È un\'<blank>!', translation: 'It\'s an emergency!', options: ['emergenza','ambulanza','ospedale','medicina'], correct: 0 }
 	]
 };
 
@@ -1308,7 +1708,23 @@ function initLesson() {
 		// Unit 6 - Verbs
 		'6-1': 'verbs-common',
 		'6-2': 'verbs-daily',
-		'6-3': 'verbs-past'
+		'6-3': 'verbs-past',
+		// Unit 7 - Colors & Clothing
+		'7-1': 'colors-basic',
+		'7-2': 'clothing-items',
+		'7-3': 'clothing-descriptions',
+		// Unit 8 - Weather & Seasons
+		'8-1': 'weather-conditions',
+		'8-2': 'seasons',
+		'8-3': 'temperature',
+		// Unit 9 - Shopping & Money
+		'9-1': 'shopping-phrases',
+		'9-2': 'money-prices',
+		'9-3': 'at-store',
+		// Unit 10 - Body & Health
+		'10-1': 'body-parts',
+		'10-2': 'feeling-sick',
+		'10-3': 'at-doctor'
 	};
 	
 	// If unit parameter is provided, use general unit content
@@ -1319,7 +1735,11 @@ function initLesson() {
 			'3': 'food-overview',
 			'4': 'travel-overview',
 			'5': 'family-overview',
-			'6': 'verbs-overview'
+			'6': 'verbs-overview',
+			'7': 'colors-overview',
+			'8': 'weather-overview',
+			'9': 'shopping-overview',
+			'10': 'health-overview'
 		};
 		currentModuleId = unitMap[unitParam] || 'greetings-overview';
 	} else {
@@ -1479,11 +1899,11 @@ function checkMatch() {
 			}, 500);
 		}
 	} else {
-		// Wrong match - lose a heart on first wrong match only
+		
 		card1.classList.add('wrong');
 		card2.classList.add('wrong');
 		
-		// Lose heart on first mistake in this matching game
+		
 		if (matchingCompleted.length === 0 && !document.querySelector('.feedback').style.display) {
 			loseHeart();
 		}
@@ -1497,7 +1917,7 @@ function checkMatch() {
 	matchingSelected = [];
 }
 
-// Render flashcard
+
 function renderFlashcard(question) {
 	const mode = document.querySelector('.flashcard');
 	currentCardIndex = 0;
@@ -1506,19 +1926,19 @@ function renderFlashcard(question) {
 	updateFlashcard(question.cards[0]);
 	updateCardCounter(question.cards.length);
 	
-	// Setup card flip - click on the whole flashcard container
+	
 	const flashcardContainer = mode.querySelector('.flashcard');
 	const flashcardClickHandler = (e) => {
-		// Don't flip if clicking on navigation buttons or counter meta section
+		
 		if (e.target.closest('.flashcard-controls') || e.target.closest('.flashcard-meta')) return;
 		flashcardContainer.classList.toggle('flipped');
 		isFlipped = !isFlipped;
 	};
 	
-	// Remove old listener and add new one
+	
 	flashcardContainer.onclick = flashcardClickHandler;
 	
-	// Setup navigation with proper event handlers
+	
 	const prevBtn = mode.querySelector('.prev-card-btn');
 	const nextBtn = mode.querySelector('.next-card-btn');
 	
@@ -1536,7 +1956,7 @@ function renderFlashcard(question) {
 	
 	mode.style.display = 'block';
 	
-	// Flashcard mode: hide check button, show dedicated continue button in controls row
+	
 	const checkBtn = document.querySelector('.check-btn');
 	checkBtn.style.display = 'none';
 	const flashcardContinue = document.querySelector('.flashcard-continue-btn');
@@ -1546,21 +1966,21 @@ function renderFlashcard(question) {
 	}
 }
 
-// Update flashcard content
+
 function updateFlashcard(card) {
 	const mode = document.querySelector('.flashcard');
 	const flashcardEl = mode.querySelector('.flashcard');
 	
-	// Reset flip state
+	
 	flashcardEl.classList.remove('flipped');
 	isFlipped = false;
 	
-	// Update content
+	
 	mode.querySelector('.flashcard-front .word').textContent = card.front;
 	mode.querySelector('.flashcard-back .word').textContent = card.back;
 }
 
-// Navigate flashcards
+
 function navigateCard(direction) {
 	const question = currentLessonData[currentQuestionIndex];
 	if (!question || question.type !== 'flashcard') return;
@@ -1571,13 +1991,13 @@ function navigateCard(direction) {
 	updateCardCounter(cards.length);
 }
 
-// Update card counter
+
 function updateCardCounter(total) {
 	document.querySelector('.current-card').textContent = currentCardIndex + 1;
 	document.querySelector('.total-cards').textContent = total;
 }
 
-// Render multiple choice
+
 function renderMultipleChoice(question) {
 	const mode = document.querySelector('.multiple-choice');
 	
@@ -1597,7 +2017,7 @@ function renderMultipleChoice(question) {
 	mode.style.display = 'block';
 }
 
-// Select choice answer
+
 function selectChoice(index, btn) {
 	document.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
 	btn.classList.add('selected');
@@ -1605,13 +2025,13 @@ function selectChoice(index, btn) {
 	document.querySelector('.check-btn').disabled = false;
 }
 
-// Check answer
+
 function checkAnswer() {
 	const question = currentLessonData[currentQuestionIndex];
 	let isCorrect = false;
 	
 	if (question.type === 'flashcard') {
-		// Flashcards just continue directly (no feedback needed)
+		
 		correctAnswers++;
 		continueLesson();
 		return;
@@ -1630,7 +2050,7 @@ function checkAnswer() {
 	}
 }
 
-// Show feedback
+
 function showFeedback(isCorrect) {
 	const feedback = document.querySelector('.feedback');
 	const correctFeedback = feedback.querySelector('.feedback-content.correct');
@@ -1651,7 +2071,7 @@ function showFeedback(isCorrect) {
 		correctFeedback.style.display = 'none';
 		incorrectFeedback.style.display = 'block';
 		
-		// Show correct answer
+		
 		const question = currentLessonData[currentQuestionIndex];
 		let correctAnswer = '';
 		if (question.type === 'fill-blank') {
@@ -1668,20 +2088,20 @@ function showFeedback(isCorrect) {
 	
 	feedback.style.display = 'block';
 	
-	// Switch buttons
+	
 	document.querySelector('.check-btn').style.display = 'none';
-	// Show generic continue (non-flashcard). Ensure we don't accidentally show flashcard version.
+	
 	const genericContinue = document.querySelector('.lesson-actions .continue-btn');
 	if (genericContinue) genericContinue.style.display = 'block';
 }
 
-// Lose a heart (disabled - no hearts system)
+
 function loseHeart() {
-	// Hearts system disabled
+	
 	return;
 }
 
-// Continue to next question
+
 function continueLesson() {
 	currentQuestionIndex++;
 	
@@ -1694,7 +2114,7 @@ function continueLesson() {
 	}
 }
 
-// Update progress bar
+
 function updateProgressBar() {
 	const progress = ((currentQuestionIndex + 1) / currentLessonData.length) * 100;
 	document.querySelector('.progress-fill').style.width = progress + '%';
@@ -1706,7 +2126,7 @@ function updateQuestionCounter() {
 	document.querySelector('.total-questions').textContent = currentLessonData.length;
 }
 
-// Show completion modal
+
 function showCompletion() {
 	const modal = document.querySelector('.completion-modal');
 	const accuracy = Math.round((correctAnswers / currentLessonData.length) * 100);
@@ -1716,7 +2136,7 @@ function showCompletion() {
 	modal.querySelector('.completion-stats .stat:last-child .stat-value').textContent = 
 		`${accuracy}%`;
 	
-	// Persist progress to localStorage
+	
 	saveLessonProgress(currentModuleId, accuracy);
 	
 	modal.style.display = 'flex';
@@ -1779,7 +2199,7 @@ function saveLessonProgress(lessonKey, accuracy) {
 }
 
 function formatLessonTitle(key) {
-	// Convert key like 'greetings-basic' to 'Greetings Basic'
+	
 	return key.split('-').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
 }
 
@@ -1831,54 +2251,54 @@ function updateProgressStreak(data) {
 	data.lastVisit = Date.now();
 }
 
-// Add TTS button dynamically below instruction
+
 function addTTSButton(question) {
-	// Remove any existing TTS button
+
 	const existingBtn = document.getElementById('tts-btn');
 	if (existingBtn) {
 		existingBtn.remove();
 	}
 	
-	// Find the visible game mode and its instruction
+	
 	const visibleMode = document.querySelector('.game-mode[style*="display: block"], .game-mode[style*="display: flex"]');
 	if (!visibleMode) return;
 	
 	const instruction = visibleMode.querySelector('.instruction');
 	if (!instruction) return;
 	
-	// Create TTS button
+	
 	const ttsBtn = document.createElement('button');
 	ttsBtn.className = 'tts-btn';
 	ttsBtn.id = 'tts-btn';
 	ttsBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i> Listen';
 	ttsBtn.onclick = speakItalian;
 	
-	// Insert only the TTS button (handwriting feature removed per request)
+	
 	instruction.insertAdjacentElement('afterend', ttsBtn);
 }
 
-// Text-to-Speech function
+
 function speakItalian() {
 	const question = currentLessonData[currentQuestionIndex];
 	let textToSpeak = '';
 	
-	// Extract Italian text based on question type (without revealing answers)
+	
 	if (question.type === 'fill-blank') {
-		// Speak the sentence with the blank marker instead of the answer
+		
 		textToSpeak = question.sentence.replace('<blank>', 'blank');
 	} else if (question.type === 'multiple-choice') {
-		// Extract Italian words from the question
+		
 		const italianMatch = question.question.match(/"([^"]+)"/);
 		if (italianMatch) {
 			textToSpeak = italianMatch[1];
 		}
 	} else if (question.type === 'flashcard') {
-		// Speak the current flashcard front text
+		
 		if (question.cards && question.cards[currentCardIndex]) {
 			textToSpeak = question.cards[currentCardIndex].front;
 		}
 	} else if (question.type === 'matching') {
-		// Speak all Italian words in the pairs
+		
 		if (question.pairs && question.pairs.length > 0) {
 			textToSpeak = question.pairs.map(pair => pair.italian).join(', ');
 		}
@@ -1886,34 +2306,33 @@ function speakItalian() {
 	
 	if (textToSpeak) {
 		const utterance = new SpeechSynthesisUtterance(textToSpeak);
-		utterance.lang = 'it-IT'; // Set language to Italian
-		utterance.rate = 0.8; // Slightly slower for learning
+		utterance.lang = 'it-IT'; 
+		utterance.rate = 0.8; 
 		utterance.pitch = 1;
 
-		// Handwriting visual was removed; no synced text reveal
-
+		
 		const ttsBtn = document.getElementById('tts-btn');
 		if (ttsBtn) {
 			ttsBtn.classList.add('speaking');
 			
 			utterance.onend = () => {
 				ttsBtn.classList.remove('speaking');
-				// stop handwriting animation when speech ends
+				
 				if (handwritingEl) handwritingEl.classList.remove('playing');
 			};
 		}
 
-		window.speechSynthesis.cancel(); // Cancel any ongoing speech
+		window.speechSynthesis.cancel();
 		window.speechSynthesis.speak(utterance);
 	}
 }
 
-// Event listeners
+
 document.addEventListener('DOMContentLoaded', () => {
 	initLesson();
 	
 	document.querySelector('.check-btn').addEventListener('click', checkAnswer);
-	// Attach listener to all continue buttons (generic + flashcard)
+	
 	document.querySelectorAll('.continue-btn').forEach(btn => btn.addEventListener('click', continueLesson));
 });
 

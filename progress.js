@@ -59,7 +59,7 @@ function loadProgress() {
 function updateOverallProgress(data) {
 	
 	const lessonsPerUnit = 4;
-	const totalUnits = units.length || 6;
+	const totalUnits = units.length || 10;
 	const totalLessons = totalUnits * lessonsPerUnit;
 	const completedLessonsCount = Array.isArray(data.completedLessons) ? data.completedLessons.length : 0;
 	const percentage = Math.round((completedLessonsCount / totalLessons) * 100);
@@ -97,6 +97,10 @@ function displayUnitsBreakdown(data) {
 			case 4: return ['travel-overview','travel-directions','travel-transport','travel-accommodation'];
 			case 5: return ['family-overview','family-members','family-relationships','family-activities'];
 			case 6: return ['verbs-overview','verbs-common','verbs-daily','verbs-past'];
+			case 7: return ['colors-overview','colors-basic','clothing-items','clothing-descriptions'];
+			case 8: return ['weather-overview','weather-conditions','seasons','temperature'];
+			case 9: return ['shopping-overview','shopping-phrases','money-prices','at-store'];
+			case 10: return ['health-overview','body-parts','feeling-sick','at-doctor'];
 			default: return [];
 		}
 	}

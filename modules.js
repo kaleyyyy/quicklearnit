@@ -150,7 +150,7 @@ function updateProgressStat() {
 			statEl.textContent = '0%';
 			return;
 		}
-		var totalLessons = 24; // 6 units * 4 lessons (overview + 3 subs)
+		var totalLessons = 40; // 10 units * 4 lessons (overview + 3 subs)
 		var pct = Math.round((data.completedLessons.length / totalLessons) * 100);
 		statEl.textContent = pct + '%';
 	} catch (e) { /* ignore */ }

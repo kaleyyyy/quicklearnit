@@ -594,7 +594,7 @@ const lessonData = {
 		{
 			type: 'multiple-choice',
 			question: 'What does "in punto" mean?',
-			options: ['Half past', 'Quarter to', 'O\'clock (sharp)', 'About'],
+			options: ['Half past', 'Quarter to', 'O\'clock ', 'About'],
 			correct: 2
 		},
 		{

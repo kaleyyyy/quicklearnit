@@ -390,7 +390,7 @@ body {
 	to { stroke-dashoffset: 0; }
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
 	.progress-header h1 {
 		font-size: 1.5rem;

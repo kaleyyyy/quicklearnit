@@ -152,7 +152,7 @@ function displayRecentActivity(data) {
 	
 	activityList.innerHTML = '';
 	
-	// Show last 5 activities
+
 	const recentActivities = data.activities.slice(-5).reverse();
 	
 	recentActivities.forEach(activity => {
@@ -175,7 +175,7 @@ function displayRecentActivity(data) {
 	});
 }
 
-// Calculate time ago from timestamp
+
 function getTimeAgo(timestamp) {
 	const now = Date.now();
 	const diff = now - timestamp;
@@ -196,7 +196,7 @@ function resetProgress() {
 		localStorage.removeItem('quicklearnit-progress');
 		loadProgress();
 		
-		// Show confirmation
+		
 		alert('Your progress has been reset!');
 	}
 }
@@ -209,7 +209,7 @@ window.completeUnit = function(unitId) {
 		data.completedUnits.push(unitId);
 		data.lessonsCompleted += 1;
 		
-		// Add activity
+		
 		const unit = units.find(u => u.id === unitId);
 		if (unit) {
 			data.activities.push({

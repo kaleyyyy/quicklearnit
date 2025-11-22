@@ -159,9 +159,9 @@ body.lesson-page {
 	}
 }
 
-/* (Removed handwriting reveal feature per user request) */
 
-/* Fill in the Blank */
+
+
 .question-text {
 	margin-bottom: 3rem;
 }
@@ -195,7 +195,7 @@ body.lesson-page {
 	justify-content: center;
 	max-width: 600px;
 	margin: 0 auto;
-	/* ensure action buttons below don't overlap these options */
+	/* action buttonsdon't overlap these options */
 	padding-bottom: 6rem;
 }
 
@@ -244,7 +244,7 @@ body.lesson-page {
 	animation: shake 0.5s ease;
 }
 
-/* Matching Game */
+
 .matching-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -295,10 +295,10 @@ body.lesson-page {
 	animation: shake 0.3s ease;
 }
 
-/* Flashcard */
+
 .flashcard-container {
 	perspective: 1000px;
-	/* reduce bottom spacing so action buttons can overlap the card */
+	
 	margin-bottom: 0.5rem;
 }
 
@@ -387,7 +387,6 @@ body.lesson-page {
 	transition: all 0.2s ease;
 	box-shadow: 0 4px 0 #000;
 	font-weight: 600;
-	/* larger min-width gives Prev/Next more visual weight and space from center */
 	min-width: 160px;
 }
 
@@ -430,7 +429,6 @@ body.lesson-page {
 	gap: 1rem;
 	max-width: 600px;
 	margin: 0 auto;
-	/* reserve space for action buttons so they don't cover options */
 	padding-bottom: 6rem;
 }
 
@@ -529,27 +527,24 @@ body.lesson-page {
 	margin-top: 0.5rem;
 }
 
-/* Action buttons */
+
 .lesson-actions {
 	display: flex;
 	justify-content: center;
-	/* default spacing for non-flashcard modes */
 	margin-top: 2rem;
 	position: relative;
-	z-index: 20; /* ensure buttons sit above 3D flashcard stacking context */
+	z-index: 20; 
 }
 
-/* When flashcard mode is active, pull the actions up to overlap the card */
+
 body.flashcard-mode .lesson-actions {
-	/* place actions below the card with breathing room */
-	/* increase spacing so buttons never overlap the flashcard */
+	
 	margin-top: 3.6rem;
 	gap: 1.6rem;
 }
 
-/* Slightly raise the flashcard and shrink the instruction spacing so the card sits higher on the page */
 body.flashcard-mode .instruction {
-	/* reduce the space under the heading */
+
 	margin-bottom: 0.6rem;
 }
 
@@ -558,21 +553,17 @@ body.flashcard-mode .flashcard-container {
 	margin-bottom: 2.2rem;
 }
 
-/* Move the whole flashcard area up (instruction, TTS, card) so the visual grouping sits higher.
-   Keeps other modes unaffected. */
 body.flashcard-mode .game-mode-container {
-	justify-content: flex-start; /* align items toward top */
-	/* reduce top padding so the whole flashcard grouping sits higher on the page */
+	justify-content: flex-start; 
 	padding-top: 1rem;
 }
 
-/* Nudge the Listen button up a little in flashcard mode so it sits closer to the heading */
+
 body.flashcard-mode .tts-btn {
 	margin-bottom: 0.6rem;
 	transform: translateY(-6px);
 }
 
-/* Ensure Listen button and heading are on top of the flashcard (avoid being obscured) */
 body.flashcard-mode .game-mode-container,
 body.flashcard-mode .instruction,
 body.flashcard-mode .tts-btn {
@@ -651,7 +642,6 @@ body.flashcard-mode .lesson-actions {
 	opacity: 0.6;
 }
 
-/* Completion Modal */
 .completion-modal {
 	position: fixed;
 	top: 0;

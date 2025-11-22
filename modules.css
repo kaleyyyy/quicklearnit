@@ -273,7 +273,7 @@ body {
 	display: none;
 }
 
-/* Main module button */
+
 .module-node {
 	width: 160px;
 	height: 160px;
@@ -291,9 +291,9 @@ body {
 	position: relative;
 }
 
-/* Completion check overlay */
+
 .module-node.module-complete::after {
-	content: '\f00c'; /* Font Awesome check */
+	content: '\f00c';
 	font-family: 'Font Awesome 6 Free';
 	font-weight: 900;
 	position: absolute;
@@ -337,17 +337,17 @@ body {
 	opacity: 0.6;
 }
 
-/* Node label */
+
 .node-label {
 	text-align: center;
 	max-width: 240px;
 	flex-shrink: 0;
-	/* ensure text has breathing room from the central connector */
+	
 	padding: 0 1.5rem;
-	z-index: 2; /* sit above decorative connectors */
+	z-index: 2; 
 }
 
-/* Small course title placed above the main unit heading (used for Unit 1) */
+
 .course-title {
 	font-family: 'Baloo 2', cursive;
 	font-size: 1rem;
@@ -371,7 +371,7 @@ body {
 	margin: 0;
 }
 
-/* Sub lessons container */
+
 .sub-lessons {
 	position: absolute;
 	top: 50%;
@@ -402,7 +402,7 @@ body {
 	pointer-events: auto;
 }
 
-/* Individual sub lesson button */
+
 .sub-lesson {
 	display: flex;
 	flex-direction: column;
@@ -449,7 +449,7 @@ body {
 	box-shadow: 0 3px 0 rgba(0,0,0,0.6);
 }
 
-/* Decorative swooshes */
+
 .swoosh {
 	position: fixed;
 	pointer-events: none;
@@ -521,9 +521,6 @@ body {
 	animation: swooshFade 3s ease-in-out forwards;
 }
 
-/* (Vine decoration removed) */
-
-/* Animations */
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -548,13 +545,13 @@ body {
 	.swoosh { display: none !important; }
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
 	.path-node {
 		padding: 0 1rem;
 	}
 
-	/* reduce gap on small screens so layout stays compact */
+	
 	.path-node {
 		gap: 2.2rem;
 	}

@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
 				path.style.transition = 'none';
 
 				swoosh.classList.add('active');
-				// disable CSS-based swoosh animation so we control opacity/position in JS
+				
 				swoosh.style.animation = 'none';
-				// ensure visible at start
+				
 				swoosh.style.opacity = 1;
 
-				// compute a small random movement vector so each swoosh drifts while fading
+				
 				var rect = swoosh.getBoundingClientRect();
 				var initialLeft = parseInt(swoosh.style.left || Math.round(rect.left), 10) || Math.round(rect.left);
 				var initialTop = parseInt(swoosh.style.top || Math.round(rect.top), 10) || Math.round(rect.top);
@@ -105,12 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
 					var t = Math.max(0, now - start);
 					var progress = Math.min(1, t / duration);
 					path.style.strokeDashoffset = (1 - progress) * len;
-					// move the whole svg a little and fade out over the same duration
+					
 					var curLeft = Math.round(initialLeft + dx * progress);
 					var curTop = Math.round(initialTop + dy * progress);
 					swoosh.style.left = curLeft + 'px';
 					swoosh.style.top = curTop + 'px';
-					// opacity: stay visible during draw then fade to 0 by the end
+					
 					swoosh.style.opacity = String(Math.max(0, 1 - progress));
 					try {
 						var pt = path.getPointAtLength(len * progress);
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				requestAnimationFrame(function (ts) { start = ts; requestAnimationFrame(frame); });
 
-				// cleanup for this swoosh after the draw duration + small buffer
+				
 				setTimeout(function () {
 					path.style.transition = 'none';
 					path.style.strokeDashoffset = len;

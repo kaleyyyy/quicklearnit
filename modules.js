@@ -1,4 +1,4 @@
-// Simplified modules.js
+
 (function(){
 	document.addEventListener('DOMContentLoaded', function(){
 		var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -19,7 +19,7 @@
 		updateProgressStat();
 		markCompletedModules();
 
-		// Main module click: single click expands, double click goes to overview
+		
 		document.querySelectorAll('.main-module').forEach(function(m){
 			var clickTimer = null;
 			
@@ -30,12 +30,12 @@
 				var pn = m.closest('.path-node');
 				if(!pn) return;
 				
-				// Clear any existing timer
+				
 				if(clickTimer) {
 					clearTimeout(clickTimer);
 					clickTimer = null;
 					
-					// This is a double click - navigate to unit overview
+					
 					var unitId = m.dataset.unit;
 					if(unitId) {
 						window.location.href = 'lesson.html?unit=' + encodeURIComponent(unitId);
@@ -43,19 +43,19 @@
 					return;
 				}
 				
-				// Set timer for single click
+				
 				clickTimer = setTimeout(function() {
 					clickTimer = null;
 					
-					// Single click - toggle expansion
+
 					var isExpanded = pn.classList.contains('expanded');
 
-					// Collapse all others
+					
 					document.querySelectorAll('.path-node.expanded').forEach(function(o){
 						if(o !== pn) o.classList.remove('expanded');
 					});
 
-					// Toggle current
+					
 					if (isExpanded) {
 						pn.classList.remove('expanded');
 					} else {
@@ -76,7 +76,7 @@
 			});
 		});
 
-		// Click outside to collapse
+		
 		document.addEventListener('click', function(e) {
 			if (!e.target.closest('.path-node')) {
 				document.querySelectorAll('.path-node.expanded').forEach(function(pn){
@@ -85,7 +85,7 @@
 			}
 		});
 
-		// Tips modal functionality
+		
 		var tipsModal = document.getElementById('tips-modal');
 		var tipsBtn = document.getElementById('tips-btn');
 		var closeBtn = document.getElementById('close-modal');
@@ -102,7 +102,7 @@
 			});
 		}
 
-		// Close modal when clicking outside
+		
 		if (tipsModal) {
 			tipsModal.addEventListener('click', function(e) {
 				if (e.target === tipsModal) {
@@ -111,7 +111,7 @@
 			});
 		}
 
-		// Close modal with Escape key
+		
 		document.addEventListener('keydown', function(e) {
 			if (e.key === 'Escape' && tipsModal && tipsModal.classList.contains('active')) {
 				tipsModal.classList.remove('active');
@@ -135,7 +135,7 @@ function updateProgressStat() {
 			statEl.textContent = '0%';
 			return;
 		}
-		var totalLessons = 40; // 10 units * 4 lessons (overview + 3 subs)
+		var totalLessons = 40; 
 		var pct = Math.round((data.completedLessons.length / totalLessons) * 100);
 		statEl.textContent = pct + '%';
 	} catch (e) { /* ignore */ }

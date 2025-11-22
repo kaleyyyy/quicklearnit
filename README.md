@@ -1,2 +1,2 @@
-- Ciao! QUICKLEARN is a fun and interactive Italian language learning website. Progress is stored on users localstorage. Website is client-sided. Enjoy learning Italain!
+- Ciao! QUICKLEARN is a fun and interactive Italian language learning website. Progress is stored on users localstorage. Website is client-sided. Includes multiple game modes to learn common words. Enjoy learning Italain!
 - Built by Kaley Hague
